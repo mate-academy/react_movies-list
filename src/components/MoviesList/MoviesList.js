@@ -4,20 +4,13 @@ import './MoviesList.scss';
 
 import { MovieCard } from '../MovieCard/index';
 
-export const MoviesList = props => (
+export const MoviesList = ({ movies }) => (
   <div className="page">
     <div className="page-content">
       <div className="movies">
-        {props.movies.map(movie => (
-          <MovieCard
-            key={movie.imdbId}
-            title={movie.title}
-            description={movie.description}
-            imgUrl={movie.imgUrl}
-            imdbUrl={movie.imdbUrl}
-          />
+        {movies.map(movie => (
+          <MovieCard {...movie} key={movie.imdbId} />
         ))}
-
       </div>
     </div>
 
