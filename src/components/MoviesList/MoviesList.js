@@ -3,16 +3,14 @@ import './MoviesList.scss';
 import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard';
 
-export const MoviesList = ({ MoviesArrApi }) => (
-  <>
-    <div className="movies">
-      {MoviesArrApi.map(movie => (
-        <MovieCard {...movie} />
-      ))}
-    </div>
-  </>
+export const MoviesList = ({ movies }) => (
+  <div className="movies">
+    {movies.map(movie => (
+      <MovieCard key={movie.imdbId} {...movie} />
+    ))}
+  </div>
 );
 
 MoviesList.propTypes = {
-  MoviesArrApi: PropTypes.arrayOf.isRequired,
+  movies: PropTypes.arrayOf.isRequired,
 };

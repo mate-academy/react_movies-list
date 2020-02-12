@@ -6,7 +6,7 @@ import { MoviesList } from './components/MoviesList/index';
 export const App = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList MoviesArrApi={moviesFromServer} />
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar">
