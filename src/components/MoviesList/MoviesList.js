@@ -4,16 +4,14 @@ import { MovieCard } from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
 export const MoviesList = ({ listOfMovies }) => (
-  <>
-    <div className="movies">
-      {listOfMovies.map(movie => (
-        <MovieCard
-          {...movie}
-          key={movie.imdbId}
-        />
-      ))}
-    </div>
-  </>
+  <div className="movies">
+    {listOfMovies.map(movie => (
+      <MovieCard
+        {...movie}
+        key={movie.imdbId}
+      />
+    ))}
+  </div>
 );
 
 MoviesList.propTypes = {
