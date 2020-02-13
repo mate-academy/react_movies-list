@@ -4,15 +4,11 @@ import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
 
 export const MoviesList = ({ moviesFromServer }) => (
-  <>
-    {
-      moviesFromServer.map(card => (
-        <div className="movies" key={card.imdbId}>
-          <MovieCard card={card} />
-        </div>
-      ))
-    }
-  </>
+  moviesFromServer.map(card => (
+    <div className="movies" key={card.imdbId}>
+      <MovieCard {...card} />
+    </div>
+  ))
 );
 
 MoviesList.propTypes = {
