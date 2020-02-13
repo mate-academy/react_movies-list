@@ -2,12 +2,12 @@ import React from 'react';
 import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
-export const MovieCard = ({ movieInfo }) => (
+export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-          src={movieInfo.imgUrl}
+          src={imgUrl}
           alt="Film logo"
         />
       </figure>
@@ -17,29 +17,31 @@ export const MovieCard = ({ movieInfo }) => (
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="/images/imdb-logo.jpeg" alt="imdb" />
+            <img src="./images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 
         <div className="media-content">
-          <p className="title is-8">{movieInfo.title}</p>
+          <p className="title is-8">{title}</p>
         </div>
       </div>
 
       <div className="content">
-        {movieInfo.description}
+        {description}
         <br />
-        <a href={movieInfo.imdbUrl}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>
 );
 
 MovieCard.propTypes = {
-  movieInfo: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    imgUrl: PropTypes.string.isRequired,
-    imdbUrl: PropTypes.string.isRequired,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  imgUrl: PropTypes.string.isRequired,
+  imdbUrl: PropTypes.string.isRequired,
+};
+
+MovieCard.defaultProps = {
+  description: '',
 };
