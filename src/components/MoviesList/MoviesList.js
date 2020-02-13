@@ -3,23 +3,19 @@ import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
-export const MoviesList = (props) => {
-  const { moviesList } = props;
-
-  return (
-    <div className="movies">
-      {moviesList.map(({ imdbId, description, imgUrl, imdbUrl, title }) => (
-        <MovieCard
-          key={imdbId}
-          description={description}
-          imgUrl={imgUrl}
-          imdbUrl={imdbUrl}
-          title={title}
-        />
-      ))}
-    </div>
-  );
-};
+export const MoviesList = ({ moviesList }) => (
+  <div className="movies">
+    {moviesList.map(({ imdbId, description, imgUrl, imdbUrl, title }) => (
+      <MovieCard
+        key={imdbId}
+        description={description}
+        imgUrl={imgUrl}
+        imdbUrl={imdbUrl}
+        title={title}
+      />
+    ))}
+  </div>
+);
 
 MoviesList.propTypes = {
   moviesList: PropTypes.arrayOf(
