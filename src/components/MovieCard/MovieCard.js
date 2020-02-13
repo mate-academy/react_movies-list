@@ -3,7 +3,7 @@ import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
 export const MovieCard = ({ movie }) => {
-  const { imgUrl, title, description, imdbUrl } = movie;
+  const { imgUrl, title, description = '', imdbUrl } = movie;
 
   return (
     <div className="card">
