@@ -1,7 +1,7 @@
 import React from 'react';
 import './MoviesList.scss';
 import PropTypes from 'prop-types';
-import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieCard, movieInfo } from '../MovieCard/MovieCard';
 
 export function MoviesList({ movies }) {
   return (
@@ -13,6 +13,12 @@ export function MoviesList({ movies }) {
   );
 }
 
+MoviesList.defaultProp = {
+  description: '',
+};
+
 MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape(movieInfo),
+  ).isRequired,
 };

@@ -3,18 +3,18 @@ import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
 export function MovieCard({ movie }) {
-  return (
+  const { title, description, imgUrl, imdbUrl } = movie;
 
+  return (
     <div className="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
-            src={movie.imgUrl}
+            src={imgUrl}
             alt="Film logo"
           />
         </figure>
       </div>
-
       <div className="card-content">
         <div className="media">
           <div className="media-left">
@@ -22,25 +22,29 @@ export function MovieCard({ movie }) {
               <img src="images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
-
           <div className="media-content">
-            <p className="title is-8">{movie.title}</p>
+            <p className="title is-8">{title}</p>
           </div>
         </div>
-
         <div className="content">
-          {movie.description}
+          {description}
           <br />
-          <a href={movie.imdbUrl}>IMDB</a>
+          <a href={imdbUrl}>IMDB</a>
         </div>
       </div>
     </div>
   );
 }
 
-MovieCard.propTypes = { movie: PropTypes.shape({
+export const movieInfo = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
-}).isRequired };
+};
+
+MovieCard.defaultProp = {
+  description: '',
+};
+
+MovieCard.propTypes = { movie: PropTypes.shape(movieInfo).isRequired };
