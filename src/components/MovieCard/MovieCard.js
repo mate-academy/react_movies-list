@@ -20,7 +20,7 @@ export const MovieCard = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="/public/images/imdb-logo.jpeg" alt="imdb" />
+              <img src="images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
@@ -41,9 +41,9 @@ export const MovieCard = ({ movie }) => {
 
 MovieCard.propTypes = {
   movie: PropTypes.shape({
-    imgUrl: PropTypes.string,
-    title: PropTypes.string,
+    imgUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    imdbUrl: PropTypes.string,
+    imdbUrl: PropTypes.string.isRequired,
   }).isRequired,
 };
