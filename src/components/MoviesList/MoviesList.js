@@ -1,7 +1,7 @@
 import React from 'react';
-import './MoviesList.scss';
 import propTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
+import './MoviesList.scss';
 
 export const MoviesList = ({ listOfMovies }) => (
   <>
@@ -27,5 +27,3 @@ MoviesList.propTypes = {
     }).isRequired,
   ).isRequired,
 };
-
-export default MoviesList;
