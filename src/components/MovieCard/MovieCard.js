@@ -3,7 +3,7 @@ import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
-  <div key={imdbId} className="card">
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -25,7 +25,6 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
       </div>
       <div className="content">
         { description}
-        <br />
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
