@@ -8,15 +8,15 @@ export const MoviesList = (props) => {
 
   return (
     <div className="movies">
-      {moviesList.map(move => (
+      {moviesList.map(({ imdbId, description, imgUrl, imdbUrl, title }) => (
         <MovieCard
-          key={move.imdbId}
-          description={move.description}
-          imgUrl={move.imgUrl}
-          imdbUrl={move.imdbUrl}
-          title={move.title}
+          key={imdbId}
+          description={description}
+          imgUrl={imgUrl}
+          imdbUrl={imdbUrl}
+          title={title}
         />
-      )) }
+      ))}
     </div>
   );
 };
