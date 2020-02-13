@@ -3,13 +3,10 @@ import './MoviesList.scss';
 import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
 
-export const MoviesList = ({ filmes }) => (
-  <>
-    { filmes.map(element => (
-      <MovieCard {...element} />
-    ))}
-
-  </>
+export const MoviesList = ({ films }) => (
+  films.map(element => (
+    <MovieCard {...element} />
+  ))
 );
 
 MoviesList.propTypes = {
