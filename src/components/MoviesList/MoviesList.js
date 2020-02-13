@@ -10,13 +10,20 @@ export const MoviesList = ({ dataFromServer }) => (
         <MovieCard key={movieData.imdbId} movieInfo={movieData} />
       ))}
     </div>
-
-    <div className="sidebar">
-        Sidebar will be here
-    </div>
   </div>
 );
 
 MoviesList.propTypes = {
-  dataFromServer: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  dataFromServer: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    imgUrl: PropTypes.string.isRequired,
+    imdbUrl: PropTypes.string.isRequired,
+  })),
+};
+
+MoviesList.defaultProps = {
+  dataFromServer: PropTypes.arrayOf(PropTypes.shape({
+    description: '',
+  })),
 };
