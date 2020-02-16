@@ -1,6 +1,6 @@
 import React from 'react';
-import { MoviesList } from './components/MoviesList/MoviesList';
 import './App.scss';
+import { MoviesList } from './components/MoviesList/MoviesList';
 import moviesFromServer from './api/movies';
 
 export const App = () => (
@@ -8,7 +8,6 @@ export const App = () => (
     <div className="page-content">
       <MoviesList movies={moviesFromServer} />
     </div>
-
     <div className="sidebar">
       Sidebar will be here
     </div>
