@@ -3,7 +3,7 @@ import MovieCard from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
 export default function MoviesList(props) {
-  const movieList = props.info.map((item) => {
+  return props.filmsList.map((item) => {
     const { title, description, imgUrl, imdbUrl, imdbId } = item;
 
     return (
@@ -16,6 +16,4 @@ export default function MoviesList(props) {
       />
     );
   });
-
-  return movieList;
 }
