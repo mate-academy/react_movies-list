@@ -3,12 +3,12 @@ import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
 // one movie markup
-const MovieCard = ({ imgUrl, title, description, imdbUrl }) => (
+const MovieCard = ({ movie }) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-          src={imgUrl}
+          src={movie.imgUrl}
           alt="Film logo"
         />
       </figure>
@@ -23,24 +23,28 @@ const MovieCard = ({ imgUrl, title, description, imdbUrl }) => (
         </div>
 
         <div className="media-content">
-          <p className="title is-8">{title}</p>
+          <p className="title is-8">{movie.title}</p>
         </div>
       </div>
 
       <div className="content">
-        {description}
+        {movie.description}
         <br />
-        <a href={imdbUrl}>IMDB</a>
+        <a href={movie.imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>
 );
 
 MovieCard.propTypes = {
-  imgUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imdbUrl: PropTypes.string.isRequired,
+  movie: PropTypes.arrayOf(
+    PropTypes.shape({
+      imgUrl: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      imdbUrl: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default MovieCard;
