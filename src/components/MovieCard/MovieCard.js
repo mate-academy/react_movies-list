@@ -17,7 +17,7 @@ const MovieCard = ({ movie }) => (
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="/images/imdb-logo.jpeg" alt="imdb" />
+            <img src="images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 
