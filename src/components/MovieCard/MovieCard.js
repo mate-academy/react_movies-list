@@ -27,7 +27,7 @@ export const MovieCard = ({ movie }, key) => (
 
       <div className="content">
         {movie.description}
-              <br />
+        <br />
         <a href={movie.imdbUrl}>IMDB</a>
       </div>
     </div>
