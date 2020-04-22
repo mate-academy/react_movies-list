@@ -13,16 +13,7 @@ export const MoviesList = ({ data }) => (
 );
 
 MoviesList.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    imgUrl: PropTypes.string.isRequired,
-    imdbUrl: PropTypes.string.isRequired,
-  })),
-};
-
-MoviesList.defaultProps = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    description: '',
-  })),
+  data: PropTypes.arrayOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
 };
