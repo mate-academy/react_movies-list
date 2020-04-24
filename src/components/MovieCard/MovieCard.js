@@ -36,10 +36,12 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
 );
 
 MovieCard.propTypes = {
-  // All the fields in the movie except the description are required
-  // eslint-disable-next-line react/require-default-props
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
+};
+
+MovieCard.defaultProps = {
+  description: '',
 };

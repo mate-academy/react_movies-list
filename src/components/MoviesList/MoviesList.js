@@ -5,11 +5,9 @@ import { MovieCard } from '../MovieCard/MovieCard';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
-    <div className="movies">
-      {movies.map(movie => (
-        <MovieCard {...movie} key={movie.imdbId} />
-      ))}
-    </div>
+    {movies.map(movie => (
+      <MovieCard {...movie} key={movie.imdbId} />
+    ))}
   </div>
 );
 
