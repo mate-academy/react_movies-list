@@ -1,6 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MoviesList.scss';
+import { MovieCard } from '../MovieCard/MovieCard';
 
-export const MoviesList = () => (
-  <>Put the list here</>
+export const MoviesList = ({ items }) => (
+  <div className="movies">
+    {items.map(item => <MovieCard key={item.imdbId} item={item} />)}
+  </div>
 );
+
+MoviesList.propTypes = {
+  items: PropTypes.string.isRequired,
+};
