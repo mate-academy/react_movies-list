@@ -2,8 +2,8 @@ import React from 'react';
 import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
-export const MovieCard = ({ items }) => {
-  const { description, imdbUrl, imgUrl, title } = items;
+export const MovieCard = ({ item }) => {
+  const { description, imdbUrl, imgUrl, title } = item;
 
   return (
     <>
@@ -42,7 +42,7 @@ export const MovieCard = ({ items }) => {
 };
 
 MovieCard.propTypes = {
-  items: PropTypes.shape({
+  item: PropTypes.shape({
     description: PropTypes.string.isRequired,
     imdbUrl: PropTypes.string.isRequired,
     imgUrl: PropTypes.string.isRequired,
