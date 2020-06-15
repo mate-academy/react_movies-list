@@ -5,7 +5,9 @@ import { MovieCard } from '../MovieCard/MovieCard';
 
 export const MoviesList = props => (
   <div className="movies">
-    {props.movies.map(movie => <MovieCard {...movie} />)}
+    {props.movies.map(movie => (
+      <MovieCard {...movie} key={movie.imdbId} />
+    ))}
   </div>
 );
 
