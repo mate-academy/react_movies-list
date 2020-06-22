@@ -20,5 +20,11 @@ export const MoviesList = ({ content }) => (
 );
 
 MoviesList.propTypes = {
-  content: PropTypes.arrayOf(Object).isRequired,
+  content: PropTypes.arrayOf(PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    imdbId: PropTypes.string.isRequired,
+    imdbUrl: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 };
