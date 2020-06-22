@@ -20,5 +20,5 @@ export const MoviesList = ({ content }) => (
 );
 
 MoviesList.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.object).isRequired,
+  content: PropTypes.arrayOf(Object).isRequired,
 };
