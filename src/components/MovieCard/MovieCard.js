@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { MovieShape } from '../MovieShape';
 
 export const MovieCard = ({ movie }) => (
   <div className="card">
@@ -34,17 +34,6 @@ export const MovieCard = ({ movie }) => (
   </div>
 );
 
-MovieCard.defaultProps = {
-  movie: PropTypes.object,
-};
-
-MovieCard.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired,
-    imdbUrl: PropTypes.string.isRequired,
-  }),
-};
+MovieCard.propTypes = MovieShape.isRequired;
 
 export default MovieCard;
