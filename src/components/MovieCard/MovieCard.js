@@ -46,5 +46,5 @@ export const MovieShape = PropTypes.shape({
 MovieCard.propTypes = { ...MovieShape };
 
 MovieCard.defaultProps = {
-  description: 'Empty description',
+  description: 'No description',
 };
