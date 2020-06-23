@@ -35,13 +35,15 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
   </div>
 );
 
-MovieCard.propTypes = {
+export const MovieShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
   imdbId: PropTypes.string.isRequired,
-};
+});
+
+MovieCard.propTypes = { ...MovieShape };
 
 MovieCard.defaultProps = {
   description: 'Empty description',
