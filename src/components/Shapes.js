@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ShapeMovieCard = PropTypes.object({
+export const ShapeMovieCard = PropTypes.shape({
   imgUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
