@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
-import PropTypes from 'prop-types';
+import { ShapedMovie } from '../ShapedMovie/ShapedMovie';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <>
@@ -35,9 +35,4 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   </>
 );
 
-MovieCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
-  imdbUrl: PropTypes.string.isRequired,
-};
+MovieCard.propTypes = ShapedMovie;
