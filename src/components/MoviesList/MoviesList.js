@@ -9,5 +9,5 @@ export const MoviesList = ({ movies }) => (
   </div>
 );
 MoviesList.propTypes = {
-  movies: PropTypes.shape().isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
