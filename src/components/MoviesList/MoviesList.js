@@ -13,6 +13,9 @@ export const MoviesList = ({ movies }) => (
         ))}
       </div>
     </div>
+    <div className="sidebar">
+      Sidebar will be here
+    </div>
   </div>
 );
 
