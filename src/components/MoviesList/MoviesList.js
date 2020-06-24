@@ -1,6 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MoviesList.scss';
+import { MovieCard } from '../MovieCard/MovieCard';
+import { ShapeMovieCard } from '../schapes';
 
-export const MoviesList = () => (
-  <>Put the list here</>
+export const MoviesList = ({ movies }) => (
+  <div className="page">
+    <div className="page-content">
+      <div className="movies">
+        {movies.map(item => (
+          <MovieCard key={item.imdbId} {...item} />
+        ))}
+      </div>
+    </div>
+    <div className="sidebar">
+      Sidebar will be here
+    </div>
+  </div>
 );
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(ShapeMovieCard).isRequired,
+};
