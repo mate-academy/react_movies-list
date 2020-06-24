@@ -5,7 +5,9 @@ import { MovieShape } from '../MovieShape';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
-    {movies.map(item => <Moviecard movie={item} />)}
+    {
+      movies.map(item => <Moviecard movie={item} />)
+    }
   </div>
 );
 

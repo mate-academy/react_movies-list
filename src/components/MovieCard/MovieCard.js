@@ -2,7 +2,7 @@ import React from 'react';
 import { MovieShape } from '../MovieShape';
 
 export const MovieCard = ({ movie }) => (
-  <div className="card">
+  <div key={movie.imdbId} className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
