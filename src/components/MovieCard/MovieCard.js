@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const MovieCard = ({ title, descriptions, imgUrl, imdbUrl }) => (
+export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
@@ -23,7 +23,7 @@ export const MovieCard = ({ title, descriptions, imgUrl, imdbUrl }) => (
       </div>
 
       <div className="content">
-        {descriptions}
+        {description}
         <br />
         <a href={imdbUrl}>IMDB</a>
       </div>
@@ -33,7 +33,7 @@ export const MovieCard = ({ title, descriptions, imgUrl, imdbUrl }) => (
 
 export const MovieCardShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
-  descriptions: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
 });

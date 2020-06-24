@@ -8,5 +8,9 @@ export const App = () => (
     <div className="page-content">
       <MoviesList data={moviesFromServer} />
     </div>
+
+    <div className="sidebar">
+      Sidebar will be here
+    </div>
   </div>
 );
