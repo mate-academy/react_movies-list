@@ -3,7 +3,7 @@ import { movieShape } from '../variables';
 import './MovieCard.scss';
 
 export const MovieCard = (
-  { title, description = '', imgUrl, imdbUrl, imdbId },
+  { title, description, imgUrl, imdbUrl, imdbId },
 ) => (
   <>
     <div className="card-image">
