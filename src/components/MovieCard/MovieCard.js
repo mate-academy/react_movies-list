@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
-import { ShapeMovieCard } from '../ShapeMovie';
+import { MovieCardPropType } from '../PropTypes/MovieCardPropType';
 
 export const MovieCard = props => (
   <div className="card">
@@ -35,4 +35,4 @@ export const MovieCard = props => (
   </div>
 );
 
-MovieCard.propTypes = ShapeMovieCard;
+MovieCard.propTypes = MovieCardPropType;

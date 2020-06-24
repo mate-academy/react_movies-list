@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ShapeMovieCard = PropTypes.shape(
+export const MovieCardPropType = PropTypes.shape(
   {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
@@ -9,6 +9,6 @@ export const ShapeMovieCard = PropTypes.shape(
   },
 );
 
-ShapeMovieCard.defaultProps = {
+MovieCardPropType.defaultProps = {
   description: 'no description',
 };
