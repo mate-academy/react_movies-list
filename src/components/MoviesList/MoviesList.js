@@ -12,5 +12,7 @@ export const MoviesList = ({ moviesList }) => (
 );
 
 MoviesList.propTypes = {
-  moviesList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  moviesList: PropTypes.arrayOf(
+    PropTypes.objectOf(PropTypes.string),
+  ).isRequired,
 };
