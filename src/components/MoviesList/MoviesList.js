@@ -15,7 +15,6 @@ export const MoviesList = (props) => {
           description={movie.description}
           imgUrl={movie.imgUrl}
           imdbUrl={movie.imdbUrl}
-          imdbId={movie.imdbId}
         />
       ))}
     </div>
