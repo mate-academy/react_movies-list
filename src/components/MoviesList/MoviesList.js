@@ -1,6 +1,11 @@
 import React from 'react';
-import './MoviesList.scss';
+import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieListShape } from '../Shape';
 
-export const MoviesList = () => (
-  <>Put the list here</>
+export const MoviesList = props => (
+  <div className="movies">
+    {props.movies.map(movie => <MovieCard {...movie} />)}
+  </div>
 );
+
+MoviesList.propTypes = MovieListShape.isRequired;
