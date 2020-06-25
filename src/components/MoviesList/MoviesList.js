@@ -1,7 +1,6 @@
 import React from 'react';
-import './MoviesList.scss';
-import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieListShape } from '../Shape';
 
 export const MoviesList = props => (
   <div className="movies">
@@ -9,6 +8,4 @@ export const MoviesList = props => (
   </div>
 );
 
-MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+MoviesList.propTypes = MovieListShape.isRequired;
