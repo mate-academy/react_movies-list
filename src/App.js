@@ -6,7 +6,7 @@ import MoviesList from './components/MoviesList/MoviesList';
 export const App = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList className="movies" movies={moviesFromServer} />
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar">
