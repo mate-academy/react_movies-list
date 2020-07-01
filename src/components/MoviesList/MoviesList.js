@@ -6,9 +6,9 @@ import { MovieCard, MovieShape } from '../MovieCard/MovieCard';
 export const MoviesList = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <React.Fragment key={movie.imdbId}>
-        <MovieCard movie={movie} />
-      </React.Fragment>
+      <>
+        <MovieCard movie={movie} key={movie.imdbId} />
+      </>
     ))}
   </div>
 );
