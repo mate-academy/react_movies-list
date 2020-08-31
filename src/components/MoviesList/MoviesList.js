@@ -6,7 +6,7 @@ import { MovieCard } from '../MovieCard/MovieCard';
 export const MoviesList = ({ movies }) => (
   <ul className="movies">
     {movies.map(movie => (
-      <li key={movie.imdbId}>
+      <li className="card" key={movie.imdbId}>
         <MovieCard {...movie} />
       </li>
     ))}
@@ -16,7 +16,7 @@ export const MoviesList = ({ movies }) => (
 MoviesList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
-      imdbId: PropTypes.number.isRequired,
+      imdbId: PropTypes.string.isRequired,
     }),
   ),
 };
