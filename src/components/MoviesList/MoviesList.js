@@ -15,5 +15,6 @@ export const MoviesList = ({ movies }) => (
 );
 
 MoviesList.propTypes = {
-  movies: PropTypes.string.isRequired,
+  // eslint-disable-next-line
+  movies: PropTypes.array.isRequired,
 };
