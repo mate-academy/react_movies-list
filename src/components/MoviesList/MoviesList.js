@@ -1,9 +1,9 @@
 import React from 'react';
 import './MoviesList.scss';
-import movies from '../../api/movies.json';
+import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard';
 
-export const MoviesList = () => (
+export const MoviesList = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
       <MovieCard
@@ -13,3 +13,14 @@ export const MoviesList = () => (
     ))}
   </div>
 );
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape = {
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      imgUrl: PropTypes.string.isRequired,
+      imdbUrl: PropTypes.string.isRequired,
+    },
+  ).isRequired,
+};
