@@ -8,7 +8,6 @@ export const MovieCard = ({
   description,
   imgUrl,
   imdbUrl,
-  imdbId,
 }) => (
   <>
     <div className="card-image">
@@ -47,7 +46,6 @@ MovieCard.propTypes = {
   description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
-  imdbId: PropTypes.string.isRequired,
 };
 
 MovieCard.defaultProps = {
