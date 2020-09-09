@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import imdbLogo from '../../images/imdbLogo.jpeg';
 import './MovieCard.scss';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
@@ -15,7 +16,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="/images/imdb-logo.jpeg" alt="imdb" />
+              <img src={imdbLogo} alt="imdb" />
             </figure>
           </div>
 
