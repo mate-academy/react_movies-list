@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard';
+import { MovieCardShape } from '../shapes/MovieCard';
 import './MoviesList.scss';
 
 export const MoviesList = ({ films }) => (
@@ -14,14 +15,7 @@ export const MoviesList = ({ films }) => (
 );
 
 MoviesList.propTypes = {
-  films: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      description: PropTypes.string,
-      imgUrl: PropTypes.string,
-      imdbUrl: PropTypes.string,
-    }),
-  ),
+  films: PropTypes.arrayOf(MovieCardShape),
 };
 
 MoviesList.defaultProps = {
