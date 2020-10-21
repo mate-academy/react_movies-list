@@ -3,7 +3,7 @@ import { MovieCardShape } from '../shapes/MovieCard';
 import './MovieCard.scss';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
-  <>
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img src={imgUrl} alt="Film logo" />
@@ -29,11 +29,11 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </>
+  </div>
 );
 
-MovieCard.propTypes = { ...MovieCardShape };
+MovieCard.propTypes = MovieCardShape;
 
 MovieCard.defaultProps = {
-  description: '',
+  description: 'no description',
 };
