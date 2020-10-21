@@ -7,8 +7,8 @@ import { MovieCardShape } from '../shapes/MovieCardShape';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
-    {movies.map(film => (
-      <MovieCard {...film} key={movies.imdbId} />
+    {movies.map(movie => (
+      <MovieCard {...movie} key={movie.imdbId} />
     ))}
   </div>
 );
