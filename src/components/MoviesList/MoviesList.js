@@ -6,7 +6,7 @@ import { MoviesListShape } from '../../shapes/MoviesListShape';
 export const MoviesList = ({ list }) => (
   <div className="movies">
     {list.map(movie => (
-      <MovieCard {... movie} key="movie.imdbId" />
+      <MovieCard {... movie} key={movie.imdbId} />
     ))}
   </div>
 );
