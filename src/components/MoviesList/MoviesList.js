@@ -1,6 +1,14 @@
 import React from 'react';
+import { MovieCard } from '../MovieCard';
+import { MoviesListShape } from '../shapes/MoviesListShape';
 import './MoviesList.scss';
 
-export const MoviesList = () => (
-  <>Put the list here</>
+export const MoviesList = ({ movies }) => (
+  <div className="movies">
+    {movies.map(movie => (
+      <MovieCard key={movie.imdbId} {...movie} />
+    ))}
+  </div>
 );
+
+MoviesList.propTypes = MoviesListShape;
