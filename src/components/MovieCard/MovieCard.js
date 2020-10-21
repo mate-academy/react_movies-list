@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { MovieCardShape } from '../shaps/MovieCardShape';
 import './MovieCard.scss';
 
 export const MovieCard = ({
@@ -22,7 +22,7 @@ export const MovieCard = ({
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="/images/imdb-logo.jpeg" alt="imdb" />
+            <img src="images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 
@@ -40,9 +40,4 @@ export const MovieCard = ({
   </>
 );
 
-MovieCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
-  imdbUrl: PropTypes.string.isRequired,
-};
+MovieCard.propTypes = MovieCardShape;
