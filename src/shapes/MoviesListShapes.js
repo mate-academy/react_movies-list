@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
+import { MovieCardShape } from './MovieCardShapes';
 
 export const MoviesListShape = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      imdbId: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  movies: PropTypes.arrayOf(MovieCardShape).isRequired,
 };
