@@ -5,11 +5,11 @@ import { MovieCardShape } from '../shapes/MonieCardShape';
 import './MoviesList.scss';
 
 export const MoviesList = ({ movies }) => (
-  <div className="movies">
+  <ul className="movies">
     {movies.map(movie => (
       <MovieCard {...movie} key={movie.imdbId} />
     ))}
-  </div>
+  </ul>
 );
 
 MoviesList.propTypes = {
