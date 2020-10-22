@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import './MoviesList.scss';
 
 import { MovieCard } from '../MovieCard';
+import { MovieCardShape } from '../shapes/MovieCardShape';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
@@ -13,7 +14,7 @@ export const MoviesList = ({ movies }) => (
 );
 
 MoviesList.propTypes = {
-  movies: propTypes.arrayOf(propTypes.object),
+  movies: propTypes.arrayOf(MovieCardShape),
 };
 
 MoviesList.defaultProps = {
