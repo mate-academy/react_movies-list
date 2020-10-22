@@ -1,1 +1,24 @@
+.image {
+  margin: 0 auto;
+  width: 130px;
 
+  transition: transform 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+.media {
+  display: flex;
+
+  &-left {
+    align-self: center;
+  }
+
+  &-content {
+    font-size: 18px;
+    text-align: center;
+  }
+}
