@@ -1,5 +1,5 @@
 import React from 'react';
-import { MovieCard } from './components/MovieCard/MovieCard';
+import { MoviesList } from './components/MoviesList';
 import './App.scss';
 
 import moviesFromServer from './api/movies.json';
@@ -7,7 +7,7 @@ import moviesFromServer from './api/movies.json';
 export const App = () => (
   <div className="page">
     <div className="page-content">
-      <MovieCard movies={moviesFromServer} />
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar">
