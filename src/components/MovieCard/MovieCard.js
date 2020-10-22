@@ -4,7 +4,7 @@ import { MovieCardShape } from '../shape/MovieCardShape';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <>
-    <div className="card">
+    <li className="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
@@ -35,7 +35,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
           <a href={imdbUrl}>IMDB</a>
         </div>
       </div>
-    </div>
+    </li>
   </>
 );
 
