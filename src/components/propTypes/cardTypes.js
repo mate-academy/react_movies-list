@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const cardTypes = {
+export const MovieCardPropType = {
   imgUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
