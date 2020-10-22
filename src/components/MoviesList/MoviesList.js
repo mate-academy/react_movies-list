@@ -5,13 +5,18 @@ import './MoviesList.scss';
 import { MovieCardShape } from '../shapes/MovieCardShape';
 
 export const MoviesList = ({ movies }) => (
-  movies.map(
-    movie => (
-      <MovieCard {...movie} key={movie.imdbId} />
-    ),
-  )
+
+  <ul className="movies">
+    {movies.map(
+      movie => (
+        <li className="card" key={movie.imdbId}>
+          <MovieCard {...movie} />
+        </li>
+      ),
+    )}
+  </ul>
 );
 
 MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(MovieCardShape),
+  movies: PropTypes.arrayOf(MovieCardShape).isRequired,
 };

@@ -6,3 +6,7 @@ export const MovieCardShape = PropTypes.shape({
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
 }).isRequired;
+
+export const defaultProps = {
+  description: 'No description for this movie',
+};

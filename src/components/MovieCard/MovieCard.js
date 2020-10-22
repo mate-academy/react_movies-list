@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
-import { MovieCardShape } from '../shapes/MovieCardShape';
+import { MovieCardShape, defaultProps } from '../shapes/MovieCardShape';
 
 export const MovieCard = ({
   title,
@@ -8,7 +8,7 @@ export const MovieCard = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <div className="card">
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -37,11 +37,9 @@ export const MovieCard = ({
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </div>
+  </>
 );
 
 MovieCard.propTypes = MovieCardShape;
 
-MovieCard.defaultProps = {
-  description: 'No description for this movie',
-};
+MovieCard.defaultProps = defaultProps;
