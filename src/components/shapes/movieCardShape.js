@@ -5,6 +5,6 @@ const movieCardShape = PropTypes.shape({
   description: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
-});
+}).isRequired;
 
 export default movieCardShape;
