@@ -2,13 +2,14 @@ import React from 'react';
 import './MovieCard.scss';
 import { MovieCardShape } from '../../shapes/MovieCardShape';
 
-export const MovieCard = props => (
+export const MovieCard = ({ title, description, imdbUrl, imgUrl }) => (
+
   <>
     <div className="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
-            src={props.movie.imgUrl}
+            src={imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -18,31 +19,30 @@ export const MovieCard = props => (
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="/images/imdb-logo.jpeg" alt="imdb" />
+              <img src="./images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
           <div className="media-content">
             <p className="title is-8">
-              {props.movie.title}
+              {title}
             </p>
           </div>
         </div>
 
         <div className="content">
-          {props.movie.description}
+          {description}
           <br />
-          <a href={props.movie.imdbUrl}>IMDB</a>
+          <a href={imdbUrl}>IMDB</a>
         </div>
       </div>
     </div>
   </>
 );
 
-MovieCard.propTypes = {
-  movie: MovieCardShape,
-};
+MovieCard.propTypes = MovieCardShape;
 
 MovieCard.defaultProps = {
   movie: {},
+  description: 'No description',
 };

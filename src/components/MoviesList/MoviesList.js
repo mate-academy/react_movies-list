@@ -11,7 +11,7 @@ export const MoviesList = props => (
       {props.movies.map(movieFromServer => (
         <MovieCard
           key={movieFromServer.imdbId}
-          movie={movieFromServer}
+          {...movieFromServer}
         />
       ))}
 
