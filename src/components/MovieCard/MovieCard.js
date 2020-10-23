@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
-import { MovieCardShape } from './MovieCardShape';
+import { MovieCardShape } from '../../shapes/MovieCardShape';
 
 export const MovieCard = ({ movie }) => {
   const { imgUrl, title, description, imdbUrl } = movie;
