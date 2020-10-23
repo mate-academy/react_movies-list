@@ -4,13 +4,11 @@ import { MovieCard } from '../MovieCard';
 import { MoviesListShape } from './MoviesListShape';
 
 export const MoviesList = ({ movies }) => (
-  <div className="movies">
+  <ul className="movies">
     {movies.map(movie => (
-      <div className="card" key={movie.imdbId}>
-        <MovieCard {...movie} />
-      </div>
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
-  </div>
+  </ul>
 );
 
 MoviesList.propTypes = MoviesListShape;
