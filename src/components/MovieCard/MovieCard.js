@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import MoviesCardShape from '../Shape/shape';
 
 export const MovieCard = ({ imgUrl, title, description, imdbUrl }) => (
   <>
@@ -17,7 +17,7 @@ export const MovieCard = ({ imgUrl, title, description, imdbUrl }) => (
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="/images/imdb-logo.jpeg" alt="imdb" />
+              <img src="./images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
@@ -36,9 +36,4 @@ export const MovieCard = ({ imgUrl, title, description, imdbUrl }) => (
   </>
 );
 
-MovieCard.propTypes = {
-  imdbUrl: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
+MovieCard.propTypes = MoviesCardShape;
