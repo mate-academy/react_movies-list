@@ -3,6 +3,7 @@ import './App.scss';
 import PropTypes from 'prop-types';
 import moviesFromServer from './api/movies.json';
 import MoviesList from './components/MoviesList/MoviesList';
+import { MovieCardShape } from './components/shapes/MovieCardShape';
 
 export const App = () => (
   <div className="page">
@@ -17,5 +18,5 @@ export const App = () => (
 );
 
 App.prototype = {
-  moviesFromServer: PropTypes.array.isRequired,
+  moviesFromServer: PropTypes.arrayOf(MovieCardShape).isRequired,
 };
