@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
-import propTypes from 'prop-types';
+import { CardShape } from '../shapes/CardShape';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <div className="card">
@@ -16,7 +16,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="/images/imdb-logo.jpeg" alt="imdb" />
+            <img src="./images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
         <div className="media-content">
@@ -36,9 +36,4 @@ MovieCard.defaultProps = {
   description: '',
 };
 
-MovieCard.propTypes = {
-  title: propTypes.string.isRequired,
-  description: propTypes.string,
-  imgUrl: propTypes.string.isRequired,
-  imdbUrl: propTypes.string.isRequired,
-};
+MovieCard.propTypes = CardShape;
