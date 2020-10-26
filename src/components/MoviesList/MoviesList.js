@@ -10,12 +10,5 @@ export const MoviesList = ({ moviesFromServer }) => (
 );
 
 MoviesList.propTypes = {
-  moviesFromServer: PropTypes.arrayOf(
-    PropTypes.shape = {
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string,
-      imgUrl: PropTypes.string.isRequired,
-      imdbUrl: PropTypes.string.isRequired,
-    },
-  ).isRequired,
+  moviesFromServer: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
