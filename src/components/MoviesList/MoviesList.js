@@ -1,7 +1,7 @@
 import React from 'react';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
-import { ListShape } from '../shapes/ListShape';
+import { MovieListShape } from '../shapes/MovieListShape';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
@@ -11,4 +11,4 @@ export const MoviesList = ({ movies }) => (
   </div>
 );
 
-MoviesList.propTypes = ListShape;
+MoviesList.propTypes = MovieListShape;

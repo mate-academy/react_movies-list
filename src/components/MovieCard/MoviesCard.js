@@ -1,6 +1,6 @@
 import React from 'react';
-import './MovieCard.scss';
-import { CardShape } from '../shapes/CardShape';
+import './MoviesCard.scss';
+import { MovieCardShape } from '../shapes/MovieCardShape';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <div className="card">
@@ -36,4 +36,4 @@ MovieCard.defaultProps = {
   description: '',
 };
 
-MovieCard.propTypes = CardShape;
+MovieCard.propTypes = MovieCardShape;
