@@ -1,6 +1,19 @@
 import React from 'react';
+import MovieCard from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
-export const MoviesList = () => (
-  <>Put the list here</>
-);
+export default function MoviesList(props) {
+  return props.filmsList.map((item) => {
+    const { title, description, imgUrl, imdbUrl, imdbId } = item;
+
+    return (
+      <MovieCard
+        title={title}
+        description={description}
+        imgUrl={imgUrl}
+        imdbUrl={imdbUrl}
+        key={imdbId}
+      />
+    );
+  });
+}
