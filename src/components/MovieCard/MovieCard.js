@@ -17,7 +17,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src={imdbUrl} alt="imdb" />
+            <img src="./images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 
@@ -29,7 +29,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
       <div className="content">
         {description}
         <br />
-        <a href={`https://www.imdb.com/title/${imdbId}`}>IMDB</a>
+        <a href="https://www.imdb.com/title/tt0457939">IMDB</a>
       </div>
     </div>
   </>
