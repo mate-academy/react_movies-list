@@ -37,8 +37,12 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
 
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
   imdbId: PropTypes.string.isRequired,
+};
+
+MovieCard.defaultProps = {
+  description: '',
 };
