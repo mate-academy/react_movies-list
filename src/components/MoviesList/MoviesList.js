@@ -6,14 +6,14 @@ import { MovieCard } from '../MovieCard';
 
 export const MoviesList = props => (
   <>
-    {props.arr.map(obj => (
+    {props.movies.map(obj => (
       <MovieCard {...obj} key={obj.imdbId} />
     ))}
   </>
 );
 
 MoviesList.propTypes = {
-  arr: PropTypes.arrayOf(
+  movies: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
@@ -25,5 +25,5 @@ MoviesList.propTypes = {
 };
 
 MoviesList.defaultProps = {
-  arr: [],
+  movies: [],
 };
