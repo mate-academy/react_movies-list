@@ -6,10 +6,7 @@ export const MovieCard = ({ imgUrl, title, imdbUrl, description }) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
-        <img
-          src={imgUrl}
-          alt="Film logo"
-        />
+        <img src={imgUrl} alt="Film logo" />
       </figure>
     </div>
 
@@ -17,7 +14,7 @@ export const MovieCard = ({ imgUrl, title, imdbUrl, description }) => (
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="/images/imdb-logo.jpeg" alt="imdb" />
+            <img src="./images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 

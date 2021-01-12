@@ -5,8 +5,8 @@ import { MovieCard } from '../MovieCard/MovieCard';
 
 export const MoviesList = ({ moviesFromServer }) => (
   <>
-    {moviesFromServer.map(item => (
-      <MovieCard key={item.imdbId} {...item} />
+    {moviesFromServer.map(movie => (
+      <MovieCard key={movie.imdbId} {...movie} />
     ))}
   </>
 );
