@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import { MovieCard } from '../MovieCard';
 
-export const MoviesList = props => (
+export const MoviesList = ({ movies }) => (
   <>
-    {props.movies.map(movie => (
+    {movies.map(movie => (
       <MovieCard {...movie} key={movie.imdbId} />
     ))}
   </>
