@@ -7,7 +7,7 @@ export const App = () => (
   <div className="page">
     <div className="page-content">
       <div className="movies">
-        <MoviesList arr={moviesFromServer} />
+        <MoviesList movies={moviesFromServer} />
       </div>
 
     </div>
