@@ -1,16 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
 import './MoviesList.scss';
+import { MovieCardType } from '../types/MovieCardType';
 
 export const MovieList = ({ movies }) => {
-  const MoviesArray = movies.map(el => (
-    <div className="movies" key={el.imdbId}>
+  const MoviesArray = movies.map(movie => (
+    <div className="movies">
       <MovieCard
-        title={el.title}
-        description={el.description}
-        imgUrl={el.imgUrl}
-        imdbUrl={el.imdbUrl}
-        imdbId={el.imdbId}
+        key={movie.imdbId}
+        movie={movie}
       />
     </div>
   ));
@@ -18,4 +17,8 @@ export const MovieList = ({ movies }) => {
   return (
     MoviesArray
   );
+};
+
+MovieList.propTypes = {
+  source: PropTypes.arrayOf(MovieCardType),
 };
