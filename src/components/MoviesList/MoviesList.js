@@ -1,7 +1,7 @@
 import React from 'react';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
-import { MoviesListType } from '../../types';
+import { MoviesListTypes } from '../../types';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
@@ -9,4 +9,4 @@ export const MoviesList = ({ movies }) => (
   </div>
 );
 
-MoviesList.propTypes = MoviesListType;
+MoviesList.propTypes = MoviesListTypes;

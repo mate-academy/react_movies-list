@@ -8,7 +8,7 @@ export const MovieCardType = {
   description: PropTypes.string,
 };
 
-export const MoviesListType = {
+export const MoviesListTypes = {
   movies: PropTypes.arrayOf(
     MovieCardType,
   ).isRequired,
