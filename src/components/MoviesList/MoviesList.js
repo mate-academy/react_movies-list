@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TypeList } from '../../types';
 import { MovieCard } from '../MovieCard';
-import './MoviesList.scss';
 
 export const MoviesList = ({ list }) => (
   <div className="movies">
