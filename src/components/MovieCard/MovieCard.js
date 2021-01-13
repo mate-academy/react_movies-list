@@ -35,4 +35,4 @@ export const MovieCard = ({ imgUrl, title, description, imdbUrl, imdbId }) => (
   </div>
 );
 
-MovieCard.propTypes = MovieTypes.arrayOf().isRequired;
+MovieCard.propTypes = MovieTypes.isRequired;
