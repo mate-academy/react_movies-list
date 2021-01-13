@@ -1,5 +1,5 @@
 import React from 'react';
-import { MovieTypes } from '../../types';
+import { MovieType } from '../../types';
 import './MovieCard.scss';
 
 export const MovieCard = ({ imgUrl, title, description, imdbUrl, imdbId }) => (
@@ -35,4 +35,4 @@ export const MovieCard = ({ imgUrl, title, description, imdbUrl, imdbId }) => (
   </div>
 );
 
-MovieCard.propTypes = MovieTypes.isRequired;
+MovieCard.propTypes = MovieType.isRequired;

@@ -1,10 +1,11 @@
 import React from 'react';
-import { MovieTypes } from '../../types';
-
+import PropTypes from 'prop-types';
+import { MovieType } from '../../types';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
 export const MoviesList = ({ movies }) => (
+
   <div className="movies">
     {movies.map(movie => (
       <MovieCard
@@ -15,10 +16,5 @@ export const MoviesList = ({ movies }) => (
   </div>
 );
 MoviesList.propTypes = {
-  movies: MovieTypes.isRequired,
+  movies: PropTypes.arrayOf(MovieType).isRequired,
 };
-/*
-MoviesList.defaultProps = {
-  movies: [],
-};
-*/
