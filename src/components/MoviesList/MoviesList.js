@@ -4,18 +4,18 @@ import { MovieCard } from '../MovieCard';
 import { MovieCardType } from '../../types';
 import './MoviesList.scss';
 
-export const MoviesList = ({ source }) => (
+export const MoviesList = ({ movies }) => (
   <div className="movies">
-    {source.map(movie => (
+    {movies.map(movie => (
       <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );
 
 MoviesList.defaultProps = {
-  source: '',
+  movies: [],
 };
 
 MoviesList.propTypes = {
-  source: PropTypes.arrayOf(MovieCardType),
+  movies: PropTypes.arrayOf(MovieCardType),
 };
