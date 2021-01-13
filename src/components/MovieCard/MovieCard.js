@@ -2,13 +2,13 @@ import React from 'react';
 import './MovieCard.scss';
 import { moviesType } from '../moviesType';
 
-export const MovieCard = ({ title, description, img, imdb }) => (
+export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   <>
     <div className="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
-            src={img}
+            src={imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -30,7 +30,7 @@ export const MovieCard = ({ title, description, img, imdb }) => (
         <div className="content">
           {description}
           <br />
-          <a href={imdb}>IMDB</a>
+          <a href={imdbUrl}>IMDB</a>
         </div>
       </div>
     </div>
