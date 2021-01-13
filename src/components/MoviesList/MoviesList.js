@@ -11,6 +11,7 @@ export const MoviesList = ({ movies }) => (
         description={movie.description}
         imgUrl={movie.imgUrl}
         imdbUrl={movie.imdbUrl}
+        key={movie.imdbId}
       />
     ))}
   </div>
