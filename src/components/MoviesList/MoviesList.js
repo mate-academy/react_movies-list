@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import { MovieTypes } from '../../types';
+
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
@@ -14,17 +15,10 @@ export const MoviesList = ({ movies }) => (
   </div>
 );
 MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: string.isRequired,
-      imgUrl: string.isRequired,
-      imdbUrl: string.isRequired,
-      imdbId: string.isRequired,
-      description: string,
-    }),
-  ),
+  movies: MovieTypes.isRequired,
 };
-
+/*
 MoviesList.defaultProps = {
   movies: [],
 };
+*/
