@@ -8,4 +8,4 @@ export const MovieType = PropTypes.shape({
   description: string.isRequired,
 });
 
-export const MovieTypes = PropTypes.arrayOf(MovieType);
+export const MoviesType = PropTypes.arrayOf(MovieType);
