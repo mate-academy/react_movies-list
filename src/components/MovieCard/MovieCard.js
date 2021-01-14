@@ -36,3 +36,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
 );
 
 MovieCard.propTypes = MovieCardType;
+
+MovieCard.defaultProps = {
+  description: 'Movie description',
+};
