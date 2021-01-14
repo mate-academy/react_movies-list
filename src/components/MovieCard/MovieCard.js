@@ -41,3 +41,6 @@ export const MovieCard = ({
 );
 
 MovieCard.propTypes = moviesTypes;
+MovieCard.defaultProps = {
+  description: '',
+};
