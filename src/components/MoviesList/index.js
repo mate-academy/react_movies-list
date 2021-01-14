@@ -1,1 +1,3 @@
-export * from './MoviesList';
+import MoviesList from './MoviesList';
+
+export default MoviesList;
