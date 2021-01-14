@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { TypeMovie } from '../../types';
 import './MoviesList.scss';
+import PropTypes from 'prop-types';
+import { TypeMovie } from '../../types';
 import { MovieCard } from '../MovieCard';
 
 export const MoviesList = ({ movies }) => (
@@ -15,5 +16,5 @@ export const MoviesList = ({ movies }) => (
 );
 
 MoviesList.propTypes = {
-  movies: TypeMovie.isRequired,
+  movies: PropTypes.arrayOf(TypeMovie).isRequired,
 };
