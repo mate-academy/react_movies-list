@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const TypeList = PropTypes.shape({
+export const TypeMovies = PropTypes.shape({
   imdbId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,

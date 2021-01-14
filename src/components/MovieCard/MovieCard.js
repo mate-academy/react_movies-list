@@ -1,6 +1,6 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TypeMovies } from '../../types';
 
 export const MovieCard = ({
   title,
@@ -40,12 +40,7 @@ export const MovieCard = ({
   </div>
 );
 
-MovieCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  imgUrl: PropTypes.string.isRequired,
-  imdbUrl: PropTypes.string.isRequired,
-};
+MovieCard.propTypes = TypeMovies;
 
 MovieCard.defaultProps = {
   description: '',
