@@ -41,4 +41,8 @@ export const MovieCard = ({
   </div>
 );
 
+MovieCard.defaultProps = {
+  description: 'No data',
+};
+
 MovieCard.propTypes = MovieType.isRequired;
