@@ -4,9 +4,9 @@ import './MoviesList.scss';
 import MovieCard from '../MovieCard';
 import { CardShape } from '../../types';
 
-const MoviesList = ({ cinemaAll }) => (
+const MoviesList = ({ movies }) => (
   <>
-    {cinemaAll.map(film => (
+    {movies.map(film => (
       <div className="card" key={film.imdbId}>
         <MovieCard {...film} />
       </div>
@@ -15,7 +15,7 @@ const MoviesList = ({ cinemaAll }) => (
 );
 
 MoviesList.propTypes = {
-  cinemaAll: PropTypes.arrayOf(CardShape).isRequired,
+  movies: PropTypes.arrayOf(CardShape).isRequired,
 };
 
 export default MoviesList;
