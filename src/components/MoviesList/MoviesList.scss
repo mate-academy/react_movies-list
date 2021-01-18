@@ -1,1 +1,11 @@
+.card {
+  background-color: #e6f0fa;
 
+  &-image {
+    padding-top: 1.5rem;
+  }
+
+  .media-content {
+    align-self: center;
+  }
+}
