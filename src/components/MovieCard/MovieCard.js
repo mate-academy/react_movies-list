@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MovieCard.scss';
 
-export const MovieCard = ({ title, description, imbdUrl, imgUrl }) => (
+export const MovieCard = ({ title, description, imdbUrl, imgUrl }) => (
   <>
     <div className="card">
       <div className="card-image">
@@ -30,7 +30,7 @@ export const MovieCard = ({ title, description, imbdUrl, imgUrl }) => (
         <div className="content">
           {description}
           <br />
-          <a href={imbdUrl}>IMDB</a>
+          <a href={imdbUrl}>IMDB</a>
         </div>
       </div>
     </div>
@@ -41,5 +41,5 @@ MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  imbdUrl: PropTypes.string.isRequired,
+  imdbUrl: PropTypes.string.isRequired,
 };
