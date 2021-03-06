@@ -4,13 +4,13 @@ import { MovieCard } from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
 export const MoviesList = ({ movies }) => {
-  const movieList = movies.map(
-    movie => <MovieCard key={movie.imbdId} {...movie} />,
+  const moviesList = movies.map(
+    movie => <MovieCard key={movie.imdbId} {...movie} />,
   );
 
   return (
     <div className="movies">
-      {movieList}
+      {moviesList}
     </div>
   );
 };
@@ -18,7 +18,7 @@ export const MoviesList = ({ movies }) => {
 MoviesList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
-      key: PropTypes.number.isRequired,
+      imdbId: PropTypes.number.isRequired,
     }),
   ),
 };

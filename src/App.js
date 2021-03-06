@@ -12,5 +12,4 @@ export const App = () => (
       Sidebar will be here
     </div>
   </div>
-
 );
