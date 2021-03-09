@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
 import './MoviesList.scss';
-import { MovieTypes } from '../MovieTypes/MovieTypes';
+import { MovieType } from '../MovieTypes/MovieTypes';
 
 export const MoviesList = ({ movies }) => (
   <div className="movies">
@@ -14,7 +14,7 @@ export const MoviesList = ({ movies }) => (
 
 MoviesList.propTypes = {
   movies: PropTypes.arrayOf(
-    PropTypes.shape({ MovieTypes }),
+    PropTypes.shape({ MovieType }),
   ),
 };
 
