@@ -28,7 +28,9 @@ export const MovieCard = ({
         </div>
 
         <div className="media-content">
-          <p className="title is-8">{title}</p>
+          <p className="title is-8">
+            {title}
+          </p>
         </div>
       </div>
 
