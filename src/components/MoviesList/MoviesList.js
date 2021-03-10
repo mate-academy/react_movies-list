@@ -6,13 +6,14 @@ import { MovieType } from '../../types';
 export const MoviesList = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <MovieCard
-        key={movie.imdbId}
-        title={movie.title}
-        description={movie.description}
-        imagePath={movie.imgUrl}
-        imdbPath={movie.imdbUrl}
-      />
+      <div key={movie.imdbId}>
+        <MovieCard
+          title={movie.title}
+          description={movie.description}
+          imgUrl={movie.imgUrl}
+          imdbUrl={movie.imdbUrl}
+        />
+      </div>
     ))}
   </div>
 );

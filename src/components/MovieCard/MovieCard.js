@@ -4,14 +4,14 @@ import { MovieType } from '../../types';
 export const MovieCard = ({
   title,
   description,
-  imagePath,
-  imdbPath,
+  imgUrl,
+  imdbUrl,
 }) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-          src={imagePath}
+          src={imgUrl}
           alt="Film logo"
         />
       </figure>
@@ -33,7 +33,7 @@ export const MovieCard = ({
       <div className="content">
         {description}
         <br />
-        <a href={imdbPath}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>
