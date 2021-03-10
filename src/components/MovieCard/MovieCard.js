@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './MovieCard.scss';
 import { MovieType } from '../MovieTypes/MovieTypes';
 
@@ -37,5 +36,5 @@ export const MovieCard = ({ movie }) => (
 );
 
 MovieCard.propTypes = {
-  movie: PropTypes.arrayOf(MovieType).isRequired,
+  movie: MovieType.isRequired,
 };
