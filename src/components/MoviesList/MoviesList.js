@@ -13,9 +13,7 @@ export const MoviesList = ({ movies }) => (
 );
 
 MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({ MovieType }),
-  ),
+  movies: PropTypes.arrayOf({ MovieType }),
 };
 
 MoviesList.defaultProps = {
