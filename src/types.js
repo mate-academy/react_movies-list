@@ -5,4 +5,5 @@ export const MovieType = PropTypes.shape({
   description: PropTypes.string.isRequired,
   imagePath: PropTypes.string.isRequired,
   imdbPath: PropTypes.string.isRequired,
+  imdbId: PropTypes.number,
 });

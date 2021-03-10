@@ -39,4 +39,4 @@ export const MovieCard = ({
   </div>
 );
 
-MovieCard.propTypes = MovieType;
+MovieCard.propTypes = MovieType.isRequired;
