@@ -37,5 +37,5 @@ export const MovieCard = ({ movie }) => (
 );
 
 MovieCard.propTypes = {
-  movie: PropTypes.arrayOf({ MovieType }).isRequired,
+  movie: PropTypes.arrayOf(MovieType).isRequired,
 };
