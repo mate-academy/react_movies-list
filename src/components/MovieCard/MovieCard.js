@@ -2,7 +2,12 @@ import React from 'react';
 import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
-export const MovieCard = ({ imgUrl, title, description, imdbUrl }) => (
+export const MovieCard = ({
+  imgUrl,
+  title,
+  description,
+  imdbUrl,
+}) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
