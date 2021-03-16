@@ -2,16 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './MoviesList.scss';
-import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieCard } from '../MovieCard';
 
-export const MoviesList = ({ list }) => (
+export const MoviesList = ({ movies }) => (
   <div className="movies">
-    {list.map(movie => (
-      <MovieCard {...movie} />
+    {movies.map(movie => (
+      <div className="card" key={movie.imdbId}>
+        <MovieCard {...movie} />
+      </div>
     ))}
   </div>
 );
 
 MoviesList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      imdbId: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };

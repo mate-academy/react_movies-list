@@ -9,7 +9,7 @@ export const MovieCard = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <div className="card">
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -23,7 +23,7 @@ export const MovieCard = ({
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="/images/imdb-logo.jpeg" alt="imdb" />
+            <img src="./images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 
@@ -40,7 +40,7 @@ export const MovieCard = ({
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </div>
+  </>
 );
 
 MovieCard.defaultProps = {
