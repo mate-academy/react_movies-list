@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MovieCard.scss';
 
-export const MovieCard = ({ movieInfo }) => (
+export const MovieCards = ({ card }) => (
   <>
-    {movieInfo.map(movie => (
+    {card.map(movie => (
       <div
         className="card"
         key={movie.imdbId}
@@ -39,8 +39,8 @@ export const MovieCard = ({ movieInfo }) => (
   </>
 );
 
-MovieCard.propTypes = {
-  movieInfo: PropTypes.arrayOf(PropTypes.shape({
+MovieCards.propTypes = {
+  card: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
     imgUrl: PropTypes.string,
