@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './MovieCard.scss';
 
-export const MovieCard = () => ({
+export const MovieCard = ({
   title,
   description,
   imgUrl,
@@ -35,7 +35,7 @@ export const MovieCard = () => ({
       </div>
 
       <div className="content">
-        {description || 'No description'}
+        {description}
         <br />
         <a href={imdbUrl}>IMDB</a>
       </div>
@@ -48,4 +48,8 @@ MovieCard.propTypes = {
   description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
+};
+
+MovieCard.defaultProps = {
+  description: 'None',
 };
