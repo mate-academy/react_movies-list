@@ -12,7 +12,6 @@ export const MoviesList = ({ movies }) => (
             <MovieCard {...film} />
           </div>
         ))}
-        ;
       </div>
     </div>
 
