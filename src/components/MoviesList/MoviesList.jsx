@@ -2,6 +2,7 @@ import React from 'react';
 import './MoviesList.scss';
 import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
+import { Sidebar } from '../Sidebar';
 
 export const MoviesList = ({ movies }) => (
   <>
@@ -15,9 +16,7 @@ export const MoviesList = ({ movies }) => (
       </div>
     </div>
 
-    <div className="sidebar">
-      Sidebar will be here
-    </div>
+    <Sidebar />
   </>
 );
 

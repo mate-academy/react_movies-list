@@ -12,6 +12,7 @@ export const MovieCard = ({
     <div className="card-image">
       <figure className="image is-4by3">
         <img
+          className="photo"
           src={imgUrl}
           alt="Film logo"
         />
@@ -34,7 +35,13 @@ export const MovieCard = ({
       <div className="content">
         {description}
         <br />
-        <a href={imdbUrl}>IMDB</a>
+        <a
+          href={imdbUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          IMDB
+        </a>
       </div>
     </div>
   </>
