@@ -7,11 +7,11 @@ export const MoviesList = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
       <MovieCard
-        key={movie.imbdId}
+        key={movie.imdbId}
         title={movie.title}
         description={movie.description}
         imgUrl={movie.imgUrl}
-        imbdUrl={movie.imbdUrl}
+        imdbUrl={movie.imdbUrl}
       />
     ))}
   </div>
@@ -23,7 +23,7 @@ MoviesList.propTypes = {
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
       imgUrl: PropTypes.string.isRequired,
-      imbdUrl: PropTypes.string.isRequired,
+      imdbUrl: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

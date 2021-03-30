@@ -6,7 +6,7 @@ export const MovieCard = ({
   title,
   description,
   imgUrl,
-  imbdUrl,
+  imdbUrl,
 }) => (
   <div className="card">
     <div className="card-image">
@@ -34,7 +34,7 @@ export const MovieCard = ({
       <div className="content">
         {description}
         <br />
-        <a href={imbdUrl}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@ MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
-  imbdUrl: PropTypes.string.isRequired,
+  imdbUrl: PropTypes.string.isRequired,
 };
 
 MovieCard.defaultProps = {
