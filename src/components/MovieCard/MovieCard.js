@@ -20,7 +20,6 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl, imdbId }) => (
             <img src="./images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
-
         <div className="media-content">
           <p className="title is-8">{title}</p>
         </div>
