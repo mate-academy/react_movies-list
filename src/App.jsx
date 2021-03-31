@@ -1,7 +1,7 @@
 import React from 'react';
 import './app.scss';
 import moviesFromServer from './api/movies.json';
-import { MoviesList } from './components/MoviesList/MoviesList';
+import { MoviesList } from './components/MoviesList';
 
 export const App = () => (
   <div className="page">
