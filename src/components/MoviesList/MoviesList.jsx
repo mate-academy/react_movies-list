@@ -6,7 +6,6 @@ import { movieShape } from '../shapes/index';
 import './MoviesList.scss';
 
 export const MoviesList = ({ movies }) => (
-  <>
     <div className="page-content">
       <div className="movies">
         {movies.map(movie => (
@@ -16,7 +15,6 @@ export const MoviesList = ({ movies }) => (
         ))}
       </div>
     </div>
-  </>
 );
 
 MoviesList.propTypes = {
