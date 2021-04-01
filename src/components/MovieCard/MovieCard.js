@@ -14,6 +14,7 @@ export const MovieCard = ({
         <img
           src={imgUrl}
           alt="Film logo"
+          className="card-image__img"
         />
       </figure>
     </div>
