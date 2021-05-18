@@ -1,6 +1,6 @@
 import React from 'react';
 import './MoviesList.scss';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard';
 
 export const MoviesList = ({ movies }) => (
@@ -8,9 +8,7 @@ export const MoviesList = ({ movies }) => (
     <div className="page-content">
       <div className="movies">
         {movies.map(movie => (
-          <div className="card" key={movie.imdbId}>
-            <MovieCard {...movie} />
-          </div>
+          <MovieCard {...movie} key={movie.imdbId} />
         ))}
       </div>
     </div>
@@ -22,9 +20,9 @@ export const MoviesList = ({ movies }) => (
 );
 
 MoviesList.propTypes = {
-  movies: propTypes.arrayOf(
-    propTypes.shape({
-      imdbId: propTypes.number.isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      imdbId: PropTypes.number.isRequired,
     }),
   ),
 };
