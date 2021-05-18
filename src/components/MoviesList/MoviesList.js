@@ -1,7 +1,6 @@
 import React from 'react';
 import './MoviesList.scss';
 import PropTypes from 'prop-types';
-// import moviesFromServer from '../../api/movies.json';
 import { MovieCard } from '../MovieCard';
 
 export const MoviesList = ({ movies }) => (
