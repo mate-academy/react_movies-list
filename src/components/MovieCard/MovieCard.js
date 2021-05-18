@@ -3,7 +3,12 @@ import propTypes from 'prop-types';
 
 import './MovieCard.scss';
 
-export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
+export const MovieCard = ({
+  title,
+  description,
+  imgUrl,
+  imdbUrl,
+}) => (
   <>
     <div className="card-image">
       <figure className="image is-4by3">
