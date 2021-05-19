@@ -18,7 +18,6 @@ export const MovieCard = ({
         />
       </figure>
     </div>
-
     <div className="card-content">
       <div className="media">
         <div className="media-left">
@@ -26,12 +25,10 @@ export const MovieCard = ({
             <img src="images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
-
         <div className="media-content">
           <p className="title is-8">{title}</p>
         </div>
       </div>
-
       <div className="content">
         {description}
         <br />
@@ -42,7 +39,7 @@ export const MovieCard = ({
 );
 
 MovieCard.defaultProps = {
-  description: 'better look then read',
+  description: 'some text',
 };
 
 MovieCard.propTypes = {
