@@ -44,5 +44,5 @@ MovieCard.propTypes = {
 };
 
 MovieCard.defaultProps = {
-  description: 'Here can be description',
+  description: 'No description available',
 };
