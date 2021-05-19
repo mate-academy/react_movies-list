@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './MovieCard.scss';
 
 export const MovieCard = movie => (
-  <>
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -35,14 +35,14 @@ export const MovieCard = movie => (
         <a href={movie.imdbUrl}>IMDB</a>
       </div>
     </div>
-  </>
+  </div>
 );
 
 MovieCard.propTypes = {
   movie: PropTypes.shape({
     imgUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    description: PropTypes.string.isRequired,
     imdbUrl: PropTypes.string.isRequired,
   }).isRequired,
 };
