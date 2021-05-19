@@ -1,6 +1,6 @@
 # Movies list
 - Replace `<your_account>` with your Github username in the
- [DEMO LINK](https://bill.github.io/react_movies-list/)
+ [DEMO LINK](https://BilliZane.github.io/react_movies-list/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
