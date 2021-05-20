@@ -4,7 +4,7 @@ import './MovieCard.scss';
 
 export const MovieCard = ({
   title,
-  description = '',
+  description,
   imgUrl,
   imdbUrl,
 }) => (
@@ -43,8 +43,13 @@ export const MovieCard = ({
   </div>
 );
 
+MovieCard.defaultProps = {
+  description: '',
+};
+
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
+  description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
 };
