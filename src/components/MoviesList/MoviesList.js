@@ -5,7 +5,7 @@ export const MoviesList = () => (
   [
     {
       movieLogoSrc: `https://m.media-amazon.com/images/
-      M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg`,
+M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg`,
       movieName: 'Inception',
       aboutMovie: `Follows the lives of eight very different couples
       in dealing with
@@ -17,7 +17,7 @@ export const MoviesList = () => (
 
     {
       movieLogoSrc: `https://m.media-amazon.com/images/
-      M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_.jpg`,
+M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_.jpg`,
       movieName: 'Love Actually',
       aboutMovie: `A thief who steals corporate secrets through the use of
       dream-sharing technology is given the inverse task of planting
@@ -28,9 +28,9 @@ export const MoviesList = () => (
 
     {
       movieLogoSrc: `https://m.media-amazon.com/images/M/
-      MV5BMTY4YWMzMTMtZjUyOS00OGY1LTljMGUtOWU5Z
-      jYzMjc2ZTMwXkEyXkFqcGdeQXVyMTYzMDM0NTU@.
-      _V1_SY1000_CR0,0,701,1000_AL_.jpg`,
+MV5BMTY4YWMzMTMtZjUyOS00OGY1LTljMGUtOWU5Z
+jYzMjc2ZTMwXkEyXkFqcGdeQXVyMTYzMDM0NTU@.
+_V1_SY1000_CR0,0,701,1000_AL_.jpg`,
       movieName: 'The Day After Tomorrow',
       aboutMovie: `Jack Hall, paleoclimatologist, must make a daring trek from
       Washington, D.C. to New York City to reach his son, trapped in
@@ -41,8 +41,8 @@ export const MoviesList = () => (
     },
     {
       movieLogoSrc: `https://m.media-amazon.com/images/
-      M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@.
-      _V1_SY1000_SX675_AL_.jpg`,
+M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@.
+_V1_SY1000_SX675_AL_.jpg`,
       movieName: 'Rogue One',
       aboutMovie: `The daughter of an Imperial
       scientist joins the Rebel Alliance
@@ -53,9 +53,9 @@ export const MoviesList = () => (
 
     {
       movieLogoSrc: `https://m.media-amazon.com/images/M/
-      MV5BMTY4YWMzMTMtZjUyOS00OGY1LTljMGUtOWU5ZjYzMjc2Z
-      TMwXkEyXkFqcGdeQXVyMTYzMDM0NTU@.
-      _V1_SY1000_CR0,0,701,1000_AL_.jpg`,
+MV5BMTY4YWMzMTMtZjUyOS00OGY1LTljMGUtOWU5ZjYzMjc2Z
+TMwXkEyXkFqcGdeQXVyMTYzMDM0NTU@.
+_V1_SY1000_CR0,0,701,1000_AL_.jpg`,
       movieName: 'The Holiday',
       aboutMovie: `Two women troubled with guy-problems swap
       homes in each other's
