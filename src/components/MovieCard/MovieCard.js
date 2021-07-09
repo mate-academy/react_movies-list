@@ -2,15 +2,12 @@ import React from 'react';
 import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
-export const MovieCard = (
-  { movieLogoSrc, movieName, aboutMovie, linkIMDB },
-) => (
-  <>
+export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-        // eslint-disable-next-line max-len
-          src={movieLogoSrc}
+          src={imgUrl}
           alt="Film logo"
         />
       </figure>
@@ -25,26 +22,26 @@ export const MovieCard = (
         </div>
 
         <div className="media-content">
-          <p className="title is-8">{movieName}</p>
+          <p className="title is-8">{title}</p>
         </div>
       </div>
 
       <div className="content">
-        {aboutMovie}
+        {description}
         <br />
-        <a href={linkIMDB}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </>
+  </div>
 );
 
 MovieCard.propTypes = {
-  movieLogoSrc: PropTypes.string.isRequired,
-  movieName: PropTypes.string.isRequired,
-  aboutMovie: PropTypes.string,
-  linkIMDB: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  imdbUrl: PropTypes.string.isRequired,
 };
 
 MovieCard.defaultProps = {
-  aboutMovie: 'description movie none :(',
+  description: 'description movie none :(',
 };
