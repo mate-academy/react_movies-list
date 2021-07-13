@@ -40,9 +40,12 @@ MovieCard.defaultProps = { film: PropTypes.shape({
   description: '',
 }) };
 
-MovieCard.propTypes = { film: PropTypes.shape({
+export const movieCardTypes = PropTypes.shape({
   imgUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   imdbUrl: PropTypes.string.isRequired,
-}) };
+  imdbId: PropTypes.string.isRequired,
+});
+
+MovieCard.propTypes = { film: movieCardTypes };
