@@ -9,10 +9,7 @@ export const MoviesList = () => (
       {moviesFromServer.map(movie => (
         <MovieCard
           key={movie.imdbId}
-          title={movie.title}
-          description={movie.description}
-          imgUrl={movie.imgUrl}
-          imdbUrl={movie.imdbUrl}
+          {...movie}
         />
       ))}
     </div>
