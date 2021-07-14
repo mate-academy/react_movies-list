@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
-import { Test } from '../MovieCard/Test';
+import { MoviePropTypes } from '../MovieCard/MoviePropTypes';
 
 const MovieList = ({ moviesFromServer }) => (
   <div className="page-content">
     <div className="movies">
-      { moviesFromServer.map(x => <MovieCard key={x.title} {...x} />) }
+      { moviesFromServer.map(item => <MovieCard key={item.title} {...item} />) }
     </div>
   </div>
 );
 
 MovieList.propTypes = {
   moviesFromServer: PropTypes.arrayOf(
-    PropTypes.shape(Test),
+    PropTypes.shape(MoviePropTypes),
   ).isRequired,
 };
 
