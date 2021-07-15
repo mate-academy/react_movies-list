@@ -6,7 +6,7 @@ import './App.scss';
 export const App = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList ListOfMovies={moviesFromServer} />
+      <MoviesList listOfMovies={moviesFromServer} />
     </div>
 
     <div className="sidebar">
