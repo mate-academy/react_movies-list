@@ -1,6 +1,13 @@
 import React from 'react';
+import { MovieCard } from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
+import moviesArray from '../../api/movies.json';
+
 export const MoviesList = () => (
-  <>Put the list here</>
+  <div className="movies">
+    {moviesArray.map(element => (
+      <MovieCard {...element} />
+    ))}
+  </div>
 );
