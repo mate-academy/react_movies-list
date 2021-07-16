@@ -13,7 +13,6 @@ export const MovieCard = ({
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-          // eslint-disable-next-line max-len
           src={`${imgUrl}`}
           alt="Film logo"
         />
@@ -34,7 +33,6 @@ export const MovieCard = ({
       </div>
 
       <div className="content">
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
         {description}
         <br />
         <a href={`${imdbUrl}`}>IMDB</a>

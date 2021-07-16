@@ -19,7 +19,7 @@ MoviesList.defaultProps = {
 
 MoviesList.propTypes = {
   moviesData: PropTypes.arrayOf(
-    PropTypes.objecshape({
+    PropTypes.shape({
       imdbId: PropTypes.string.isRequired,
     }),
   ),
