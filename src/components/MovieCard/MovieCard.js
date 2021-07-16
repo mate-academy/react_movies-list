@@ -11,10 +11,7 @@ export const MovieCard = ({
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
-        <img
-          src={imgUrl}
-          alt="Film logo"
-        />
+        <img src={imgUrl} alt="Film logo" />
       </figure>
     </div>
 
@@ -42,9 +39,13 @@ export const MovieCard = ({
   </div>
 );
 
+MovieCard.defaultProps = {
+  description: '',
+};
+
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
 };
