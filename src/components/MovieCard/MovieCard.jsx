@@ -11,11 +11,7 @@ export const MovieCard = ({
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
-        <img
-          // eslint-disable-next-line max-len
-          src={imgUrl}
-          alt="Film logo"
-        />
+        <img src={imgUrl} alt="Film logo" />
       </figure>
     </div>
 
