@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
 import { MoviesList } from './components/MoviesList/MoviesList';
-// import moviesFromServer from './api/movies';
+import moviesArray from './api/movies.json';
 
 export const App = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList />
+      <MoviesList moviesData={moviesArray} />
     </div>
 
     <div className="sidebar">
