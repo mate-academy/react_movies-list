@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Type } from '../../Types';
 import './MovieCard.scss';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
