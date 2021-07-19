@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { typesOfCard } from '../../types';
+import { MovieCardType } from '../../types';
 import './MovieCard.scss';
 
 export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
@@ -10,7 +10,6 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
         className={classNames('image', 'is-4by3')}
       >
         <img
-          // eslint-disable-next-line max-len
           src={imgUrl}
           alt="Film logo"
         />
@@ -38,7 +37,7 @@ export const MovieCard = ({ title, description, imgUrl, imdbUrl }) => (
   </>
 );
 
-MovieCard.propTypes = typesOfCard;
+MovieCard.propTypes = MovieCardType;
 
 MovieCard.defaultProps = {
   description: 'some description',
