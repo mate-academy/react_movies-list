@@ -7,15 +7,9 @@ export const MoviesList = ({ movies }) => (
   <div className="movies">
     {movies.map(card => (
       <div key={card.imdbId} className="card">
-        <MovieCard
-          title={card.title}
-          description={card.description}
-          imgUrl={card.imgUrl}
-          imdbUrl={card.imdbUrl}
-          imdbId={card.imdbId}
-        />
+        <MovieCard {...card} />
       </div>
-    ))}
+    ))}g
   </div>
 );
 
