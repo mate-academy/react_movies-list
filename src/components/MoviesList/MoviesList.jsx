@@ -9,7 +9,7 @@ export const MoviesList = ({ movies }) => (
       <div key={card.imdbId} className="card">
         <MovieCard {...card} />
       </div>
-    ))}g
+    ))}
   </div>
 );
 
