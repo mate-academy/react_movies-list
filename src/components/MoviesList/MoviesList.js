@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import { MovieCard } from '../MovieCard/MovieCard';
 import { shapeOfCard } from '../../cardShape';
 
-export const MoviesList = ({ movieList }) => (
+export const MoviesList = ({ movies }) => (
   <div className="movies">
-    {movieList.map(card => (
+    {movies.map(card => (
       <MovieCard key={card.title} movieItem={card} />
     ))}
   </div>
 );
 
 MoviesList.propTypes = {
-  movieList: PropTypes.arrayOf(shapeOfCard).isRequired,
+  movies: PropTypes.arrayOf(shapeOfCard).isRequired,
 };
