@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-cycle
+import { TypeMovieCard } from '../proptypes';
 import './MovieCard.scss';
 
 export const MovieCard = ({ imgUrl, title, imdbUrl, description }) => (
@@ -7,7 +8,6 @@ export const MovieCard = ({ imgUrl, title, imdbUrl, description }) => (
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-        // eslint-disable-next-line max-len
           src={imgUrl}
           alt="Film logo"
         />
@@ -36,12 +36,7 @@ export const MovieCard = ({ imgUrl, title, imdbUrl, description }) => (
   </div>
 );
 
-MovieCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  imgUrl: PropTypes.string.isRequired,
-  imdbUrl: PropTypes.string.isRequired,
-};
+MovieCard.propTypes = TypeMovieCard;
 
 MovieCard.defaultProps = {
   description: '',
