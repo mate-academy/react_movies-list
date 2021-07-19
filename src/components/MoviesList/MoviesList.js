@@ -7,7 +7,7 @@ import { shapeOfCard } from '../../cardShape';
 export const MoviesList = ({ movies }) => (
   <div className="movies">
     {movies.map(card => (
-      <MovieCard key={card.title} movieItem={card} />
+      <MovieCard key={card.title} {...card} />
     ))}
   </div>
 );
