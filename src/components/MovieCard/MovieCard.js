@@ -2,13 +2,12 @@ import React from 'react';
 import './MovieCard.scss';
 import PropTypes from 'prop-types';
 
-export const MovieCard = ({ imdbId, title, description, imdbUrl, imgUrl }) => (
+export const MovieCard = ({ title, description, imdbUrl, imgUrl }) => (
   <>
     <div className="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
-            // eslint-disable-next-line max-len
             src={imgUrl}
             alt="Film logo"
           />
@@ -39,7 +38,6 @@ export const MovieCard = ({ imdbId, title, description, imdbUrl, imgUrl }) => (
 );
 
 MovieCard.propTypes = {
-  imdbId: PropTypes.string.isRequired,
   imdbUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
