@@ -19,6 +19,10 @@ MoviesList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       imdbId: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      imgUrl: PropTypes.string.isRequired,
+      imdbUrl: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
 };
