@@ -1,14 +1,14 @@
 import React from 'react';
 import './MoviesList.scss';
 import PropTypes from 'prop-types';
-import { MovieCard, movieType } from '../MovieCard/MovieCard';
+import { MovieCard, MovieType } from '../MovieCard/MovieCard';
 
 export const MoviesList = ({ movies }) => (
   <>
     <div className="movies">
       {movies.map(movie => (
         <div className="card" key={movie.imdbId}>
-          <MovieCard {...movie} />
+          <MovieCard movie={movie} />
         </div>
       ))}
     </div>
@@ -16,12 +16,7 @@ export const MoviesList = ({ movies }) => (
 );
 
 MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      imdbId: PropTypes.string.isRequired,
-      ...movieType,
-    }),
-  ),
+  movies: PropTypes.arrayOf(MovieType),
 };
 
 MoviesList.defaultProps = {
