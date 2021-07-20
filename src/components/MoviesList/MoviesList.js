@@ -7,7 +7,12 @@ export const MoviesList = ({ movies }) => (
   <ul className="movies">
     {movies.map(movie => (
       <li className="card" key={movie.imdbId}>
-        <MovieCard {...movie} />
+        <MovieCard
+          title={movie.title}
+          description={movie.description}
+          imgUrl={movie.imgUrl}
+          imdbUrl={movie.imdbUrl}
+        />
       </li>
     ))}
   </ul>
