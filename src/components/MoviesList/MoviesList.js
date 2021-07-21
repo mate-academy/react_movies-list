@@ -8,9 +8,9 @@ export const MoviesList = ({ movies }) => (
     {
       movies.map(
         movie => (
-          <React.Fragment key={movie.imdbId}>
+          <div key={movie.imdbId}>
             <MovieCard {...movie} />
-          </React.Fragment>
+          </div>
         ),
       )
     }
