@@ -1,6 +1,12 @@
 import React from 'react';
 import './MoviesList.scss';
+import { MovieCard } from '../MovieCard/MovieCard';
 
-export const MoviesList = () => (
-  <>Put the list here</>
+export const MoviesList = ({ list }) => (
+  list.map(movie => (
+    <MovieCard
+      movie={movie}
+      key={movie.imdbId}
+    />
+  ))
 );
