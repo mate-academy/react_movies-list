@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import './MoviesList.scss';
+import {MovieCard} from './MovieCard/';
 
-export const MoviesList = () => (
-  <>Put the list here</>
+export const MoviesList = ({movies}) => ( 
+  <ul>
+    {movies.map(movie => (
+      <li key = {movie.imdbId}>
+        <MovieCard {...movie}/>
+      </li>
+    ))}
+  </ul>
 );
