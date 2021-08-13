@@ -5,14 +5,12 @@ import {MoviesList} from './components/MoviesList/';
 
 export const App = () => (
   <div className="page">
-    <div className="page-content">
-      <div className="movies">
-        <MoviesList movies = {moviesFromServer} />
-      </div>
+    <div className="page-content">     
+      <MoviesList movies={moviesFromServer} />  
     </div>
 
     <div className="sidebar">
       Sidebar will be here
     </div>
-  </div>
+  </div> 
 );
