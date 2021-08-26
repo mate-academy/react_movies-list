@@ -5,3 +5,4 @@ export interface Card {
     imdbUrl: string;
     imdbId: string;
   }
+  
