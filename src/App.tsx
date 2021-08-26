@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.scss';
 import moviesFromServer from './api/movies.json';
 import { MoviesList } from './components/MoviesList';
+
+import './App.scss';
 
 interface Card {
   title: string;
