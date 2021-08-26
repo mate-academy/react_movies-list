@@ -1,1 +1,11 @@
-// 
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  padding: 20px 0;
+}
+
+.card-image img {
+  object-fit: contain;
+}
