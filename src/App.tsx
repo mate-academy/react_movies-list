@@ -1,16 +1,9 @@
 import React from 'react';
 import moviesFromServer from './api/movies.json';
+import { Card } from './types/Card';
 import { MoviesList } from './components/MoviesList';
 
 import './App.scss';
-
-interface Card {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
 
 type Props = {
   moviesFromServer?: Card[];
