@@ -3,7 +3,9 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-export const MovieCard: React.FC<Partial<Movie>> = (movie) => {
+type Props = Pick<Movie, 'title' | 'imgUrl' | 'description' | 'imdbUrl'>;
+
+export const MovieCard: React.FC<Props> = (movie) => {
   const {
     title,
     imgUrl,
