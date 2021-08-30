@@ -3,7 +3,7 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type Props = Pick<Movie, 'title' | 'imgUrl' | 'description' | 'imdbUrl'>;
+type Props = Omit<Movie, 'imdbId'>;
 
 export const MovieCard: React.FC<Props> = (movie) => {
   const {
