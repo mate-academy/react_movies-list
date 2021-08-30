@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Card } from '../../types/Card';
 
 import './MovieCard.scss';
