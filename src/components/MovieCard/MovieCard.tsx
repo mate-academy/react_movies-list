@@ -3,9 +3,12 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type Props = Omit<Movie, 'imdbId'>;
+type Props = {
+  movie: Omit<Movie, 'imdbId'>
+};
 
-export const MovieCard: React.FC<Props> = (movie) => {
+export const MovieCard: React.FC<Props> = (props) => {
+  const { movie } = props;
   const {
     title,
     imgUrl,
