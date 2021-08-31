@@ -2,16 +2,18 @@ import React from 'react';
 import './MovieCard.scss';
 
 type Props = {
-  title: string,
-  description?: string,
-  imgUrl: string,
-  imdbUrl: string,
+  movieData: {
+    title: string,
+    description?: string,
+    imgUrl: string,
+    imdbUrl: string,
+  }
 };
 
-export const MovieCard: React.FC<Props> = (props) => {
+export const MovieCard: React.FC<Props> = ({ movieData }) => {
   const {
-    title, description, imgUrl, imdbUrl,
-  } = props;
+    title, description = '', imgUrl, imdbUrl,
+  } = movieData;
 
   return (
     <div className="card">
@@ -47,8 +49,4 @@ export const MovieCard: React.FC<Props> = (props) => {
       </div>
     </div>
   );
-};
-
-MovieCard.defaultProps = {
-  description: '',
 };
