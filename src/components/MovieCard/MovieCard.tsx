@@ -5,7 +5,7 @@ import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
 type Props = {
-  movie: Movie,
+  movie: Movie;
 };
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
