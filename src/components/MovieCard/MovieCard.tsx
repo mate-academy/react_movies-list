@@ -1,12 +1,12 @@
 import React from 'react';
-import { MovieTypes } from '../../types/MovieTypes';
+import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
-type Movie = {
-  movie: MovieTypes
+type Props = {
+  movie: Movie;
 };
 
-export const MovieCard: React.FC<Movie> = ({ movie }) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
