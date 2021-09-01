@@ -41,8 +41,12 @@
     "extends": "react-app"
   },
   "lint-staged": {
-    "*.css": ["stylelint"],
-    "*.js": ["eslint"]
+    "*.css": [
+      "stylelint"
+    ],
+    "*.js": [
+      "eslint"
+    ]
   },
   "browserslist": {
     "production": [
