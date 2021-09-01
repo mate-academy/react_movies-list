@@ -18,9 +18,7 @@ export const MoviesList: React.FC<Props> = ({ films }: Props) => (
             const { imdbId } = film;
 
             return (
-              <div className="card" key={imdbId}>
-                <MovieCard {...film} />
-              </div>
+              <MovieCard key={imdbId} {...film} />
             );
           })}
 
