@@ -4,4 +4,5 @@ interface Movie {
   title:string;
   imgUrl:string;
   imdbId:string;
+  imdbUrl:string;
 }
