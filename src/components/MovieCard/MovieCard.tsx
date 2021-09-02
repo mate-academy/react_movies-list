@@ -1,10 +1,10 @@
 import React from 'react';
-import { MovieType } from '../../types/Movie';
+import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
 
 type Props = {
-  movie: MovieType,
+  movie: Movie,
 };
 
 export const MovieCard: React.FC<Props> = (props) => {
