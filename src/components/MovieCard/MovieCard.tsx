@@ -10,7 +10,7 @@ export const MovieCard: React.FC<Props> = (props) => {
   const { movie } = props;
   const {
     title,
-    description = 'set',
+    description = '',
     imgUrl,
     imdbUrl,
   } = movie;
