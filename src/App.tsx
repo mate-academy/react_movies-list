@@ -5,7 +5,5 @@ import moviesFromServer from './api/movies.json';
 import { MoviesList } from './components/MoviesList';
 
 export const App: React.FC = () => (
-  <>
-    <MoviesList films={moviesFromServer} />
-  </>
+  <MoviesList films={moviesFromServer} />
 );

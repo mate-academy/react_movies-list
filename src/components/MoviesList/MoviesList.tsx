@@ -1,16 +1,16 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
 
-interface Film {
-  [key: string]: string;
-}
+import { Film } from '../../types/Film';
 
 type Props = {
   films: Film[];
 };
 
-export const MoviesList: React.FC<Props> = ({ films }: Props) => (
-  <>
+export const MoviesList: React.FC<Props> = (props) => {
+  const { films } = props;
+
+  return (
     <div className="page">
       <div className="page-content">
         <div className="movies">
@@ -18,7 +18,7 @@ export const MoviesList: React.FC<Props> = ({ films }: Props) => (
             const { imdbId } = film;
 
             return (
-              <MovieCard key={imdbId} {...film} />
+              <MovieCard key={imdbId} film={film} />
             );
           })}
 
@@ -29,6 +29,5 @@ export const MoviesList: React.FC<Props> = ({ films }: Props) => (
         Sidebar will be here
       </div>
     </div>
-
-  </>
-);
+  );
+};
