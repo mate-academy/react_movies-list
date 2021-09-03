@@ -6,6 +6,6 @@ import { MoviesList } from './components/MoviesList';
 
 export const App: React.FC = () => (
   <div className="wrapper">
-    <MoviesList MoviesListArr={moviesFromServer} />
+    <MoviesList movies={moviesFromServer} />
   </div>
 );

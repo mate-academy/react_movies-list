@@ -1,4 +1,4 @@
-export interface CardContent {
+export interface cardContent {
   title: string;
   description?: string;
   imgUrl: string;

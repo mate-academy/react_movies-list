@@ -1,8 +1,8 @@
 import React from 'react';
 import './MovieCard.scss';
-import { CardContent } from './TypeMovieCard';
+import { cardContent } from './TypeMovieCard';
 
-export const MovieCard: React.FC<CardContent> = ({
+export const MovieCard: React.FC<cardContent> = ({
   title,
   description,
   imgUrl,
