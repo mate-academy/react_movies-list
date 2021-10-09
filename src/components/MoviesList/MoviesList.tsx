@@ -10,13 +10,13 @@ type Props = {
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <div className="movies">
-    {movies.map(movie => (
+    {movies.map(key => (
       <MovieCard
-        title={movie.title}
-        imdbUrl={movie.imdbUrl}
-        imdbId={movie.imdbId}
-        description={movie.description}
-        imgUrl={movie.imgUrl}
+        title={key.title}
+        imdbUrl={key.imdbUrl}
+        imdbId={key.imdbId}
+        description={key.description}
+        imgUrl={key.imgUrl}
       />
     ))}
   </div>
