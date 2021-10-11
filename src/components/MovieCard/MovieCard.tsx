@@ -1,14 +1,8 @@
 import React from 'react';
 import './MovieCard.scss';
+import { Movie } from '../../types/Movie';
 
-type Props = {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-};
-
-export const MovieCard: React.FC<Props> = ({
+export const MovieCard: React.FC<Movie> = ({
   title,
   description,
   imgUrl,
