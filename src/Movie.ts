@@ -1,4 +1,4 @@
-interface MovieFromServer {
+export interface Movie {
   title: string;
   description?: string;
   imgUrl: string;
