@@ -1,7 +1,7 @@
 import React from 'react';
-import Movie from '../../types/Movie';
-
 import './MovieCard.scss';
+
+import Movie from '../../types/Movie';
 
 export const MovieCard: React.FC<Movie> = ({
   title,
@@ -25,11 +25,9 @@ export const MovieCard: React.FC<Movie> = ({
             <img src="images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
-
         <div className="media-content">
           <p className="title is-8">{title}</p>
         </div>
-
       </div>
 
       <div className="content">

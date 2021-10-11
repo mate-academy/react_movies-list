@@ -11,7 +11,6 @@ export const App: React.FC = () => (
         <MoviesList movies={moviesFromServer} />
       </div>
     </div>
-
     <div className="sidebar">
       Sidebar will be here
     </div>
