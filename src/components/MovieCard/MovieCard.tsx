@@ -1,15 +1,14 @@
 import React from 'react';
+import { Movie } from '../../types/Movie'
 import './MovieCard.scss';
 
 type Props = {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-}
+  movie: Movie;
+};
 
-export const MovieCard: React.FC<Props> = (props) => {
-  const { title, description, imgUrl, imdbUrl } = props;
+export const MovieCard: React.FC<Props> = ({ movie } ) => {
+  const { title, description, imgUrl, imdbUrl } = movie;
+
   return (
     <div className="card">
       <div className="card-image">
@@ -43,4 +42,3 @@ export const MovieCard: React.FC<Props> = (props) => {
     </div>
   );
 };
-
