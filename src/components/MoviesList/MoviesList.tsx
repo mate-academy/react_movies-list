@@ -7,7 +7,7 @@ import { Movies } from '../../types/Movies';
 export const MoviesList: React.FC<Movies> = ({ movies }) => (
   <div className="movies">
     {movies.map((movie: Movie) => (
-      <div key={movie.id} className="card">
+      <div className="card">
         <MovieCard {...movie} />
       </div>
     ))}
