@@ -29,7 +29,6 @@ export const MovieCard: React.FC<Movie> = ({
           <p className="title is-8">{title}</p>
         </div>
       </div>
-
       <div className="content">
         {description}
         <br />
