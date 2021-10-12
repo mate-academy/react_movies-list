@@ -1,15 +1,11 @@
 import React from 'react';
-
-export type Movie = {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string,
-};
+import { Movie } from './MovieType';
 
 export const MovieCard: React.FC<Movie> = ({
-  title, description, imgUrl, imdbUrl,
+  title,
+  description,
+  imgUrl,
+  imdbUrl,
 }) => {
   return (
     <div className="card">

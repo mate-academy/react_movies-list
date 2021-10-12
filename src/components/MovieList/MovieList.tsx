@@ -1,5 +1,6 @@
 import React from 'react';
-import { Movie, MovieCard } from '../MovieCard';
+import { MovieCard } from '../MovieCard';
+import { Movie } from '../MovieCard/MovieType';
 
 export interface PropsMoviesList {
   movies: Movie[]
