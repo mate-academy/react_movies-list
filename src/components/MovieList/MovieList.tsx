@@ -6,7 +6,7 @@ export interface PropsMoviesList {
 }
 
 export const MovieList: React.FC<PropsMoviesList> = ({ movies }) => (
-  <ul>
+  <ul className="movies">
     {movies.map(film => (
       <li key={film.imdbId}>
         <MovieCard {...film} />
