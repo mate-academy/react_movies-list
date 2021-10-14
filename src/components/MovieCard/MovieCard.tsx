@@ -2,13 +2,13 @@ import React from 'react';
 import { Movie } from '../../Types';
 import './MovieCard.scss';
 
-export const MovieCard: React.FC<Movie> = ({...movie}:Movie) => (
-  <>  
+export const MovieCard: React.FC<{ movie:Movie }> = ({ movie }) => (
+  <>
     <li className="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
-            src = {movie.imgUrl}
+            src={movie.imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -18,7 +18,7 @@ export const MovieCard: React.FC<Movie> = ({...movie}:Movie) => (
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src= 'images/imdb-logo.jpeg' alt="imdb" />
+              <img src="images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
