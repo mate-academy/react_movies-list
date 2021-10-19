@@ -1,5 +1,4 @@
 import React from 'react';
-import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
 type Props = {
