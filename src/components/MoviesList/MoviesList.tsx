@@ -2,7 +2,7 @@ import React from 'react';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
-interface Movie {
+export interface Movie {
   title: string;
   description: string;
   imgUrl: string;
@@ -16,6 +16,6 @@ type Props = {
 
 export const MoviesList: React.FC<Props> = ({ listMovies }) => (
   <div className="movies">
-    {listMovies.map((movie) => (<MovieCard {...movie} key={movie.imdbId} />))}
+    {listMovies.map((movie) => (<MovieCard movie={movie} key={movie.imdbId} />))}
   </div>
 );
