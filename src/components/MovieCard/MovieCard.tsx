@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieCard.scss';
 
-import { Movie } from '../../movie_types';
+import { Movie } from '../../Types/movie_types';
 
 export const MovieCard: React.FC<Movie> = (movie) => (
   <div className="card">

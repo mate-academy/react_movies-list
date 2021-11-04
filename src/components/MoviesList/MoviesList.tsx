@@ -2,7 +2,7 @@ import React from 'react';
 import './MoviesList.scss';
 
 import { MovieCard } from '../MovieCard';
-import { Movie } from '../../movie_types';
+import { Movie } from '../../Types/movie_types';
 
 interface Movies {
   movies: Movie[],
