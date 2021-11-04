@@ -1,1 +1,5 @@
-// 
+.card-image {
+  &__logo {
+    object-fit: contain;
+  }
+} 
