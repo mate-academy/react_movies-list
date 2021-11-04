@@ -1,14 +1,7 @@
 import React from 'react';
 
 import './MovieCard.scss';
-
-export interface Movie {
-  title: string,
-  description?: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string,
-};
+import { Movie } from '../types.tsx/types';
 
 export const MovieCard: React.FC<Movie> = ({
   title,
