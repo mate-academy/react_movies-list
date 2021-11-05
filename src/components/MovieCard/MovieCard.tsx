@@ -14,7 +14,7 @@ export const MovieCard: React.FC<Props> = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <div className="card">
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -43,5 +43,5 @@ export const MovieCard: React.FC<Props> = ({
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </div>
+  </>
 );
