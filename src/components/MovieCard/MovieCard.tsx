@@ -18,6 +18,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           <img
             src={imgUrl}
             alt="Film logo"
+            className="card-image__logo"
           />
         </figure>
       </div>
