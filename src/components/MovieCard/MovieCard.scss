@@ -1,3 +1,16 @@
-.card-image img {
+.card {
+  transition: background-color 0.6s;
+
+  &:hover {
+    background-color: rgba(137, 188, 200, 0.33);
+  }
+}
+
+.film-logo {
   object-fit: contain;
+  transition: transform 0.6s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
