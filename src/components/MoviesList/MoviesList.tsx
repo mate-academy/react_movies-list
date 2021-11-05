@@ -4,14 +4,14 @@ import { Product } from '../type/Product';
 import { MovieCard } from '../MovieCard';
 
 type Props = {
-  products: Product[];
+  movies: Product[]
 };
 
-export const MoviesList: React.FC<Props> = ({ products }) => (
+export const MoviesList: React.FC<Props> = ({ movies }) => (
   <div className="movies">
-    {products.map((product) => (
-      <div className="card" key={product.imdbId}>
-        <MovieCard {...product} />
+    {movies.map((movie) => (
+      <div className="card" key={movie.imdbId}>
+        <MovieCard movie={movie} />
       </div>
     ))}
   </div>
