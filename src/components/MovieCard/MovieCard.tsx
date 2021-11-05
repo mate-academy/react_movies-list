@@ -11,9 +11,9 @@ export interface Movie {
 }
 
 export const MovieCard: React.FC<Movie> = ({
-  title, description = '', imgUrl, imdbUrl, imdbId,
+  title, description = '', imgUrl, imdbUrl,
 }) => (
-  <div className="card" key={imdbId}>
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
