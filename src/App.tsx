@@ -6,7 +6,7 @@ import moviesFromServer from './api/movies.json';
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList moviesFromServer={moviesFromServer} />
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar">
