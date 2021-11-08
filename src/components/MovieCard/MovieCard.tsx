@@ -5,7 +5,6 @@ type Props = {
   description: string;
   imgUrl: string;
   imdbUrl: string;
-  imdbId: string;
 };
 
 export const MovieCard: React.FC<Props> = ({
@@ -15,9 +14,10 @@ export const MovieCard: React.FC<Props> = ({
   imdbUrl,
 }) => (
   <>
-    <div className="card-image">
+    <div className="card-wrap-image">
       <figure className="image is-4by3">
         <img
+          className="card-image"
           src={imgUrl}
           alt="Film logo"
         />
