@@ -1,15 +1,7 @@
 import React from 'react';
+import { Movie } from '../../types/typedef';
 
 import './MovieCard.scss';
-
-interface Movie {
-  title: string,
-  // eslint-disable-next-line
-  description?: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string,
-}
 
 export const MovieCard: React.FC<Movie> = ({
   title,
@@ -23,6 +15,7 @@ export const MovieCard: React.FC<Movie> = ({
       <div className="card-image">
         <figure className="image is-4by3">
           <img
+            className="logo"
             src={imgUrl}
             alt="Film logo"
           />
@@ -33,7 +26,11 @@ export const MovieCard: React.FC<Movie> = ({
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="images/imdb-logo.jpeg" alt="imdb" />
+              <img
+                className="logo"
+                src="images/imdb-logo.jpeg"
+                alt="imdb"
+              />
             </figure>
           </div>
 

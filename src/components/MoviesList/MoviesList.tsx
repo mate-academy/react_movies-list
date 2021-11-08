@@ -1,18 +1,11 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
+import { Movie } from '../../types/typedef';
 import './MoviesList.scss';
 
-interface Movie {
-  title: string,
-  description?: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string
-}
-
-type MovieList = {
+interface MovieList {
   movies: Movie[]
-};
+}
 
 export const MoviesList: React.FC<MovieList> = ({ movies }) => (
   <>
