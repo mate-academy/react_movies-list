@@ -2,14 +2,15 @@ import './MovieCard.scss';
 
 interface Props {
   title: string;
-  description: string;
+  description?: string;
   imgUrl: string;
   imdbUrl: string;
+  imdbId: string;
 }
 
 export const MovieCard: React.FC<Props> = ({
   title,
-  description,
+  description = '',
   imgUrl,
   imdbUrl,
 }) => (
