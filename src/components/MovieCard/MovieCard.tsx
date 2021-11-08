@@ -3,12 +3,18 @@ import { Movie } from '../../type/Movie';
 
 import './MovieCard.scss';
 
-export const MovieCard: React.FC<Movie> = ({ ...movie }) => (
-  <div className="card" key={movie.imdbId}>
+export const MovieCard: React.FC<Movie> = ({
+  title,
+  description,
+  imgUrl,
+  imdbUrl,
+  imdbId,
+}) => (
+  <div className="card" key={imdbId}>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-          src={movie.imgUrl}
+          src={imgUrl}
           alt="Film logo"
           className="card-image__logo"
         />
@@ -24,14 +30,14 @@ export const MovieCard: React.FC<Movie> = ({ ...movie }) => (
         </div>
 
         <div className="media-content">
-          <p className="title is-8">{movie.title}</p>
+          <p className="title is-8">{title}</p>
         </div>
       </div>
 
       <div className="content">
-        {movie.description}
+        {description}
         <br />
-        <a href={movie.imdbUrl}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>

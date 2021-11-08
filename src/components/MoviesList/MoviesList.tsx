@@ -11,7 +11,13 @@ interface Movies {
 export const MoviesList: React.FC<Movies> = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <MovieCard {...movie} />
+      <MovieCard
+        title={movie.title}
+        description={movie.description}
+        imgUrl={movie.imgUrl}
+        imdbUrl={movie.imdbUrl}
+        imdbId={movie.imdbId}
+      />
     ))}
   </div>
 );
