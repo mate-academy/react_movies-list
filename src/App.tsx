@@ -6,7 +6,7 @@ import './App.scss';
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList props={moviesFromServer} />
+      <MoviesList moviesFromServer={moviesFromServer} />
     </div>
     <div className="sidebar">
       Sidebar will be here
