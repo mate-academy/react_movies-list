@@ -2,11 +2,16 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../Movie/Movie';
 
-export const MovieCard: React.FC<Movie> = ({ ...movie }) => (
+type Props = {
+  movie: Movie
+};
+
+export const MovieCard: React.FC<Props> = ({ movie }) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
+          className="card-image__size"
           src={movie.imgUrl}
           alt="Film logo"
         />
