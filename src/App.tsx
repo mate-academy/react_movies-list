@@ -16,7 +16,7 @@ export class App extends React.Component<Props, State> {
 
   updateState = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({
-      query: event.target.value,
+      query: event.target.value.toLowerCase(),
     });
   };
 
@@ -49,6 +49,6 @@ export class App extends React.Component<Props, State> {
           </div>
         </div>
       </>
-    )
+    );
   }
-};
+}
