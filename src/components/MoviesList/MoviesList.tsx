@@ -3,7 +3,6 @@ import './MoviesList.scss';
 import { Card } from '../../types/Card';
 
 type Props = {
-  // eslint-disable-next-line react/require-default-props
   movies?: Card[];
 };
 
