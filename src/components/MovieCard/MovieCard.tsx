@@ -7,7 +7,7 @@ type Props = Omit<Movie, 'imdbId'>;
 
 export const MovieCard: React.FC<Props> = ({
   title,
-  description,
+  description = '',
   imgUrl,
   imdbUrl,
 }) => (
