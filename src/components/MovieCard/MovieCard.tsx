@@ -4,7 +4,9 @@ import './MovieCard.scss';
 
 import { Movie } from '../../types/Movie';
 
-export const MovieCard: React.FC<Movie> = (movie) => (
+type Props = Omit<Movie, 'imdbId'>;
+
+export const MovieCard: React.FC<Props> = (movie) => (
   <>
     <div className="card-image">
       <figure className="image is-4by3">

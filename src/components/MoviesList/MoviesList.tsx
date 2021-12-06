@@ -17,7 +17,6 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
           description={movie.description}
           imgUrl={movie.imgUrl}
           imdbUrl={movie.imdbUrl}
-          imdbId={movie.imdbId}
         />
       </div>
     ))}
