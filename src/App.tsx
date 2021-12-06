@@ -11,7 +11,7 @@ export const App: React.FC = () => (
     </div>
 
     <div className="sidebar">
-      SIDEBAR
+      Sidebar will be here
     </div>
   </div>
 );
