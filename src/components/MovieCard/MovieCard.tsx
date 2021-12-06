@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Movie } from '../../types/MovieType';
 
 import './MovieCard.scss';
@@ -7,7 +6,7 @@ import './MovieCard.scss';
 type Props = Omit<Movie, 'imdbId'>;
 
 export const MovieCard: React.FC<Props> = ({
-  title, description, imgUrl, imdbUrl,
+  title, description = '', imgUrl, imdbUrl,
 }) => (
   <div className="card">
     <div className="card-image">
@@ -39,14 +38,3 @@ export const MovieCard: React.FC<Props> = ({
     </div>
   </div>
 );
-
-MovieCard.defaultProps = {
-  description: '',
-};
-
-MovieCard.propTypes = {
-  imdbUrl: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-};
