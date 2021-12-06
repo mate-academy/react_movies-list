@@ -18,7 +18,6 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
         description={description}
         imgUrl={imgUrl}
         imdbUrl={imdbUrl}
-        imdbId={imdbId}
       />
     ))}
   </div>

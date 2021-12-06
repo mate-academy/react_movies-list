@@ -6,7 +6,7 @@ import './MovieCard.scss';
 export const MovieCard: React.FC<Movie> = ({
   title,
   imgUrl,
-  description,
+  description = '',
   imdbUrl,
 }) => (
   <div className="card">
