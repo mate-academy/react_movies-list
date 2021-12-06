@@ -1,8 +1,6 @@
 import React from 'react';
 import './MoviesList.scss';
 
-// import { type } from 'os';
-
 import { MovieCard } from '../MovieCard';
 import { Movie } from '../../types/Movie';
 
