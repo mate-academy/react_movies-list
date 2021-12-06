@@ -38,9 +38,13 @@ export const MovieCard: React.FC<Props> = ({ title, description, imgUrl, imdbUrl
   </div>
 );
 
+MovieCard.defaultProps = {
+  description = '',
+};
+
 MovieCard.propTypes = {
   imdbUrl: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
