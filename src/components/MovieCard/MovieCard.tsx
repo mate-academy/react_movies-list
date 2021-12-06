@@ -6,7 +6,7 @@ import './MovieCard.scss';
 type Props = Movie;
 
 export const MovieCard: React.FC<Props> = ({
-  imgUrl, title, description, imdbUrl,
+  imgUrl, title, description = '', imdbUrl,
 }) => (
   <div className="card">
     <div className="card-image">
@@ -32,7 +32,7 @@ export const MovieCard: React.FC<Props> = ({
       </div>
 
       <div className="content">
-        {description || ''}
+        {description}
         <br />
         <a href={imdbUrl}>IMDB</a>
       </div>
