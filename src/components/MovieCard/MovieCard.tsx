@@ -1,13 +1,9 @@
 import React from 'react';
+import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
 
-type Props = {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-};
+type Props = Pick<Movie, 'title' | 'description' | 'imgUrl' | 'imdbUrl'>;
 
 export const MovieCard: React.FC<Props> = ({
   title,
