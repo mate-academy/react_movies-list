@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Movie } from '../../MovieType';
+import { Movie } from '../../types/MovieType';
 
 import './MovieCard.scss';
 
 type Props = Omit<Movie, 'imdbId'>;
 
-export const MovieCard: React.FC<Props> = ({ title, description, imgUrl, imdbUrl }) => (
+export const MovieCard: React.FC<Props> = ({
+  title, description, imgUrl, imdbUrl,
+}) => (
   <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
