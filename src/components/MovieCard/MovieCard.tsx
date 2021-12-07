@@ -3,13 +3,15 @@ import { Movie } from '../../types/MovieTypes';
 
 import './MovieCard.scss';
 
-export const MovieCard: React.FC<Movie> = ({
+type Props = Omit<Movie, 'imdbId'>;
+
+export const MovieCard: React.FC<Props> = ({
   title,
   description,
   imgUrl,
   imdbUrl,
 }) => (
-  <li className="card">
+  <li>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
