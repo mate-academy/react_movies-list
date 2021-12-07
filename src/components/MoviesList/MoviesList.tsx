@@ -3,9 +3,9 @@ import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
 import { Movie } from '../../types/Movie';
 
-interface Props {
+type Props = {
   movies: Movie[];
-}
+};
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <>
@@ -17,7 +17,7 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
             description={movie.description}
             imgUrl={movie.imgUrl}
             imdbUrl={movie.imdbUrl}
-            imdbId={movie.imdbId}
+            key={movie.imdbId}
           />
         ))
       }
