@@ -13,11 +13,11 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
       title, description, imgUrl, imdbUrl, imdbId,
     }) => (
       <MovieCard
+        key={imdbId}
         title={title}
         description={description}
         imgUrl={imgUrl}
         imdbUrl={imdbUrl}
-        imdbId={imdbId}
       />
     ))}
   </div>
