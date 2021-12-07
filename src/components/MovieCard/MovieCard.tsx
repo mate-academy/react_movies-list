@@ -1,13 +1,8 @@
-import React from 'react';
+import { Movie } from '../../interfaces/Movie';
 
 import './MovieCard.scss';
 
-type Props = {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-};
+type Props = Omit<Movie, 'imdbId'> ;
 
 export const MovieCard: React.FC<Props> = ({
   title,
