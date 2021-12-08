@@ -1,13 +1,9 @@
 import React from 'react';
 
 import './MovieCard.scss';
+import { Movie } from '../types/Movie';
 
-type Props = {
-  title: string,
-  description: string | undefined,
-  imgUrl: string,
-  imdbUrl: string,
-};
+type Props = Omit<Movie, 'imdbId'>;
 
 export const MovieCard: React.FC<Props> = ({
   title, description, imgUrl, imdbUrl,
@@ -36,7 +32,7 @@ export const MovieCard: React.FC<Props> = ({
       </div>
 
       <div className="content">
-        {description}
+        {description && <>{description}</>}
         <br />
         <a href={imdbUrl}>IMDB</a>
       </div>
