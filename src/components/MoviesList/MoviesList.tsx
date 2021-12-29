@@ -1,17 +1,14 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
+import { Movie } from '../../types/Movie';
 
 import './MoviesList.scss';
 
-// interface ValidMovies {
-//   title: string;
-//   description?: string;
-//   imgUrl: string;
-//   imdbUrl: string;
-//   imdbId: string;
-// }
+type Movies = {
+  movies: Movie[];
+};
 
-export const MoviesList: React.FC<any> = ({ movies }) => (
+export const MoviesList: React.FC<Movies> = ({ movies }) => (
   <>
     <ul className="movies">
       {movies.map((movie: any) => (
