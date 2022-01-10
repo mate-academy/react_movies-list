@@ -1,8 +1,11 @@
 import React from 'react';
 import './MoviesList.scss';
-import { SlowBuffer } from 'buffer';
 import { MovieCard } from '../MovieCard';
 import { Movie } from '../../Types/Movie';
+
+// next line was in the project, but linter does not like it.
+// not sure if we need it
+// import { SlowBuffer } from 'buffer';
 
 type Props = {
   movies: Movie[];
