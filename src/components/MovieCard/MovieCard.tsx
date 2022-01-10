@@ -1,13 +1,7 @@
 import React from 'react';
 import { isPropertySignature } from 'typescript';
 import './MovieCard.scss';
-
-type Movie = {
-  title: string;
-  description?: string;
-  imgUrl: string;
-  imdbUrl: string;
-};
+import { Movie } from '../../Types/Movie';
 
 interface Props {
   movie: Movie;

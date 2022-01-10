@@ -1,15 +1,8 @@
 import React from 'react';
 import './MoviesList.scss';
-// import { SlowBuffer } from 'buffer';
+import { SlowBuffer } from 'buffer';
 import { MovieCard } from '../MovieCard';
-
-interface Movie {
-  title: string;
-  description?: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
+import { Movie } from '../../Types/Movie';
 
 type Props = {
   movies: Movie[];
