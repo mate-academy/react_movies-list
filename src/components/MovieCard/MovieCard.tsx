@@ -1,19 +1,24 @@
 import React from 'react';
+import { isPropertySignature } from 'typescript';
 import './MovieCard.scss';
 
 type Movie = {
   title: string;
-  description: string;
+  description?: string;
   imgUrl: string;
   imdbUrl: string;
 };
 
-export const MovieCard: React.FC<Movie> = (props) => (
+interface Props {
+  movie: Movie;
+}
+
+export const MovieCard: React.FC<Props> = ({ movie }) => (
   <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
-          src={props.imgUrl}
+          src={movie.imgUrl}
           alt="Film logo"
         />
       </figure>
@@ -28,14 +33,14 @@ export const MovieCard: React.FC<Movie> = (props) => (
         </div>
 
         <div className="media-content">
-          <p className="title is-8">{props.title}</p>
+          <p className="title is-8">{movie.title}</p>
         </div>
       </div>
 
       <div className="content">
-        {props.description}
+        {movie.description}
         <br />
-        <a href={props.imdbUrl}>IMDB</a>
+        <a href={movie.imdbUrl}>IMDB</a>
       </div>
     </div>
   </>
