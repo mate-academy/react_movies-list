@@ -6,7 +6,7 @@ import './App.scss';
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <div className="movies">
+      <div>
         <MoviesList movies={moviesFromServer} />
       </div>
     </div>
