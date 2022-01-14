@@ -1,14 +1,7 @@
 import React from 'react';
 
 import './MovieCard.scss';
-
-export interface Movie {
-  title: string;
-  description?: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
+import { Movie } from '../../types/Movie';
 
 export const MovieCard: React.FC<Movie> = ({
   title,
@@ -16,10 +9,11 @@ export const MovieCard: React.FC<Movie> = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <>
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
+          className="card-img"
           src={imgUrl}
           alt="Film logo"
         />
@@ -45,5 +39,5 @@ export const MovieCard: React.FC<Movie> = ({
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </>
+  </div>
 );
