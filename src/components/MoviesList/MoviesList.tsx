@@ -10,7 +10,7 @@ type Movies = {
 export const MoviesList: React.FC<Movies> = ({ movies }) => (
   <ul className="movies">
     {movies.map(movie => (
-      <li><MovieCard currentMovie={movie} /></li>
+      <li key={movie.imdbId}><MovieCard {...movie} /></li>
     ))}
   </ul>
 );
