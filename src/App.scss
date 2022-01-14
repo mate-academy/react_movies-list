@@ -14,10 +14,14 @@
   border-left: 1px solid lightgray;
 }
 
-.movies {
+.movies_list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+}
+
+.card {
+  min-height: 600px;
 }
 
 .card-image img {
