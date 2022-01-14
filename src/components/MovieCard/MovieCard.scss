@@ -1,1 +1,8 @@
-// 
+//
+.card {
+  min-height: 600px;
+}
+
+.card-image img {
+  object-fit: contain;
+}
