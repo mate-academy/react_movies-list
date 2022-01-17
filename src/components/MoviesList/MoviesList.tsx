@@ -1,5 +1,4 @@
 import React from 'react';
-import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
@@ -8,16 +7,13 @@ type Props = {
 };
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
-  <ul className="movies">
+  <div className="movies">
     {movies.map(movie => (
-      <li className="card" key={movie.imdbId}>
+      <div key={movie.imdbId} className="card">
         <MovieCard
-          title={movie.title}
-          description={movie.description}
-          imgUrl={movie.imgUrl}
-          imdbUrl={movie.imdbUrl}
+          {...movie}
         />
-      </li>
+      </div>
     ))}
-  </ul>
+  </div>
 );
