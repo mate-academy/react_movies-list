@@ -1,4 +1,4 @@
-export interface List {
+export interface Movie {
   title: string;
   description?: string;
   imgUrl: string;
