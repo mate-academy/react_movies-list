@@ -2,16 +2,9 @@ import React from 'react';
 
 import './MovieCard.scss';
 
-type Movie = {
-  title: string,
-  description?: string,
-  imgUrl: string,
-  imdbUrl: string,
-};
-
 export const MovieCard: React.FC<Movie> = ({
   title,
-  description = '',
+  description,
   imgUrl,
   imdbUrl,
 }) => (
@@ -46,7 +39,3 @@ export const MovieCard: React.FC<Movie> = ({
     </div>
   </div>
 );
-
-MovieCard.defaultProps = {
-  description: '',
-};
