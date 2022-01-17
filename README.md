@@ -1,5 +1,5 @@
 # Movies list
- [DEMO LINK](https://marina-tilniak.github.io/react_movies-list/)
+ npm 
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task

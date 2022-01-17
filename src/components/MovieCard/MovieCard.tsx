@@ -3,7 +3,6 @@ import './MovieCard.scss';
 
 type Props = {
   title: string,
-  // eslint-disable-next-line react/require-default-props
   description?: string,
   imgUrl: string,
   imdbUrl: string,
@@ -11,7 +10,7 @@ type Props = {
 
 export const MovieCard: React.FC<Props> = ({
   title,
-  description = '',
+  description,
   imgUrl,
   imdbUrl,
 }) => (
@@ -46,3 +45,7 @@ export const MovieCard: React.FC<Props> = ({
     </div>
   </>
 );
+
+MovieCard.defaultProps = {
+  description: '',
+};
