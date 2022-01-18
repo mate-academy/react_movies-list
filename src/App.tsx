@@ -1,12 +1,12 @@
 import React from 'react';
 import { MoviesList } from './components/MoviesList';
-import moviesFromServer from './api/movies.json';
+import movies from './api/movies.json';
 import './App.scss';
 
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList movies={moviesFromServer} />
+      <MoviesList movies={movies} />
     </div>
 
     <div className="sidebar">
