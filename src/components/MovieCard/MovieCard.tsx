@@ -9,7 +9,7 @@ export const MovieCard: React.FC<Movie> = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <div className="card">
+  <div>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
