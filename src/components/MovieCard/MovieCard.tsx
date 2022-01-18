@@ -4,7 +4,7 @@ import './MovieCard.scss';
 
 export const MovieCard: React.FC<Movie> = ({
   title,
-  description,
+  description = 'NO DESCRIPTION',
   imgUrl,
   imdbUrl,
 }) => (
@@ -39,10 +39,3 @@ export const MovieCard: React.FC<Movie> = ({
     </div>
   </div>
 );
-
-// MovieCard.defaultProps = {
-//   title: 'no name movie',
-//   description: 'no description',
-//   imgUrl: 'no img url',
-//   imdbUrl: 'no link to imdb',
-// };

@@ -2,14 +2,17 @@
   padding-top: 20px;
 }
 
-.media-content {
-  height: 100px;
+.card-image img {
+  object-fit: contain;
 }
 
 .card-content {
   height: 360px;
 }
 
-.card-image img {
-  object-fit: contain;
+.media-content {
+  height: 100px;
 }
+
+
+
