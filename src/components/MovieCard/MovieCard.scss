@@ -1,1 +1,7 @@
-// 
+.card {
+  height: 600px;
+
+  &-image img {
+    object-fit: contain;
+  }
+}
