@@ -5,7 +5,7 @@ import './MovieCard.scss';
 
 export const MovieCard: React.FC<Movie> = ({
   title,
-  description,
+  description = 'No description',
   imgUrl,
   imdbUrl,
 }) => (
@@ -33,7 +33,7 @@ export const MovieCard: React.FC<Movie> = ({
       </div>
 
       <div className="content">
-        {description || null}
+        {description}
         <br />
         <a href={imdbUrl}>IMDB</a>
       </div>
