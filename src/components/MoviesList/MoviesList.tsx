@@ -1,14 +1,7 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
+import { Movie } from '../../react-app-env';
 import './MoviesList.scss';
-
-interface Movie {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
 
 type Props = {
   movies: Movie[];
