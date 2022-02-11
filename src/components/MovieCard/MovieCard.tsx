@@ -11,7 +11,7 @@ type Props = {
 
 export const MovieCard: React.FC<Props> = ({
   title,
-  description = '',
+  description,
   imgUrl,
   imdbUrl,
 }) => (
