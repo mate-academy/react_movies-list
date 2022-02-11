@@ -9,7 +9,7 @@ export interface Movie {
   imdbUrl: string;
   imdbId: string;
 }
-type Props = {
+export type Props = {
   movies: Movie[];
 };
 

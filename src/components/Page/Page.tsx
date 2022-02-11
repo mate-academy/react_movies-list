@@ -1,11 +1,8 @@
 import React from 'react';
-import { MoviesList } from '../MoviesList';
+import { MoviesList, Props } from '../MoviesList';
 import { Sidebar } from '../Sidebar/Sidebar';
-import { Movie } from '../MovieCard';
+import './Page.scss';
 
-type Props = {
-  movies: Movie[];
-};
 export const Page: React.FC<Props> = (props) => (
   <div className="page">
     <div className="page-content">
