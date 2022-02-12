@@ -23,7 +23,7 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
             <MovieCard
               title={movie.title}
               description={movie.description}
-              imgUrl={movie.imdbUrl}
+              imgUrl={movie.imgUrl}
               imdbUrl={movie.imdbUrl}
             />
           </li>
