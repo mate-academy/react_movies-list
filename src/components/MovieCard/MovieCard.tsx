@@ -5,6 +5,7 @@ type Props = {
   description?: string;
   imgUrl: string;
   imdbUrl: string;
+  imdbId: string;
 };
 
 export const MovieCard: React.FC<Props> = ({
