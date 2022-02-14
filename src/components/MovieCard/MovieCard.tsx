@@ -2,15 +2,14 @@ import React from 'react';
 
 import './MovieCard.scss';
 
-export interface Movie {
+type Props = {
   title: string;
-  description: string;
+  description?: string;
   imgURL: string;
   imdbURL: string;
-  imdbId: string;
-}
+};
 
-export const MovieCard: React.FC<Movie> = ({
+export const MovieCard: React.FC<Props> = ({
   title,
   description,
   imgURL,
@@ -47,3 +46,7 @@ export const MovieCard: React.FC<Movie> = ({
     </div>
   </>
 );
+
+MovieCard.defaultProps = {
+  description: 'No description',
+};
