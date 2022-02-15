@@ -1,7 +1,6 @@
-import './MoviesList.scss';
-
-import { Movie } from '../../Movie';
+import { Movie } from '../../type/Movie';
 import { MovieCard } from '../MovieCard';
+import './MoviesList.scss';
 
 type Props = {
   movies: Movie[];
