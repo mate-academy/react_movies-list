@@ -1,41 +1,22 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
-
-interface FilmWhithId {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string,
-}
+import { FilmWhithId } from '../interface';
 
 type Props = {
-  property: FilmWhithId[];
+  films: FilmWhithId[];
 };
 
-export const MoviesList: React.FC<Props> = ({ property = [] }) => (
-    <div className="movies">
-      {property.map((prop) => {
-        const {
-          imdbId,
-          description,
-          imdbUrl,
-          imgUrl,
-          title,
-        } = prop;
-
-        return (
-          <div id={imdbId} key={title}>
-            <MovieCard
-              title={title}
-              description={description}
-              imgUrl={imgUrl}
-              imdbUrl={imdbUrl}
-            />
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+export const MoviesList: React.FC<Props> = ({ films }) => (
+  <ul className="movies">
+    {films.map((film) => (
+      <li
+        id={film.imdbId}
+        key={film.imdbId}
+        className="card"
+      >
+        <MovieCard film={film} />
+      </li>
+    ))}
+  </ul>
+);

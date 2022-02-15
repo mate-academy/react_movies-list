@@ -4,16 +4,13 @@ import moviesFromServer from './api/movies.json';
 
 const movies = [...moviesFromServer];
 
-const App = () => (
-    <div className="page">
-      <div className="page-content">
-        <MoviesList property={movies} />
-      </div>
-      <div className="sidebar">
-        Sidebar will be here
-      </div>
+export const App = () => (
+  <div className="page">
+    <div className="page-content">
+      <MoviesList films={movies} />
     </div>
-  );
-};
-
-export default App;
+    <div className="sidebar">
+      Sidebar will be here
+    </div>
+  </div>
+);

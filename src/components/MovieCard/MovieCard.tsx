@@ -1,24 +1,17 @@
 import './MovieCard.scss';
+import { FilmWhithId } from '../interface';
 
-interface Props {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-}
+type Props = {
+  film: FilmWhithId;
+};
 
-export const MovieCard: React.FC<Film> = ({
-  title,
-  description,
-  imgUrl,
-  imdbUrl,
-}) => {
+export const MovieCard: React.FC<Props> = ({ film }) => {
   return (
-    <div className="card">
+    <>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
-            src={imgUrl}
+            src={film.imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -33,16 +26,16 @@ export const MovieCard: React.FC<Film> = ({
             </figure>
           </div>
           <div className="media-content">
-            <p className="title is-8">{title}</p>
+            <p className="title is-8">{film.title}</p>
           </div>
         </div>
 
         <div className="content">
-          {description}
+          {film.description}
           <br />
-          <a href={imdbUrl}>IMDB</a>
+          <a href={film.imdbUrl}>IMDB</a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
