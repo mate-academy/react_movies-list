@@ -14,8 +14,7 @@ type Props = {
   property: FilmWhithId[];
 };
 
-export const MoviesList: React.FC<Props> = ({ property = [] }) => {
-  return (
+export const MoviesList: React.FC<Props> = ({ property = [] }) => (
     <div className="movies">
       {property.map((prop) => {
         const {
