@@ -4,8 +4,7 @@ import moviesFromServer from './api/movies.json';
 
 const movies = [...moviesFromServer];
 
-const App = () => {
-  return (
+const App = () => (
     <div className="page">
       <div className="page-content">
         <MoviesList property={movies} />
