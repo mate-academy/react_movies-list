@@ -1,6 +1,6 @@
 import './MovieCard.scss';
 
-interface Film {
+interface Props {
   title: string,
   description: string,
   imgUrl: string,
