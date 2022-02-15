@@ -1,11 +1,11 @@
 import { MovieCard } from './MovieCard';
 
 interface Movie {
-  'title': string,
-  'description': string,
-  'imgUrl': string,
-  'imdbUrl': string,
-  'imdbId': string,
+  title: string,
+  description: string,
+  imgUrl: string,
+  imdbUrl: string,
+  imdbId: string,
 }
 
 type Props = {
