@@ -13,7 +13,7 @@ export const App: React.FC<Props> = () => (
   <div className="page">
     <div className="page-content">
       <MoviesList
-        movies={moviesFromServer ?? []}
+        movies={moviesFromServer}
       />
     </div>
 
