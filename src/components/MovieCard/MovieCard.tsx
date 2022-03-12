@@ -6,7 +6,7 @@ type Props = Partial<Movie>;
 
 export const MovieCard: React.FC<Props> = ({
   title,
-  description,
+  description = '',
   imgUrl,
   imdbUrl,
   imdbId,
