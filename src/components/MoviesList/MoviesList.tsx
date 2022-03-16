@@ -13,6 +13,7 @@ export const MoviesList: React.FC<Props> = ({ moviesFromServer = [] }) => (
     { moviesFromServer.map(movie => (
       <li
         key={movie.imdbId}
+        className="card"
       >
         <MovieCard {...movie} />
       </li>

@@ -7,9 +7,8 @@ export const MovieCard: React.FC<Movie> = ({
   description = '',
   imgUrl,
   imdbUrl,
-  imdbId,
 }) => (
-  <div className="card" key={imdbId}>
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -40,5 +39,5 @@ export const MovieCard: React.FC<Movie> = ({
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </div>
+  </>
 );
