@@ -1,6 +1,6 @@
 # Movies list
 - Replace `<focushuk>` with your Github username in the
- [DEMO LINK](http://focushuk.github.io/react_movies-list/)
+ [DEMO LINK](https://focushuk.github.io/react_movies-list/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
