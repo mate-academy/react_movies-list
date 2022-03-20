@@ -4,12 +4,11 @@ import { Movie } from '../../types/movie';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
-type Movies = {
-  // eslint-disable-next-line react/require-default-props
-  movies?: Movie[];
+type Props = {
+  movies: Movie[];
 };
 
-export const MoviesList: React.FC<Movies> = ({ movies }) => (
+export const MoviesList: React.FC<Props> = ({ movies }) => (
   <ul className="movies">
     {movies && movies.map(movie => (
       <li key={movie.imdbUrl}>
