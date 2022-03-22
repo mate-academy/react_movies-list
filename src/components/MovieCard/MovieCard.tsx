@@ -2,16 +2,15 @@ import React from 'react';
 import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
-type Props = Movie;
+type Props = Omit<Movie, 'imdbId'>;
 
 export const MovieCard: React.FC<Props> = ({
   title,
   description,
   imgUrl,
   imdbUrl,
-  imdbId,
 }) => (
-  <div className="card" key={imdbId}>
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img src={imgUrl} alt="Film logo" />
@@ -41,5 +40,5 @@ export const MovieCard: React.FC<Props> = ({
         <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
-  </div>
+  </>
 );
