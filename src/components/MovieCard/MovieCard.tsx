@@ -4,7 +4,7 @@ import './MovieCard.scss';
 
 type Props = {
   title: string,
-  description: string,
+  description?: string,
   imgUrl: string,
   imdbUrl: string,
 };
@@ -46,3 +46,7 @@ export const MovieCard: React.FC<Props> = ({
     </div>
   </>
 );
+
+MovieCard.defaultProps = {
+  description: '',
+};
