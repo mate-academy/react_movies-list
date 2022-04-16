@@ -2,7 +2,6 @@ import React from 'react';
 import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
-/* eslint-disable max-len */
 export const MovieCard: React.FC<Movie> = (cardMovie) => (
   <>
     <div className="card-image">
