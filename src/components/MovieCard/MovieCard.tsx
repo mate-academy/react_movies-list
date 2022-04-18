@@ -3,7 +3,7 @@ import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
 export const MovieCard: React.FC<Movie> = (cardMovie) => (
-  <>
+  <div className="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -32,5 +32,5 @@ export const MovieCard: React.FC<Movie> = (cardMovie) => (
         <a href={cardMovie.imdbUrl}>IMDB</a>
       </div>
     </div>
-  </>
+  </div>
 );

@@ -8,15 +8,11 @@ type ListOfMovies = {
 };
 
 export const MoviesList: React.FC<ListOfMovies> = ({ movies }) => (
-  <>
-    <div className="movies">
-      {movies.map(movie => {
-        return (
-          <div className="card" key={movie.imdbId}>
-            <MovieCard {...movie} />
-          </div>
-        );
-      })}
-    </div>
-  </>
+  <div className="movies">
+    {movies.map(movie => {
+      return (
+        <MovieCard {...movie} key={movie.imdbId} />
+      );
+    })}
+  </div>
 );
