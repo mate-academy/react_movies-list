@@ -4,18 +4,18 @@ import { MovieCard } from '../MovieCard';
 import { CardInfo } from '../../types/CardInfo';
 
 type Props = {
-  cards: CardInfo[];
+  movies: CardInfo[];
 };
 
-export const MoviesList: React.FC<Props> = ({ cards = [] }) => (
+export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
   <div className="movies">
-    {cards.map(card => (
-      <div className="card" key={card.imdbId}>
+    {movies.map(movie => (
+      <div className="card" key={movie.imdbId}>
         <MovieCard
-          title={card.title}
-          imgUrl={card.imgUrl}
-          imdbUrl={card.imdbUrl}
-          description={card.description}
+          title={movie.title}
+          imgUrl={movie.imgUrl}
+          imdbUrl={movie.imdbUrl}
+          description={movie.description}
         />
       </div>
     ))}
