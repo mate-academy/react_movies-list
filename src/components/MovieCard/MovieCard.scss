@@ -1,1 +1,5 @@
-// 
+.card {
+  &__image {
+    object-fit: contain;
+  }
+}
