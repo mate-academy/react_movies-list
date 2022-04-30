@@ -5,7 +5,7 @@ import './MovieCard.scss';
 
 export const MovieCard: React.FC<Movie> = ({
   title,
-  description,
+  description = 'Has no data',
   imgUrl,
   imdbUrl,
 }) => (
