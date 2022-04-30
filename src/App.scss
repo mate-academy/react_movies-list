@@ -1,25 +1,22 @@
 .page {
   display: grid;
   grid-template: auto / 1fr 400px;
-  column-gap: 20px;
+  column-gap: 1px;
   min-height: 100vh;
 }
 
 .page-content {
   padding: 20px;
+  background-color: rgb(255, 246, 246);
 }
 
 .sidebar {
   padding: 20px;
   border-left: 1px solid lightgray;
-}
 
-.movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
+  transition: all 1s;
 
-.card-image img {
-  object-fit: contain;
+  &:hover {
+    background-color: rgb(255, 189, 244);
+  }
 }

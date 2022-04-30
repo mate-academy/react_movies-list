@@ -1,1 +1,15 @@
-// 
+.card {
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 2px 2px 0  rgb(255, 230, 253);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0.8em 0.8em -0.7em rgb(253, 156, 172);
+    transform: translateY(-0.25em);
+  }
+}
+
+.card-image img {
+  object-fit: contain;
+}
