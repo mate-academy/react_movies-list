@@ -11,14 +11,14 @@ type ServerData = {
 export const MoviesList: React.FC<ServerData> = ({ moviesData }) => (
   <div className="moviesList">
     {moviesData.map(({
-      title, description, imgUrl, imdbUrl,
-    // eslint-disable-next-line array-callback-return
+      imdbId, title, description, imgUrl, imdbUrl,
     }) => (
       <MovieCard
         title={title}
         description={description}
         imgUrl={imgUrl}
         imdbUrl={imdbUrl}
+        key={imdbId}
       />
     ))}
   </div>

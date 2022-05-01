@@ -1,6 +1,6 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 import { MoviesServerData } from '../../types/MoviesServerData';
-// import PropTypes from
 
 import './MovieCard.scss';
 
