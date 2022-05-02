@@ -34,7 +34,7 @@ export const MovieCard: React.FC<Props> = ({ movieData }) => (
         <div className="content">
           {movieData.description}
           <br />
-          <a href={movieData.imdbUrl}>{movieData.imdbId}</a>
+          <a href={movieData.imdbUrl}>IMDB</a>
         </div>
       </div>
     </div>
