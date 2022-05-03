@@ -4,21 +4,23 @@ import { MovieCard } from '../MovieCard';
 import { Movie } from '../types/Movie';
 
 type Movies = {
-  movies: Movie[]
+  movies: Movie[];
 };
 
 export const MoviesList: React.FC<Movies> = ({ movies }) => (
-  <ul>
-    {movies.map(movie => (
-      <li key={movie.imdbId}>
+  <div className="movies">
+    {movies.map(
+      ({
+        title, description, imgUrl, imdbUrl, imdbId,
+      }) => (
         <MovieCard
-          title={movie.title}
-          description={movie.description}
-          imgUrl={movie.imgUrl}
-          imdbUrl={movie.imdbUrl}
-          imdbId={movie.imdbId}
+          key={imdbId}
+          title={title}
+          description={description}
+          imgUrl={imgUrl}
+          imdbUrl={imdbUrl}
         />
-      </li>
-    ))}
-  </ul>
+      ),
+    )}
+  </div>
 );
