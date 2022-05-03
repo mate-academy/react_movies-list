@@ -1,8 +1,6 @@
 import React from 'react';
 import { Movie } from '../../types/Movie';
 
-import './MovieCard.scss';
-
 export const MovieCard: React.FC<Movie> = ({
   title,
   description = 'Has no data',
