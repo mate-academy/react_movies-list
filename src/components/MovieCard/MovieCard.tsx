@@ -11,10 +11,13 @@ export const MovieCard: React.FC<Props> = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <div className="card">
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
-        <img src={imgUrl} alt="Film logo" />
+        <img
+          src={imgUrl}
+          alt="Film logo"
+        />
       </figure>
     </div>
 
@@ -31,11 +34,13 @@ export const MovieCard: React.FC<Props> = ({
         </div>
       </div>
 
-      <div className="content">
-        {description}
-        <br />
-        <a href={imdbUrl}>IMDB</a>
-      </div>
+      {description && (
+        <div className="content">
+          {description}
+          <br />
+          <a href={imdbUrl}>IMDB</a>
+        </div>
+      )}
     </div>
-  </div>
+  </>
 );
