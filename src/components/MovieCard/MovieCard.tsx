@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './MovieCard.scss';
 
 type Props = {
@@ -49,9 +48,5 @@ export const MovieCard: React.FC<Props> = ({
 );
 
 MovieCard.defaultProps = {
-  description: '',
-};
-
-MovieCard.propTypes = {
-  description: PropTypes.string,
+  description: 'Description is undefined',
 };
