@@ -3,4 +3,5 @@ export interface MovieCardItem {
   description?: string;
   imgUrl: string;
   imdbUrl: string;
+  imdbId: string,
 }
