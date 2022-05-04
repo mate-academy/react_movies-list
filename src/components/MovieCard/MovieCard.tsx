@@ -48,5 +48,5 @@ export const MovieCard: React.FC<Props> = ({
 );
 
 MovieCard.defaultProps = {
-  description: '',
+  description: 'No description',
 };
