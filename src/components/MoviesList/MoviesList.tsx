@@ -2,13 +2,7 @@ import React from 'react';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
 
-interface Item {
-  title: string,
-  description?: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string
-}
+import { Item } from '../../types/Item';
 
 type Items = {
   props: Item[]
