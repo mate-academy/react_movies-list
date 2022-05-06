@@ -1,3 +1,9 @@
 .card-image img {
   object-fit: contain;
-} 
+}
+
+.content {
+  &__imdb {
+    display: block;
+  }
+}
