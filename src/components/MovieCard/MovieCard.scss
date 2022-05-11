@@ -1,5 +1,7 @@
 .card-image img {
   object-fit: contain;
+  position: relative;
+  max-width: 100%;
 }
 
 .content {
