@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { MoviesServerData } from '../../types/MoviesServerData';
 
 import './MovieCard.scss';
@@ -45,6 +45,10 @@ export const MovieCard: React.FC<MovieData> = ({
   </div>
 );
 
-// MovieCard.defaultProps = {
-//   description: '',
-// };
+MovieCard.propTypes = {
+  description: PropTypes.string,
+};
+
+MovieCard.defaultProps = {
+  description: '',
+};
