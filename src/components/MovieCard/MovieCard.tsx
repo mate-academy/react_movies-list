@@ -2,7 +2,9 @@ import React from 'react';
 import { Card } from '../../types/Card';
 import './MovieCard.scss';
 
-export const MovieCard: React.FC <Card> = (props) => {
+type Props = Omit<Card, 'imdbId'>;
+
+export const MovieCard: React.FC <Props> = (props) => {
   const {
     title,
     description,

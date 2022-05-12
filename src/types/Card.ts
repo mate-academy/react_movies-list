@@ -3,4 +3,5 @@ export interface Card {
   description?: string;
   imgUrl: string;
   imdbUrl: string;
+  imdbId: string;
 }
