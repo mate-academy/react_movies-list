@@ -4,12 +4,12 @@ import { Movie } from '../Types';
 import { MovieCard } from '../MovieCard';
 
 type Props = {
-  list: Movie[];
+  movies: Movie[];
 };
 
-export const MoviesList: React.FC<Props> = ({ list = [] }) => (
+export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
   <div className="Movies">
-    {list.map(movie => (
+    {movies.map(movie => (
       <>
         <MovieCard
           title={movie.title}

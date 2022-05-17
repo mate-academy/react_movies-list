@@ -9,7 +9,7 @@ export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
       <div className="movies">
-        <MoviesList list={moviesFromServer} />
+        <MoviesList movies={moviesFromServer} />
       </div>
     </div>
 
