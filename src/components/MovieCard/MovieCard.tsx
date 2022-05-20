@@ -6,10 +6,12 @@ interface Props {
   description: string;
   imgUrl: string;
   imdbUrl: string;
-};
+}
 
 export const MovieCard: React.FC<Props> = (props) => {
-  const { title, description, imgUrl, imdbUrl } = props;
+  const {
+    title, description, imgUrl, imdbUrl,
+  } = props;
 
   return (
     <>
