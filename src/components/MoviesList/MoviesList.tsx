@@ -1,14 +1,7 @@
 import React from 'react';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard/MovieCard';
-
-interface List {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
+import { List } from '../types/ListType';
 
 type Props = {
   datafromServer: List[]
@@ -18,7 +11,12 @@ export const MoviesList: React.FC<Props> = ({ datafromServer = [] }) => (
   <div className="movies">
     {datafromServer.map(movie => (
       <div key={movie.imdbId} className="card" data-cy="card">
-        <MovieCard {...movie} />
+        <MovieCard
+          title={movie.title}
+          description={movie.description}
+          imdbUrl={movie.imdbUrl}
+          imgUrl={movie.imgUrl}
+        />
       </div>
     ))}
   </div>
