@@ -1,7 +1,3 @@
-.card-image img {
-  object-fit: contain;
-}
-
 .movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
