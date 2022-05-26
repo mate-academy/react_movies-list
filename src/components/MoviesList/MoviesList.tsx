@@ -1,6 +1,7 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
-import { List } from '../../type/MoviesList';
+import { List } from '../../react-app-env';
+
 import './MoviesList.scss';
 
 type Props = {
@@ -11,7 +12,7 @@ export const MoviesList: React.FC<Props> = ({ moviesListAPI }) => (
   <div className="movies">
     {moviesListAPI.map(movieCard => (
       <div className="card" key={movieCard.imdbId} data-cy="card">
-        <MovieCard {...movieCard} />
+        <MovieCard moviesCardAPI={movieCard} />
       </div>
     ))}
   </div>
