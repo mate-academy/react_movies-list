@@ -1,5 +1,5 @@
 import React from 'react';
-import { Movie } from '../../types/Movie';
+import { Movie } from '../../react-app-env';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
