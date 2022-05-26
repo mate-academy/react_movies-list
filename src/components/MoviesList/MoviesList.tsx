@@ -5,12 +5,12 @@ import { List } from '../../react-app-env';
 import './MoviesList.scss';
 
 type Props = {
-  moviesListAPI: List[];
+  movies: List[];
 };
 
-export const MoviesList: React.FC<Props> = ({ moviesListAPI }) => (
+export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
   <div className="movies">
-    {moviesListAPI.map(movieCard => (
+    {movies.map(movieCard => (
       <div className="card" key={movieCard.imdbId} data-cy="card">
         <MovieCard moviesCardAPI={movieCard} />
       </div>
