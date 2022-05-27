@@ -1,9 +1,13 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
-import { FilmList } from '../../react-app-env';
+import { FilmProp } from '../../react-app-env';
 
-export const MoviesList: React.FC<FilmList> = ({ movieList = [] }) => (
+interface Props {
+  movieList: FilmProp[];
+}
+
+export const MoviesList: React.FC<Props> = ({ movieList = [] }) => (
 
   <>
     <div className="movies">

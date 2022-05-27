@@ -1,8 +1,12 @@
 import React from 'react';
 import './MovieCard.scss';
-import { FilmCard } from '../../react-app-env';
+import { FilmProp } from '../../react-app-env';
 
-export const MovieCard: React.FC<FilmCard> = ({ movie }) => {
+interface Props {
+  movie: FilmProp;
+}
+
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
