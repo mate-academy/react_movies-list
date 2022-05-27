@@ -1,4 +1,4 @@
-import { Movie } from '../../types/types';
+import { Movie } from '../../react-app-env';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
