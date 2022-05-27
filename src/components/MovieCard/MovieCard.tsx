@@ -1,10 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { MovCard } from '../../react-app-env';
+import { Film } from '../../react-app-env';
 
 import './MovieCard.scss';
 
-export const MovieCard: React.FC<MovCard> = ({ movie }) => {
+interface Prop {
+  movie: Film;
+}
+
+export const MovieCard: React.FC<Prop> = ({ movie }) => {
   const {
     imgUrl, title, description, imdbUrl,
   } = movie;

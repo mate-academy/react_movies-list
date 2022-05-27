@@ -6,11 +6,3 @@ export interface Film {
   imdbUrl: string;
   imdbId : string;
 }
-
-export interface MovList {
-  movies: Film[];
-}
-
-export interface MovCard {
-  movie: Film;
-}
