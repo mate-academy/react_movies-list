@@ -1,12 +1,9 @@
 /// <reference types="react-scripts" />
 
-export interface Card {
+export interface List {
   title: string;
   description: string;
-  imbdUrl?: string;
   imgUrl: string;
-}
-
-export interface List extends Card {
+  imdbUrl: string;
   imdbId: string;
 }

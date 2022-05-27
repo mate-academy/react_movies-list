@@ -1,22 +1,21 @@
 import React from 'react';
-import { Card } from '../../react-app-env';
-
 import './MovieCard.scss';
 
-type Props = {
-  moviesCardAPI: Card,
-};
+interface Props {
+  title: string;
+  description: string;
+  imdbUrl: string;
+  imgUrl: string;
+}
 
-export const MovieCard: React.FC<Props> = ({ moviesCardAPI }) => {
-  const {
-    title,
-    description,
-    imbdUrl,
-    imgUrl,
-  } = moviesCardAPI;
-
+export const MovieCard: React.FC<Props> = ({
+  title,
+  description,
+  imdbUrl,
+  imgUrl,
+}) => {
   return (
-    <>
+    <div className="card" data-cy="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
@@ -44,11 +43,11 @@ export const MovieCard: React.FC<Props> = ({ moviesCardAPI }) => {
         <div className="content">
           {description}
           <br />
-          <a href={imbdUrl}>
+          <a href={imdbUrl}>
             IMDB
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
