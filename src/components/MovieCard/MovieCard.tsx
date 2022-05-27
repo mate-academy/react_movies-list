@@ -1,24 +1,17 @@
 import React from 'react';
 import './MovieCard.scss';
+import { FilmCard } from '../../react-app-env';
 
-interface FilmProp {
-  title: string;
-  description: string;
-  imbdUrl: string;
-  imgUrl: string;
-  imdbId: string;
-}
-export const MovieCard: React.FC<FilmProp> = (
-  {
+export const MovieCard: React.FC<FilmCard> = ({ movie }) => {
+  const {
     title,
     description,
-    imbdUrl,
+    imdbUrl,
     imgUrl,
-    imdbId,
-  },
-) => (
-  <>
-    <div className="card" key={imdbId} data-cy="card">
+  } = movie;
+
+  return (
+    <>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
@@ -44,9 +37,9 @@ export const MovieCard: React.FC<FilmProp> = (
         <div className="content">
           {description}
           <br />
-          <a href={imbdUrl}>IMDB</a>
+          <a href={imdbUrl}>IMDB</a>
         </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
