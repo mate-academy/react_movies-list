@@ -1,6 +1,16 @@
 import React from 'react';
 import './MoviesList.scss';
+import { MovieCard } from '../MovieCard';
+import { Movie } from './react-app-env';
 
-export const MoviesList: React.FC = () => (
-  <>Put the list here</>
+interface Props {
+  movies: Movie[];
+}
+
+export const MoviesList: React.FC<Props> = ({ movies }) => (
+  <div className="movies">
+    {movies.map(card => (
+      <MovieCard movies={card} key={card.imdbId} />
+    ))}
+  </div>
 );
