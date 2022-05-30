@@ -14,7 +14,11 @@ export const MovieCard: React.FC <Movie> = (
   },
 ) => (
   <>
-    <div className="card-image" key={imdbId}>
+    <div
+      className="card-image"
+      key={imdbId}
+      data-cy="card"
+    >
       <figure className="image is-4by3">
         <img
           src={imgUrl}
