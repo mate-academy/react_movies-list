@@ -9,7 +9,11 @@ interface Prop {
 export const MoviesList: React.FC<Prop> = ({ moviesList }) => (
   <>
     {moviesList.map((move: Movie) => (
-      <div key={move.imdbId} className="card">
+      <div
+        key={move.imdbId}
+        className="card"
+        data-cy="card"
+      >
         <MovieCard
           title={move.title}
           description={move.description}
