@@ -10,16 +10,21 @@ interface SingleMovie {
   imdbId: string,
 }
 
-type Mov = {
+type Props = {
   list: SingleMovie[];
 };
 
-export const MoviesList: React.FC<Mov> = ({ list }) => (
+export const MoviesList: React.FC<Props> = ({ list }) => (
 
   <div className="movies">
     {list.map((el : SingleMovie) => (
       <div key={el.imdbId} data-cy="card" className="card">
-        <MovieCard {...el} />
+        <MovieCard
+          title={el.title}
+          description={el.description}
+          imgUrl={el.imgUrl}
+          imdbUrl={el.imdbUrl}
+        />
       </div>
     ))}
   </div>
