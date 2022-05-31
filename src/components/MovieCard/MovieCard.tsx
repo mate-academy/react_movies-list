@@ -6,7 +6,7 @@ export const MovieCard: React.FC<Movies> = ({
   title,
   description,
   imgUrl,
-  imbdUrl,
+  imdbUrl,
   imdbId,
 }) => (
   <div className="card" data-cy="card" key={imdbId}>
@@ -36,7 +36,7 @@ export const MovieCard: React.FC<Movies> = ({
       <div className="content">
         {description}
         <br />
-        <a href={imbdUrl}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>

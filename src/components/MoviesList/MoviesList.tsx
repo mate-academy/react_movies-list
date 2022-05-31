@@ -14,7 +14,7 @@ export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
         title,
         description,
         imgUrl,
-        imbdUrl,
+        imdbUrl,
         imdbId,
       } = movieBlock;
 
@@ -23,7 +23,7 @@ export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
           title={title}
           description={description}
           imgUrl={imgUrl}
-          imbdUrl={imbdUrl}
+          imdbUrl={imdbUrl}
           imdbId={imdbId}
         />
       );
