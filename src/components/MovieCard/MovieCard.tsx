@@ -1,7 +1,16 @@
 import React from 'react';
-
+import { MoviesList } from '../MoviesList';
+import { Movies } from '../../appTypeDefs';
 import './MovieCard.scss';
 
-export const MovieCard: React.FC = () => (
-  <>Put the card here</>
-);
+type MovieCardProps = {
+  movies: Movies[];
+};
+
+export const MovieCard: React.FC<MovieCardProps> = (movies) => {
+  return (
+    <>
+      <MoviesList {...movies} />
+    </>
+  );
+};
