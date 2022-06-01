@@ -2,8 +2,16 @@ import React from 'react';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
 
+interface Keys {
+  title: string;
+  description: string;
+  imdbId: string;
+  imgUrl: string;
+  imdbUrl: string;
+}
+
 interface Movie {
-  movies: [];
+  movies: Keys[];
 }
 
 export const MoviesList: React.FC<Movie> = ({ movies }) => (
