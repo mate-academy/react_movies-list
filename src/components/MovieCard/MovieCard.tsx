@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-indent */
 import React from 'react';
 import { Movie } from '../../types/movies';
 import './MovieCard.scss';
