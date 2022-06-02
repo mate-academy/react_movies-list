@@ -26,7 +26,7 @@ describe('MovieCard component', () => {
   it(`should have a 'imdbUrl' prop
       with the link to IMDb page of the film`, () => {
     mount(<MovieCard
-      imbdUrl={movies[0].imdbUrl}
+      imdbUrl={movies[0].imdbUrl}
     />);
 
     cy.getByDataCy('card')
