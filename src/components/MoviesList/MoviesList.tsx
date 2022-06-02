@@ -10,9 +10,13 @@ interface Props {
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <div key={movie.imdbId}>
-        <MovieCard movie={movie} />
-      </div>
+      <MovieCard
+        key={movie.imdbId}
+        title={movie.title}
+        description={movie.description}
+        imdbUrl={movie.imdbUrl}
+        imgUrl={movie.imgUrl}
+      />
     ))}
   </div>
 );
