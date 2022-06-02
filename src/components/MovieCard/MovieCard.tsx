@@ -5,14 +5,14 @@ import './MovieCard.scss';
 interface Props {
   title: string;
   description: string;
-  imbdUrl: string;
+  imdbUrl: string;
   imgUrl: string;
 }
 
 export const MovieCard: React.FC<Props> = ({
   title,
   description,
-  imbdUrl,
+  imdbUrl,
   imgUrl,
 }) => (
   <div className="card" data-cy="card">
@@ -41,7 +41,7 @@ export const MovieCard: React.FC<Props> = ({
       <div className="content">
         {description}
         <br />
-        <a href={imbdUrl}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </div>
