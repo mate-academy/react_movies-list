@@ -2,20 +2,14 @@ import React from 'react';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
 
-interface Movie {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
+import { Movie } from '../../types';
 
 interface Props {
   moviesList: Movie[];
 }
 
 export const MoviesList: React.FC<Props> = ({ moviesList }) => (
-  <ul>
+  <>
     {moviesList.map(({
       title,
       description,
@@ -23,14 +17,13 @@ export const MoviesList: React.FC<Props> = ({ moviesList }) => (
       imdbUrl,
       imdbId,
     }) => (
-      <li key={imdbId}>
-        <MovieCard
-          cardTitle={title}
-          description={description}
-          imgUrl={imgUrl}
-          imdbUrl={imdbUrl}
-        />
-      </li>
+      <MovieCard
+        cardTitle={title}
+        description={description}
+        imgUrl={imgUrl}
+        imdbUrl={imdbUrl}
+        imdbId={imdbId}
+      />
     ))}
-  </ul>
+  </>
 );
