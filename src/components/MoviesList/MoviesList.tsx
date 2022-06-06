@@ -19,7 +19,3 @@ export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
     ))}
   </div>
 );
-
-MoviesList.defaultProps = {
-  movies: [],
-};
