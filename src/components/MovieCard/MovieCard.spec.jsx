@@ -5,6 +5,7 @@ import movies from '../../api/movies.json';
 
 describe('MovieCard component', () => {
   it('should have a \'title\' prop with the title of the film', () => {
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<MovieCard
       title={movies[0].title}
     />);
