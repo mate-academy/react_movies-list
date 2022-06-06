@@ -9,24 +9,24 @@ type Props = {
   imgUrl: string,
   imdbUrl: string,
   imdbId: string,
-}
+};
 
-export const MovieCard: React.FC<Props> = ({ 
+export const MovieCard: React.FC<Props> = ({
   title,
   description,
   imgUrl,
   imdbUrl,
-  imdbId
+  imdbId,
 }) => (
   <div data-cy="card" key={imdbId} className="card">
     <div className="card-image">
       <figure className="image is-4by3">
-        <img 
+        <img
           src={imgUrl}
           alt="Film logo"
         />
       </figure>
-      </div>
+    </div>
 
     <div className="card-content">
       <div className="media">

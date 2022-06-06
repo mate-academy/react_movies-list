@@ -6,12 +6,12 @@ import { Movie } from '../../react-app-env';
 
 type Props = {
   movies: Movie[],
-}
+};
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
-  <div className='movies'>
+  <div className="movies">
     {movies.map(movie => (
-      <MovieCard 
+      <MovieCard
         title={movie.title}
         description={movie.description}
         imgUrl={movie.imgUrl}
