@@ -2,6 +2,11 @@
 import React from 'react';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
+import { Movie } from '../../react-app-env';
+
+type Props = {
+  movies: Movie[],
+};
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <div className="movies">
@@ -17,15 +22,3 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
     )) }
   </div>
 );
-
-interface Movie {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string,
-}
-
-type Props = {
-  movies: Movie[],
-};
