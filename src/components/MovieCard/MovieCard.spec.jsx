@@ -1,10 +1,10 @@
-import React from 'react';
 import { mount } from '@cypress/react';
 import { MovieCard } from './MovieCard';
 import movies from '../../api/movies.json';
 
 describe('MovieCard component', () => {
   it('should have a \'title\' prop with the title of the film', () => {
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<MovieCard
       title={movies[0].title}
     />);
@@ -13,7 +13,7 @@ describe('MovieCard component', () => {
       .should('contain', movies[0].title);
   });
 
-  it(`should have a 'description' prop 
+  it(`should have a 'description' prop
       with the description of the film`, () => {
     mount(<MovieCard
       description={movies[0].description}
@@ -23,7 +23,7 @@ describe('MovieCard component', () => {
       .should('contain', movies[0].description);
   });
 
-  it(`should have a 'imdbUrl' prop 
+  it(`should have a 'imdbUrl' prop
       with the link to IMDb page of the film`, () => {
     mount(<MovieCard
       imdbUrl={movies[0].imdbUrl}
