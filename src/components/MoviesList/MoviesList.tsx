@@ -7,20 +7,37 @@ type MoviesListProps = {
   movies: Movie[];
 };
 
-export const MoviesList: React.FC<MoviesListProps> = (
-  { movies },
-) => {
-  return (
-    <div className="movies">
-      {movies.map(movie => (
-        <MovieCard
-          key={movie.imdbId}
-          title={movie.title}
-          description={movie.description}
-          imdbUrl={movie.imdbUrl}
-          imgUrl={movie.imgUrl}
-        />
-      ))}
-    </div>
-  );
-};
+interface State {
+  activeMovieIndex: number;
+}
+
+export class MoviesList extends React.Component<MoviesListProps, State> {
+  state = {
+    activeMovieIndex: 0,
+  };
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState((prevState) => (
+        { activeMovieIndex: prevState.activeMovieIndex + 1 }
+      ));
+    }, 1000);
+  }
+
+  render(): React.ReactNode {
+    return (
+      <div className="movies">
+        {this.props.movies.map((movie, index) => (
+          <MovieCard
+            key={movie.imdbId}
+            title={movie.title}
+            description={movie.description}
+            imdbUrl={movie.imdbUrl}
+            imgUrl={movie.imgUrl}
+            active={index === this.state.activeMovieIndex % 5}
+          />
+        ))}
+      </div>
+    );
+  }
+}
