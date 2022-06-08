@@ -9,18 +9,16 @@ interface Props {
 }
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
-  <>
-    <ul className="movies">
-      {movies.map((movie) => (
-        <li key={movie.imdbId}>
-          <MovieCard
-            title={movie.title}
-            description={movie.description}
-            imdbUrl={movie.imdbUrl}
-            imgUrl={movie.imgUrl}
-          />
-        </li>
-      ))}
-    </ul>
-  </>
+  <ul className="movies">
+    {movies.map((movie) => (
+      <li key={movie.imdbId}>
+        <MovieCard
+          title={movie.title}
+          description={movie.description}
+          imdbUrl={movie.imdbUrl}
+          imgUrl={movie.imgUrl}
+        />
+      </li>
+    ))}
+  </ul>
 );
