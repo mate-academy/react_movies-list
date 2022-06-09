@@ -2,21 +2,20 @@
 import React from 'react';
 
 import './MovieCard.scss';
+import { Movie } from '../../react-app-env';
 
 type Props = {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string,
+  movie: Movie,
 };
 
 export const MovieCard: React.FC<Props> = ({
-  title,
-  description,
-  imgUrl,
-  imdbUrl,
-  imdbId,
+  movie: {
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
+    imdbId,
+  }
 }) => (
   <div data-cy="card" key={imdbId} className="card">
     <div className="card-image">
