@@ -8,7 +8,13 @@ export const MoviesList: React.FC<{ movies: Movie[] }> = ({
 }: { movies: Movie[] }) => (
   <div className="movies">
     {movies.map((mov: Movie) => (
-      <MovieCard {...mov} />
+      <MovieCard
+        title={mov.title}
+        description={mov.description}
+        imgUrl={mov.imgUrl}
+        imdbUrl={mov.imdbUrl}
+        imdbId={mov.imdbId}
+      />
     ))}
   </div>
 );
