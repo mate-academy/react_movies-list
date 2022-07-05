@@ -3,7 +3,7 @@
 import React from 'react';
 import { mount } from '@cypress/react';
 import { App } from './App';
-import moviesFromServer from './api/movies.json';
+import moviesFromServer from './api/movies';
 
 describe('App', () => {
   it(`should pass the 'moviesFromServer'
