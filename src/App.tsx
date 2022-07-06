@@ -1,6 +1,6 @@
 import React from 'react';
-import moviesFromServer from './api/movies.json';
 import { MoviesList } from './components/MoviesList';
+import moviesFromServer from './api/movies.json';
 import './App.scss';
 
 /* eslint-disable max-len */
