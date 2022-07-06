@@ -3,8 +3,12 @@ import { Movie } from '../types/movie';
 
 import './MovieCard.scss';
 
-export const MovieCard: React.FC<Movie> = (movie) => (
-  <>
+type Props = {
+  movie: Movie
+};
+
+export const MovieCard: React.FC<Props> = ({ movie }) => (
+  <div className="card" data-cy="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -34,5 +38,5 @@ export const MovieCard: React.FC<Movie> = (movie) => (
       </div>
     </div>
 
-  </>
+  </div>
 );
