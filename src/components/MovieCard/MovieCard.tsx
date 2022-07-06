@@ -8,7 +8,7 @@ type Prors = {
 };
 
 export const MovieCard: React.FC<Prors> = ({ movie }) => (
-  <div className="card" key={movie.imdbId}>
+  <div className="card" data-cy="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
