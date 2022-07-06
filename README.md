@@ -1,4 +1,9 @@
 # Movies list
+- [DEMO LINK](https://saperzp.github.io/react_movies-list/)
+- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+
+## Task
+
 You are given movies loaded from API and the initial markup.
 
 1. Create and export a `Movie` interface inside `./src/types/Movie.ts` (all the fields are required)
