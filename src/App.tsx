@@ -1,7 +1,7 @@
 import React from 'react';
 import moviesFromServer from './api/movies.json';
-import './App.scss';
 import { MoviesList } from './components/MoviesList';
+import './App.scss';
 
 /* eslint-disable max-len */
 export const App: React.FC = () => (

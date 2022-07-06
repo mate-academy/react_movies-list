@@ -1,9 +1,9 @@
 import React from 'react';
+import { MovieCard } from '../MovieCard';
 import { Movie } from '../../types/Movie';
-import { MovieCard } from '../MovieCard/index';
 import './MoviesList.scss';
 
-type Props = {
+export type Props = {
   movies: Movie[];
 };
 
