@@ -8,7 +8,7 @@ type List = {
 };
 
 export const MoviesList: React.FC<List> = ({ movies }) => (
-  <>
+  <div className="movies">
     {movies.map(({
       title,
       description,
@@ -31,5 +31,5 @@ export const MoviesList: React.FC<List> = ({ movies }) => (
         </div>
       );
     })}
-  </>
+  </div>
 );
