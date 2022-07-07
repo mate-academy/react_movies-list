@@ -1,21 +1,14 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard/MovieCard';
+import { Card } from '../../types/Card';
 import './MoviesList.scss';
-
-interface Card {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
 
 type List = {
   movies: Card[],
 };
 
 export const MoviesList: React.FC<List> = ({ movies }) => (
-  <div className="movies">
+  <>
     {movies.map(({
       title,
       description,
@@ -25,7 +18,7 @@ export const MoviesList: React.FC<List> = ({ movies }) => (
     }) => {
       return (
         <div
-          className="card"
+          className="movies"
           key={imdbId}
           data-cy="card"
         >
@@ -38,5 +31,5 @@ export const MoviesList: React.FC<List> = ({ movies }) => (
         </div>
       );
     })}
-  </div>
+  </>
 );
