@@ -1,16 +1,12 @@
 import React from 'react';
+import { Film } from '../../react-app-env';
 
 import './MovieCard.scss';
 
-type Props = {
-  title: string,
-  description: string,
-  imgUrl: string,
-  url: string,
-};
+type Props = Film;
 
 const MovieCard: React.FC<Props> = ({
-  title, description, imgUrl, url,
+  title, description, imgUrl, imdbUrl,
 }) => (
   <>
     <div className="card-image">
@@ -38,7 +34,7 @@ const MovieCard: React.FC<Props> = ({
       <div className="content">
         {description}
         <br />
-        <a href={url}>IMDB</a>
+        <a href={imdbUrl}>IMDB</a>
       </div>
     </div>
   </>

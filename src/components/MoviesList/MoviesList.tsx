@@ -1,17 +1,10 @@
 import React from 'react';
+import { Film } from '../../react-app-env';
 import MovieCard from '../MovieCard/MovieCard';
 import './MoviesList.scss';
 
-export interface Films {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-  imdbId: string
-}
-
 type Props = {
-  movies: Films[];
+  movies: Film[];
 };
 
 const MoviesList: React.FC<Props> = ({ movies }) => (
@@ -22,7 +15,7 @@ const MoviesList: React.FC<Props> = ({ movies }) => (
           <MovieCard
             title={film.title}
             description={film.description}
-            url={film.imdbUrl}
+            imdbUrl={film.imdbUrl}
             imgUrl={film.imgUrl}
           />
         </li>
