@@ -8,9 +8,8 @@ export const MovieCard: React.FC<Movie> = ({
   description,
   imgUrl,
   imdbUrl,
-  imdbId,
 }) => (
-  <div className="card" key={imdbId} data-cy="card">
+  <div className="card" data-cy="card">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
