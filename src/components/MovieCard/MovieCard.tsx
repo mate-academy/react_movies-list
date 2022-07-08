@@ -3,14 +3,10 @@ import React from 'react';
 import './MovieCard.scss';
 
 type Props = {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
+  movie: Movie
 };
 
-export const MovieCard: React.FC<Props> = ({ ...movie }) => (
+export const MovieCard: React.FC<Props> = ({ movie }) => (
   <>
     <div className="card-image">
       <figure className="image is-4by3">
