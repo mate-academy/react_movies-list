@@ -8,15 +8,11 @@ type Props = {
 };
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
-  <div className="movies">
+  <ul className="movies">
     {movies.map(movie => (
-      <MovieCard
-        title={movie.title}
-        description={movie.description}
-        imdbUrl={movie.imdbUrl}
-        imgUrl={movie.imgUrl}
-        imdbId={movie.imdbId}
-      />
+      <li className="card" data-cy="card" key={movie.imdbId}>
+        <MovieCard movie={movie} />
+      </li>
     ))}
-  </div>
+  </ul>
 );
