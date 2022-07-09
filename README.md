@@ -12,5 +12,5 @@ You are given movies loaded from API and the initial markup.
 
 ## Instructions
 - Replace `<your_account>` with your Github username in the
- [DEMO LINK](https://<your_account>.github.io/react_movies-list/)
+ [DEMO LINK](https://artemfurdela.github.io/react_movies-list/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
