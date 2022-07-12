@@ -3,13 +3,12 @@ import React from 'react';
 import './App.scss';
 import { MoviesList } from './components/MoviesList';
 import moviesFromServer from './api/movies.json';
-import { Card } from './components/Types/Card';
 
 /* eslint-disable max-len */
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList list={moviesFromServer as Card[]} />
+      <MoviesList list={moviesFromServer} />
     </div>
 
     <div className="sidebar">
