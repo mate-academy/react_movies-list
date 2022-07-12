@@ -1,6 +1,6 @@
 import './App.scss';
 import moviesFromServer from './api/movies.json';
-import { MoviesList } from './components/MoviesList/index';
+import { MoviesList } from './components/MoviesList/MoviesList';
 
 export const App: React.FC = () => (
   <div className="page">

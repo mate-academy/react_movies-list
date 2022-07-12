@@ -1,22 +1,32 @@
 import React from 'react';
-import './MoviesList.scss';
-import { Movie } from '../../Types/Movie';
 import { MovieCard } from '../MovieCard/MovieCard';
 
+import './MoviesList.scss';
+
+interface Movies {
+  title: string,
+  description: string,
+  imgUrl: string,
+  imdbUrl: string,
+  imdbId: string,
+}
+
 type Props = {
-  movies: Movie[];
+  movies: Movies[],
 };
 
-export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
+export const MoviesList: React.FC<Props> = ({ movies }) => (
   <>
-    {movies.map(movie => (
-      <MovieCard
-        key={movie.imdbId}
-        title={movie.title}
-        description={movie.description}
-        imgUrl={movie.imgUrl}
-        imdbUrl={movie.imdbUrl}
-      />
-    ))}
+    <div className="movies">
+      {movies.map(movie => (
+        <MovieCard
+          title={movie.title}
+          description={movie.description}
+          imgUrl={movie.imgUrl}
+          imdbUrl={movie.imdbUrl}
+          imdbId={movie.imdbId}
+        />
+      ))}
+    </div>
   </>
 );

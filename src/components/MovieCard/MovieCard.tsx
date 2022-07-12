@@ -1,10 +1,12 @@
 import './MovieCard.scss';
 
+
 type Props = {
-  title: string;
-  description?: string;
-  imgUrl: string;
-  imdbUrl: string;
+  title: string,
+  description: string,
+  imgUrl: string,
+  imdbUrl: string,
+  imdbId: string,
 };
 
 export const MovieCard: React.FC<Props> = ({
@@ -12,15 +14,13 @@ export const MovieCard: React.FC<Props> = ({
   description,
   imgUrl,
   imdbUrl,
+  imdbId,
 }) => (
   <>
-    <div className="card">
+    <div className="card" key={imdbId} data-cy="card">
       <div className="card-image">
         <figure className="image is-4by3">
-          <img
-            src={imgUrl}
-            alt="Film logo"
-          />
+          <img src={imgUrl} alt="Film logo" />
         </figure>
       </div>
 
@@ -46,7 +46,3 @@ export const MovieCard: React.FC<Props> = ({
     </div>
   </>
 );
-
-MovieCard.defaultProps = {
-  description: '',
-};
