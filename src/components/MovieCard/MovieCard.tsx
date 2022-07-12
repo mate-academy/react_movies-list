@@ -1,6 +1,5 @@
 import './MovieCard.scss';
 
-
 type Props = {
   title: string,
   description: string,
