@@ -1,10 +1,10 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 import './App.scss';
 import moviesFromServer from './api/movies.json';
 import { MoviesList } from './components/MoviesList';
 
-/* eslint-disable max-len */
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
