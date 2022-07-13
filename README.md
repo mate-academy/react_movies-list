@@ -1,4 +1,7 @@
-# Movies List
+# Movies list
+- Replace `<your_account>` with your Github username in the
+ [DEMO LINK](https://LAndrikevych.github.io/react_movies-list/)
+- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 You are given movies loaded from the API and initial markup. Your task is:
 
