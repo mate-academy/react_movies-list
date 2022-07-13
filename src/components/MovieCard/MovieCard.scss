@@ -1,1 +1,7 @@
-// 
+.card {
+  text-decoration: none;
+  &-image img {
+    object-fit: contain;
+  }
+
+}
