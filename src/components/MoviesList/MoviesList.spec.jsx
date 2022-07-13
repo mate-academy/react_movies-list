@@ -8,7 +8,6 @@ import movies from '../../api/movies.json';
 describe('MoviesList component', () => {
   it('should render a \'MovieCard\' per each movie', () => {
     mount(<MoviesList movies={movies} />);
-
     cy.getByDataCy('card')
       .should('have.length', movies.length);
   });
