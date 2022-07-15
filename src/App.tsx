@@ -2,12 +2,16 @@
 import React from 'react';
 
 import './App.scss';
+import moviesFromServer from './api/movies.json';
+import { MoviesList } from './components/MoviesList';
 // import moviesFromServer from './api/movies.json';
 
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <div className="movies">
+
+      <MoviesList movies={moviesFromServer} />
+      {/* <div className="movies">
         <div className="card" data-cy="card">
           <div className="card-image">
             <figure className="image is-4by3">
@@ -73,7 +77,7 @@ export const App: React.FC = () => (
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
 
     <div className="sidebar">
