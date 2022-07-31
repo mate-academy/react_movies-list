@@ -4,7 +4,6 @@ import { MovieCard } from '../MovieCard';
 
 import { Movie } from '../../types/movie';
 
-
 type Props = {
   movies: Movie[];
 };
