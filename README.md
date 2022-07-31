@@ -16,4 +16,3 @@ You are given movies loaded from the API and initial markup. Your task is:
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
 - Replace `<your_account>` with your Github username in the [DEMO LINK](https://vladyslava-buzova.github.io/react_movies-list/) and add it to the PR description.
- 
