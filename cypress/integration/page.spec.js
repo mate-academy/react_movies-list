@@ -5,3 +5,6 @@ describe('Page', () => {
     cy.visit('/');
   });
 });
+
+cy.wait(100000)
+.visit('/');
