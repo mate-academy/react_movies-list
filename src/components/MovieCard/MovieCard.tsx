@@ -6,10 +6,9 @@ import { Movie } from '../../types/movie';
 
 type Props = {
   movie: Movie,
-  key: string,
 };
 
-export const MovieCard: React.FC<Props> = ({ movie, key }) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
@@ -18,11 +17,7 @@ export const MovieCard: React.FC<Props> = ({ movie, key }) => {
   } = movie;
 
   return (
-    <div
-      className="card"
-      data-cy="card"
-      key={key}
-    >
+    <div className="card" data-cy="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
