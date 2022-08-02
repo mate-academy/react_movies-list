@@ -6,18 +6,13 @@ import './MovieCard.scss';
 
 type Props = {
   movie: Movie,
-  key: string,
 };
 
-export const MovieCard: React.FC<Props> = ({ movie, key }) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const { title, description, imgUrl, imdbUrl } = movie;
 
   return (
-    <div
-      className="card"
-      data-cy="card"
-      key={key}
-    >
+    <div className="card" data-cy="card">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
