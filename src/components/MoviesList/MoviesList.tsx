@@ -1,6 +1,15 @@
+/* eslint-disable max-len */
 import React from 'react';
+import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
+import { Movie } from '../../types/movie';
 
-export const MoviesList: React.FC = () => (
-  <>Put the list here</>
+type Props = {
+  movies: Movie[],
+};
+
+export const MoviesList: React.FC<Props> = ({ movies }) => (
+  <div className="movies">
+    {movies.map(el => <MovieCard movie={el} key={el.imdbId} />)}
+  </div>
 );
