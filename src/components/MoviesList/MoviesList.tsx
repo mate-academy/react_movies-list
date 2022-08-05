@@ -16,7 +16,7 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
         data-cy="card"
         key={movie.imdbId}
       >
-        <MovieCard {...movie} />
+        <MovieCard movie={movie} />
       </div>
     ))}
   </div>
