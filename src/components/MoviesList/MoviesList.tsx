@@ -9,10 +9,10 @@ interface ReceivedInfo {
 
 export const MoviesList: React.FC<ReceivedInfo> = ({ movies }) => (
   <div className="movies">
-
     {movies.map(film => (
       <MovieCard
         movie={film}
+        key={film.imdbUrl}
       />
     ))}
   </div>
