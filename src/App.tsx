@@ -1,18 +1,43 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.scss';
 import moviesFromServer from './api/movies.json';
 import { MoviesList } from './components/MoviesList';
 
-export const App: React.FC = () => (
-  <div className="page">
-    <div className="page-content">
-      <MoviesList movies={moviesFromServer} />
-    </div>
+export const App: React.FC = () => {
+  const [query, setQuery] = useState('');
 
-    <div className="sidebar">
-      Sidebar will be here
+  const visibleMovies = moviesFromServer.filter(
+    movie => (movie.title && movie.description)
+      .toLowerCase()
+      .includes(query.toLowerCase()),
+  );
+
+  return (
+    <div className="page">
+      <div className="page-content">
+        <div className="search-bar">
+          <input
+            type="text"
+            className="input-field"
+            placeholder="Search..."
+            value={query}
+            onChange={(event) => {
+              const { value } = event.target;
+
+              setQuery(value);
+            }}
+          />
+        </div>
+        {visibleMovies.length > 0
+          ? <MoviesList movies={visibleMovies} />
+          : 'Nothing found'}
+      </div>
+
+      <div className="sidebar">
+        Sidebar will be here
+      </div>
     </div>
-  </div>
-);
+  );
+};
