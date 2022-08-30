@@ -1,13 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { MoviesList } from './components/MoviesList';
 
 import './App.scss';
-// import moviesFromServer from './api/movies.json';
+import moviesFromServer from './api/movies.json';
 
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <div className="movies">
+      {/* <div className="movies">
         <div className="card" data-cy="card">
           <div className="card-image">
             <figure className="image is-4by3">
@@ -73,7 +74,8 @@ export const App: React.FC = () => (
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar">
