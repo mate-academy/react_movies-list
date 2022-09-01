@@ -9,15 +9,15 @@
   padding: 20px;
 }
 
-.sidebar {
-  padding: 20px;
-  border-left: 1px solid lightgray;
-}
-
-.movies {
+.movie {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+}
+
+.sidebar {
+  padding: 20px;
+  border-left: 1px solid lightgray;
 }
 
 .card-image img {
