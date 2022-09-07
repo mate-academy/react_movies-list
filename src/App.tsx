@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable max-len */
 import React from 'react';
 
@@ -9,7 +8,9 @@ import { MoviesList } from './components/MoviesList';
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList movie={moviesFromServer} />
+      <div className="movies">
+        <MoviesList movies={moviesFromServer} />
+      </div>
     </div>
 
     <div className="sidebar" data-cy="Sidebar">
