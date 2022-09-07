@@ -4,7 +4,7 @@ import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
 type Props = {
-  movie: Movie
+  movie: Movie;
 };
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
@@ -31,7 +31,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src={imgUrl} alt="imdb" />
+              <img src="images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
@@ -39,7 +39,6 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
             <p className="title is-8" data-cy="MovieTitle">
               {title}
             </p>
-
           </div>
         </div>
 

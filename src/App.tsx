@@ -1,6 +1,6 @@
 import React from 'react';
-import { MoviesList } from './components/MoviesList';
 import moviesFromServer from './api/movies.json';
+import { MoviesList } from './components/MoviesList';
 
 import './App.scss';
 
