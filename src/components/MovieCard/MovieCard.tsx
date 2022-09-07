@@ -1,4 +1,3 @@
-import React from 'react';
 import { MovieType } from '../../types/MovieType';
 import './MovieCard.scss';
 
