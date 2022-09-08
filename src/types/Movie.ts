@@ -5,5 +5,3 @@ export interface Movie {
   imdbUrl: string;
   imdbId: string;
 }
-
-// Required<Movie>
