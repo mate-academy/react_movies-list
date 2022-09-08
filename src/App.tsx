@@ -7,7 +7,7 @@ export const App: React.FC = () => (
 
   <div className="page">
     <div className="page-content">
-      <MoviesList allmovies={moviesFromServerfrom} />
+      <MoviesList movies={moviesFromServerfrom} />
     </div>
 
     <div className="sidebar" data-cy="Sidebar">
