@@ -4,14 +4,14 @@ import './MovieCard.scss';
 
 type MovieType = {
   movie: Movie;
-}
+};
 
 export const MovieCard: React.FC<MovieType> = ({ movie }) => {
   const {
     title,
     description,
     imgUrl,
-    imdbUrl
+    imdbUrl,
   } = movie;
 
   return (
@@ -58,4 +58,4 @@ export const MovieCard: React.FC<MovieType> = ({ movie }) => {
       </div>
     </>
   );
-}
+};
