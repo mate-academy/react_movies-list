@@ -9,6 +9,41 @@ type MovieProps = {
   imdbUrl: string;
 };
 
+const MovieImage: React.FC<{ imgAdr: string }> = ({ imgAdr }) => (
+  <div className="card-image">
+    <figure className="image is-4by3">
+      <img
+        data-cy="MovieImage"
+        src={imgAdr}
+        alt="Film logo"
+      />
+    </figure>
+  </div>
+);
+
+const MovieTitle: React.FC<{ title: string }> = ({ title }) => (
+  <div className="media-content">
+    <p className="title is-8" data-cy="MovieTitle">
+      {title}
+    </p>
+  </div>
+);
+
+const MovieDescription: React.FC<{ description: string }>
+  = ({ description }) => (
+    <p data-cy="MovieDescription">
+      {description}
+    </p>
+  );
+
+const MovieLink: React.FC<{ link: string }> = ({ link }) => (
+  <a
+    href={link}
+  >
+    IMDB
+  </a>
+);
+
 export const MovieCard: React.FC<MovieProps> = ({
   title,
   description,
@@ -16,15 +51,8 @@ export const MovieCard: React.FC<MovieProps> = ({
   imdbUrl,
 }) => (
   <div className="card" data-cy="Movie">
-    <div className="card-image">
-      <figure className="image is-4by3">
-        <img
-          data-cy="MovieImage"
-          src={imgUrl}
-          alt="Film logo"
-        />
-      </figure>
-    </div>
+
+    <MovieImage imgAdr={imgUrl} />
 
     <div className="card-content">
       <div className="media">
@@ -34,23 +62,14 @@ export const MovieCard: React.FC<MovieProps> = ({
           </figure>
         </div>
 
-        <div className="media-content">
-          <p className="title is-8" data-cy="MovieTitle">
-            {title}
-          </p>
-        </div>
+        <MovieTitle title={title} />
+
       </div>
 
       <div className="content">
-        <p data-cy="MovieDescription">
-          {description}
-        </p>
+        <MovieDescription description={description} />
 
-        <a
-          href={imdbUrl}
-        >
-          IMDB
-        </a>
+        <MovieLink link={imdbUrl} />
       </div>
     </div>
   </div>
