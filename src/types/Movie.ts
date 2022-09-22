@@ -3,5 +3,5 @@ export interface Movie {
   description: string;
   imgUrl: string;
   imdbUrl: string;
-  // imbId: string;
+  imdbId: string;
 }

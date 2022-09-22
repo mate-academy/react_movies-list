@@ -10,6 +10,6 @@ type MovieType = {
 export const MoviesList: React.FC<MovieType> = ({ movies = [] }) => (
   <div className="movies">
     { movies.map(film => (
-      <MovieCard movie={film} />))}
+      <MovieCard key={film.imdbId} movie={film} />))}
   </div>
 );
