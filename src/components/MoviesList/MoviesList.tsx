@@ -8,7 +8,7 @@ type MovieType = {
 };
 
 export const MoviesList: React.FC<MovieType> = ({ movies }) => (
-  <div className="movies">
+  <ul className="movies">
     {
       movies.map(singleMovie => (
         <MovieCard
@@ -17,5 +17,5 @@ export const MoviesList: React.FC<MovieType> = ({ movies }) => (
         />
       ))
     }
-  </div>
+  </ul>
 );
