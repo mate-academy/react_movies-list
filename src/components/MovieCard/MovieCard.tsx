@@ -9,7 +9,11 @@ type MovieProps = {
 
 export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
   const {
-    title, description, imgUrl, imdbUrl, imdbId,
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
+    imdbId,
   } = movie;
 
   return (
