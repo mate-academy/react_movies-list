@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
@@ -7,7 +7,7 @@ type MovieProps = {
   movie: Movie;
 };
 
-export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
+export const MovieCard: FC<MovieProps> = ({ movie }) => {
   const {
     title,
     description,
@@ -17,7 +17,7 @@ export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
   } = movie;
 
   return (
-    <div key={imdbId}>
+    <li key={imdbId}>
       <div className="card" data-cy="Movie">
         <div className="card-image">
           <figure className="image is-4by3">
@@ -58,6 +58,6 @@ export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
           </div>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
