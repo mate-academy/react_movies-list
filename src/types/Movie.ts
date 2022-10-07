@@ -4,5 +4,4 @@ export interface Movie {
   imgUrl: string;
   imdbUrl: string;
   imdbId:string;
-  // add all the other field
 }

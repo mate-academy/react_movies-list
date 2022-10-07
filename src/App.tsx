@@ -1,8 +1,4 @@
-/* eslint-disable max-len */
 import React from 'react';
-
-// import PropTypes from 'prop-types'
-
 import './App.scss';
 import moviesFromServer from './api/movies.json';
 import { MoviesList } from './components/MoviesList';
