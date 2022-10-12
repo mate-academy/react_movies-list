@@ -5,10 +5,10 @@ import { Movie } from '../../types/Movie';
 import './MoviesList.scss';
 
 type Props = {
-  movies: Movie[]
+  movies: Movie[];
 };
 
-export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
+export const MoviesList: React.FC<Props> = ({ movies }) => (
   <ul className="movies">
     {movies.map((movie: Movie) => (
       <li key={movie.imdbId}>
