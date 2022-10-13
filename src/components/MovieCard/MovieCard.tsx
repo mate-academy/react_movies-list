@@ -6,7 +6,6 @@ type Props = {
   description: string;
   imgUrl: string;
   imdbUrl: string;
-  imdbId: string;
 };
 
 export const MovieCard: React.FC<Props> = ({
@@ -14,14 +13,12 @@ export const MovieCard: React.FC<Props> = ({
   description,
   imgUrl,
   imdbUrl,
-  imdbId,
 }) => (
   <>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
           data-cy="MovieImage"
-          // eslint-disable-next-line max-len
           src={imgUrl}
           alt="Film logo"
         />
@@ -32,7 +29,7 @@ export const MovieCard: React.FC<Props> = ({
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src={imdbUrl} alt="imdb" />
+            <img src="images/imdb-logo.jpeg" alt="imdb" />
           </figure>
         </div>
 
@@ -52,7 +49,7 @@ export const MovieCard: React.FC<Props> = ({
           href={imdbUrl}
           data-cy="MovieLink"
         >
-          {imdbId}
+          IMDB
         </a>
       </div>
     </div>
