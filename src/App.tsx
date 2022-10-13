@@ -8,7 +8,7 @@ export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
       <MoviesList
-        moviesFromServer={moviesFromServer}
+        movies={moviesFromServer}
       />
     </div>
 
