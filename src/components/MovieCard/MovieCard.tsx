@@ -7,16 +7,21 @@ type Props = {
   movie: Movie,
 };
 
-export const MovieCard: React.FC<Props> = (props: Props) => {
-  const { movie } = props;
+export const MovieCard: React.FC<Props> = ({ movie }) => {
+  const {
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
+  } = movie;
 
   return (
-    <li className="card" data-cy="Movie" key={movie.imdbId}>
+    <>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
-            src={movie.imgUrl}
+            src={imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -32,24 +37,24 @@ export const MovieCard: React.FC<Props> = (props: Props) => {
 
           <div className="media-content">
             <p className="title is-8" data-cy="MovieTitle">
-              {movie.title}
+              {title}
             </p>
           </div>
         </div>
 
         <div className="content">
           <p data-cy="MovieDescription">
-            {movie.description}
+            {description}
           </p>
 
           <a
-            href={`https://www.imdb.com/title/${movie.imdbId}`}
+            href={imdbUrl}
             data-cy="MovieLink"
           >
             IMDB
           </a>
         </div>
       </div>
-    </li>
+    </>
   );
 };
