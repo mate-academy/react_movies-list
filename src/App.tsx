@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import React from 'react';
-// import { type } from 'os';
 import './App.scss';
 import movies from './api/movies.json';
 import { MoviesList } from './components/MoviesList/MoviesList';
