@@ -1,16 +1,20 @@
-import { FC } from 'react';
+import React from 'react';
 import './MoviesList.scss';
 import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 
-type MoviesProps = {
-  movies: Movie[];
+type Props = {
+  movies: Movie[]
 };
 
-export const MoviesList: FC<MoviesProps> = ({ movies }) => (
-  <ul>
+export const MoviesList: React.FC<Props> = ({ movies }) => (
+  <div className="movies">
     {movies.map((movie: Movie) => (
-      <MovieCard movie={movie} key={movie.imdbId} />
+      <>
+        <MovieCard
+          movie={movie}
+        />
+      </>
     ))}
-  </ul>
+  </div>
 );
