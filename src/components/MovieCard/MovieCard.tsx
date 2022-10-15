@@ -3,9 +3,19 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-export const MovieCard: React.FC<Movie> = ({
-  title, description, imgUrl, imdbUrl, imdbId,
-}) => (
+type Props = {
+  movie: Movie;
+};
+
+export const MovieCard: React.FC<Props> = ({ movie })=> {
+  const {
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
+  } = movie;
+
+  return (
   <div className="card" data-cy="Movie">
     <div className="card-image">
       <figure className="image is-4by3">
@@ -41,9 +51,10 @@ export const MovieCard: React.FC<Movie> = ({
           href={imdbUrl}
           data-cy="MovieLink"
         >
-          {imdbId}
+          IMDB
         </a>
       </div>
     </div>
   </div>
-);
+  )
+};
