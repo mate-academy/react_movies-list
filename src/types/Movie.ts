@@ -1,5 +1,11 @@
-export interface Movie {
+export interface MovieType {
+  imgUrl: string,
+  description: string,
+  imdbUrl: string,
   title: string;
-
-  // add all the other field
+  imdbId: string,
 }
+
+export type MovieList = {
+  movies: MovieType[]
+};
