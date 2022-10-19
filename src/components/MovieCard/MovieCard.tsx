@@ -11,7 +11,10 @@ type Props = {
 
 export const MovieCard: React.FC<Props> = (
   {
-    title, description, imgUrl, imdbUrl,
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
   },
 ) => (
   <div className="card" data-cy="Movie">
