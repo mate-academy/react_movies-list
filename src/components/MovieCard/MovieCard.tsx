@@ -8,12 +8,8 @@ type Props = {
 };
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
-  const {
-    imgUrl,
-    title,
-    description,
-    imdbUrl,
-  } = movie;
+  // eslint-disable-next-line object-curly-newline
+  const { imgUrl, title, description, imdbUrl } = movie;
 
   return (
     <div className="card" data-cy="Movie">
@@ -49,7 +45,9 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
 
           <a
             href={imdbUrl}
+            target="_blank"
             data-cy="MovieLink"
+            rel="noreferrer"
           >
             IMDB
           </a>
