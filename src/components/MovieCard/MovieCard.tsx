@@ -8,8 +8,9 @@ export const MovieCard: React.FC<MovieType> = ({
   description,
   imgUrl,
   imdbUrl,
+  imdbId,
 }) => (
-  <>
+  <li className="card" data-cy="Movie" key={imdbId}>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -48,5 +49,5 @@ export const MovieCard: React.FC<MovieType> = ({
         </a>
       </div>
     </div>
-  </>
+  </li>
 );
