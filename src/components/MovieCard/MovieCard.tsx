@@ -2,10 +2,10 @@ import React from 'react';
 import './MovieCard.scss';
 
 type PropsObg = {
-  title:string;
-  description:string;
-  imgUrl:string;
-  imdbUrl:string;
+  title: string;
+  description: string;
+  imgUrl: string;
+  imdbUrl: string;
 };
 
 export const MovieCard: React.FC<PropsObg> = ({
