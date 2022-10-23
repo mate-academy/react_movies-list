@@ -1,8 +1,12 @@
 import React from 'react';
 import './MoviesList.scss';
-import { MovieList } from '../../types/Movie';
+import { MovieType } from '../../types/Movie';
 
 import { MovieCard } from '../MovieCard';
+
+export type MovieList = {
+  movies?: MovieType[]
+};
 
 export const MoviesList: React.FC<MovieList> = ({ movies = [] }) => (
   <ul className="movies">
