@@ -6,7 +6,3 @@ export interface MovieType {
   title: string
   imdbId: string
 }
-
-export type MovieCardProps = {
-  movie: MovieType
-};

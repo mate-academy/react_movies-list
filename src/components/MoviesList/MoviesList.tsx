@@ -4,16 +4,18 @@ import { MovieType } from '../../types/Movie';
 
 import { MovieCard } from '../MovieCard';
 
-export type MovieList = {
-  movies?: MovieType[]
-};
+interface MovieListProps {
+  movies: MovieType[]
+}
 
-export const MoviesList: React.FC<MovieList> = ({ movies = [] }) => (
+export const MoviesList: React.FC<MovieListProps> = ({ movies }) => (
   <ul className="movies">
     {movies.map((movie) => (
-      <MovieCard
-        movie={movie}
-      />
+      <li className="card" data-cy="Movie" key={movie.imdbId}>
+        <MovieCard
+          movie={movie}
+        />
+      </li>
     ))}
   </ul>
 );

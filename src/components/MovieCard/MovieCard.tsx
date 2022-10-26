@@ -1,11 +1,14 @@
 import React from 'react';
-import { MovieCardProps } from '../../types/Movie';
+import { MovieType } from '../../types/Movie';
 
 import './MovieCard.scss';
 
+interface MovieCardProps {
+  movie: MovieType
+}
+
 export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const {
-    imdbId,
     imgUrl,
     title,
     description,
@@ -13,13 +16,13 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   } = movie;
 
   return (
-    <li className="card" data-cy="Movie" key={imdbId}>
+    <>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
             src={imgUrl}
-            alt="Film logo"
+            alt={`${title} poster`}
           />
         </figure>
       </div>
@@ -52,6 +55,6 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           </a>
         </div>
       </div>
-    </li>
+    </>
   );
 };
