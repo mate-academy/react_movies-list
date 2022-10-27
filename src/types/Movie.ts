@@ -1,6 +1,5 @@
 export interface MovieType {
-
-  imgUrl: string | undefined
+  imgUrl: string
   description: string
   imdbUrl: string
   title: string
