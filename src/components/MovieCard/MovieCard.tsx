@@ -1,21 +1,18 @@
 import React from 'react';
-import { MovieType } from '../../types/Movie';
 import './MovieCard.scss';
+import { MovieType } from '../../types/Movie';
 
 type Props = {
   movie: MovieType;
 };
 
-export const MovieCard: React.FC<Props> = ({ movie }) => {
-  const {
-    title,
-    description,
-    imgUrl,
-    imdbUrl,
-  } = movie;
-
+export const MovieCard: React.FC<Props> = ({
+  movie: {
+    title, description, imgUrl, imdbUrl,
+  },
+}) => {
   return (
-    <div className="card" data-cy="Movie">
+    <>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
@@ -49,6 +46,6 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };

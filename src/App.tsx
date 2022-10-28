@@ -5,14 +5,6 @@ import './App.scss';
 import { MoviesList } from './components/MoviesList';
 import moviesFromServer from './api/movies.json';
 
-export interface MovieType {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imdbUrl: string;
-  imdbId: string;
-}
-
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
