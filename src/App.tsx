@@ -4,7 +4,7 @@ import moviesFromServer from './api/movies.json';
 import { Movie } from './types/Movie';
 import { MoviesList } from './components/MoviesList';
 
-export const movies: Movie[] = moviesFromServer;
+export const moviesList: Movie[] = moviesFromServer;
 
 export const App: React.FC = () => (
   <div className="page">
