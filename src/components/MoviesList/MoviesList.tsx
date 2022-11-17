@@ -9,14 +9,13 @@ interface Props {
 }
 
 export const MoviesList: React.FC<Props> = ({ movies }) => {
-  // <>Put the list here</>
+  const moviesArr = movies
+    .map((movie: Movie) => (
+      <MovieCard key={movie.imdbId} movie={movie} />));
+
   return (
-    <ul>
-      {movies.map((film: Movie) => (
-        <li key={film.imdbId}>
-          <MovieCard movie={film} />
-        </li>
-      ))}
-    </ul>
+    <div className="movies">
+      {moviesArr}
+    </div>
   );
 };
