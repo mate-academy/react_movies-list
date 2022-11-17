@@ -11,11 +11,11 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
     title,
     description,
     imgUrl,
-    imdbUrl,
+    imdbId,
   } = movie;
 
   return (
-    <div className="card" data-cy="Movie" key="movie.imdbId">
+    <div className="card" data-cy="Movie" key={imdbId}>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
@@ -47,7 +47,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           </p>
 
           <a
-            href={imdbUrl}
+            href={imgUrl}
             data-cy="MovieLink"
           >
             IMDB
