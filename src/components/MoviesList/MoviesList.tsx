@@ -13,5 +13,4 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
       <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
-
 );
