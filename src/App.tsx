@@ -1,17 +1,16 @@
 import React from 'react';
-import { MovieCard } from './components/MovieCard';
-import './MoviesList.scss';
-import { Movie } from './types/Movie';
+import './App.scss';
+import moviesFromServer from './api/movies.json';
+import { MoviesList } from './components/MoviesList';
 
+export const App: React.FC = () => (
+  <div className="page">
+    <div className="page-content">
+      <MoviesList movies={moviesFromServer} />
+    </div>
 
-type Props = {
-  movies: Movie[];
-}
-
-export const MoviesList: React.FC<Props> = ({ movies }) => (
-  <div className="movies">
-    {movies.map((movie) => (
-      <MovieCard key='imdbId' movie={movie} />
-    ))}
+    <div className="sidebar" data-cy="Sidebar">
+      Sidebar will be here
+    </div>
   </div>
 );
