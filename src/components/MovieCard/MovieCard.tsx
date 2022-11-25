@@ -7,7 +7,6 @@ type Props = {
   description: string;
   imgUrl: string;
   imdbUrl: string;
-  imdbId: string;
 };
 
 export const MovieCard: React.FC<Props> = ({
@@ -15,10 +14,8 @@ export const MovieCard: React.FC<Props> = ({
   description,
   imgUrl,
   imdbUrl,
-  imdbId,
 }) => (
   <div
-    key={imdbId}
     className="card"
     data-cy="Movie"
   >
