@@ -6,3 +6,14 @@ iframe {
   padding: 20px;
   border-left: 1px solid lightgray;
 }
+
+.page {
+  display: grid;
+  grid-template: auto / 1fr 400px;
+  column-gap: 20px;
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 20px;
+}
