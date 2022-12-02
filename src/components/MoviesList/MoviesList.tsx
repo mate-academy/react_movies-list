@@ -14,5 +14,4 @@ export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
       <MovieCard {...movie} />
     ))}
   </ul>
-
 );
