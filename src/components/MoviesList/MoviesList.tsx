@@ -2,21 +2,17 @@ import React from 'react';
 import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 
-type Movies = {
-  props: Movie[]
+type Props = {
+  movies: Movie[]
 };
 
-export const MoviesList: React.FC<Movies> = ({ props = [] }) => (
-  <div className="movies">
-    {props.map(fields => (
+export const MoviesList: React.FC<Props> = ({ movies }) => (
+  <ul className="movies">
+    {movies.map(movie => (
       <MovieCard
-        key={fields.imdbId}
-        imdbId={fields.imdbId}
-        title={fields.title}
-        description={fields.description}
-        imgUrl={fields.imgUrl}
-        imdbUrl={fields.imdbUrl}
+        key={movie.imdbId}
+        movie={movie}
       />
     ))}
-  </div>
+  </ul>
 );
