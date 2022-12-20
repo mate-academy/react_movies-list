@@ -4,7 +4,7 @@ import { Movie } from '../../types/Movie';
 import './MoviesList.scss';
 
 type Props = {
-  movies?: Movie[];
+  movies: Movie[];
 };
 
 export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
@@ -14,7 +14,3 @@ export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
     ))}
   </div>
 );
-
-MoviesList.defaultProps = {
-  movies: [],
-};
