@@ -1,4 +1,4 @@
-export interface Movie {
+export interface MovieType {
   title: string;
   description: string;
   imgUrl: string;
@@ -7,5 +7,5 @@ export interface Movie {
 }
 
 export type Movies = {
-  movies: Movie[];
+  movies: MovieType[];
 };
