@@ -7,5 +7,5 @@ export interface MovieType {
 }
 
 export type Movies = {
-  movies: MovieType[];
+  movies?: MovieType[];
 };
