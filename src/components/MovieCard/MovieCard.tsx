@@ -16,8 +16,8 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
   } = movie;
 
   return (
-    <div className="card" data-cy="Movie">
-      <div className="card-image">
+    <div className="movie-card" data-cy="Movie">
+      <div className="movie-card__image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
@@ -27,8 +27,8 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         </figure>
       </div>
 
-      <div className="card-content">
-        <div className="media">
+      <div className="movie-card__content">
+        <div className="movie-card__media">
           <div className="media-left">
             <figure className="image is-48x48">
               <img src="images/imdb-logo.jpeg" alt="imdb" />
@@ -42,7 +42,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           </div>
         </div>
 
-        <div className="content">
+        <div className="movie-card__content">
           <p data-cy="MovieDescription">
             {description}
           </p>
