@@ -8,7 +8,10 @@ type Props = {
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
-    title, description, imgUrl, imdbUrl,
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
   } = movie;
 
   return (
