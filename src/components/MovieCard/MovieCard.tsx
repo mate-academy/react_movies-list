@@ -4,7 +4,7 @@ import './MovieCard.scss';
 
 type Props = {
   movie: Movie;
-}
+};
 
 export const MovieCard: React.FC<Props> = ({ movie }) => (
   <div className="card" data-cy="Movie">
