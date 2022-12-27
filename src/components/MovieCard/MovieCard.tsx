@@ -4,7 +4,7 @@ import './MovieCard.scss';
 
 type Props = {
   movie: Movie;
-}
+};
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
@@ -56,4 +56,4 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
       </div>
     </div>
   );
-}
+};

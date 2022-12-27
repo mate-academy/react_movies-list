@@ -5,7 +5,7 @@ import './MoviesList.scss';
 
 type Props = {
   movies: Movie[];
-}
+};
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <ul className="movies">
@@ -19,6 +19,6 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
           movie={movie}
         />
       </li>
-      ))}
+    ))}
   </ul>
 );
