@@ -5,3 +5,11 @@ export interface Movie {
   imdbUrl: string;
   imdbId: string;
 }
+
+export type Prop = {
+  movies: Movie[];
+};
+
+export type Props = {
+  movie: Movie;
+};
