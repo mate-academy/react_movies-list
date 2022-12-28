@@ -8,14 +8,12 @@ interface Movies {
 }
 
 export const MoviesList: React.FC<Movies> = ({ movies }) => (
-  <>
+  <div className="movies">
     {movies.map((movie) => (
-      <div className="movies">
-        <MovieCard
-          movie={movie}
-          key={movie.imdbId}
-        />
-      </div>
+      <MovieCard
+        movie={movie}
+        key={movie.imdbId}
+      />
     ))}
-  </>
+  </div>
 );
