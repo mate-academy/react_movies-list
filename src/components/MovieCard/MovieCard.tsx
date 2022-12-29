@@ -1,11 +1,12 @@
 import React from 'react';
-import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
 
-type Props = {
+import { Movie } from '../../types/Movie';
+
+interface Props {
   movie: Movie;
-};
+}
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
@@ -31,12 +32,18 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="images/imdb-logo.jpeg" alt="imdb" />
+              <img
+                src="images/imdb-logo.jpeg"
+                alt="imdb"
+              />
             </figure>
           </div>
 
           <div className="media-content">
-            <p className="title is-8" data-cy="MovieTitle">
+            <p
+              className="title is-8"
+              data-cy="MovieTitle"
+            >
               {title}
             </p>
           </div>
