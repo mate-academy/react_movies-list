@@ -6,10 +6,6 @@ export interface Movie {
   imdbId: string;
 }
 
-export type Prop = {
-  movies: Movie[];
-};
-
 export type Props = {
   movie: Movie;
 };
