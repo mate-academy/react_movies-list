@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 
 import './MovieCard.scss';
@@ -9,14 +8,21 @@ type Props = {
   movie: Movie;
 };
 
-export const MovieCard: React.FC<Props> = ({ movie }) => (
-  <div className="movies">
+export const MovieCard: React.FC<Props> = ({ movie }) => {
+  const {
+    title,
+    imgUrl,
+    description,
+    imdbUrl,
+  } = movie;
+
+  return (
     <div className="card" data-cy="Movie">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
-            src={movie.imgUrl}
+            src={imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -32,18 +38,18 @@ export const MovieCard: React.FC<Props> = ({ movie }) => (
 
           <div className="media-content">
             <p className="title is-8" data-cy="MovieTitle">
-              {movie.title}
+              {title}
             </p>
           </div>
         </div>
 
         <div className="content">
           <p data-cy="MovieDescription">
-            {movie.description}
+            {description}
           </p>
 
           <a
-            href={movie.imdbUrl}
+            href={imdbUrl}
             data-cy="MovieLink"
           >
             IMDB
@@ -51,5 +57,5 @@ export const MovieCard: React.FC<Props> = ({ movie }) => (
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
