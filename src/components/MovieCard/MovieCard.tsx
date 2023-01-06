@@ -33,7 +33,7 @@ export const MovieCard: React.FC<Prop> = ({ movie }) => {
           </div>
 
           <div className="media-content">
-            <p className="title is-8" data-cy="Movie">
+            <p className="title is-8" data-cy="MovieTitle">
               {title}
             </p>
           </div>
