@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const MovieCard: React.FC<Props> = ({ movie }) => (
-  <div className="movies">
+  <li className="movies">
     <div className="card" data-cy="Movie">
       <div className="card-image">
         <figure className="image is-4by3">
@@ -50,5 +50,5 @@ export const MovieCard: React.FC<Props> = ({ movie }) => (
         </div>
       </div>
     </div>
-  </div>
+  </li>
 );
