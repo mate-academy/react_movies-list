@@ -15,7 +15,7 @@ export const MovieCard: React.FC<Props> = ({
   imgUrl,
   imdbUrl,
 }) => (
-  <article
+  <li
     className="card"
     data-cy="Movie"
   >
@@ -57,5 +57,5 @@ export const MovieCard: React.FC<Props> = ({
         </a>
       </div>
     </div>
-  </article>
+  </li>
 );
