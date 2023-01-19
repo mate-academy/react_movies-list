@@ -9,8 +9,8 @@ type List = {
 
 export const MoviesList: React.FC<List> = ({ movies }) => (
   <div className="movies">
-    {movies.map(film => (
-      <MovieCard movie={film} />
+    {movies.map(movie => (
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );
