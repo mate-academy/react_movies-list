@@ -1,19 +1,20 @@
+import { FC } from 'react';
+import ImdbLogo from '../../images/imdb-logo.jpeg';
+import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
-type Props = {
-  title: string,
-  description: string,
-  imgUrl: string,
-  imdbUrl: string,
-};
+type Props = Omit<Movie, 'imdbId'>;
 
-export const MovieCard: React.FC<Props> = ({
+export const MovieCard: FC<Props> = ({
   title,
   description,
   imgUrl,
   imdbUrl,
 }) => (
-  <>
+  <div
+    className="card"
+    data-cy="Movie"
+  >
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -28,7 +29,7 @@ export const MovieCard: React.FC<Props> = ({
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src="images/imdb-logo.jpeg" alt="imdb" />
+            <img src={ImdbLogo} alt="imdb" />
           </figure>
         </div>
 
@@ -47,10 +48,12 @@ export const MovieCard: React.FC<Props> = ({
         <a
           href={imdbUrl}
           data-cy="MovieLink"
+          target="_blank"
+          rel="noreferrer"
         >
           IMDB
         </a>
       </div>
     </div>
-  </>
+  </div>
 );
