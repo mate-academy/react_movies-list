@@ -13,7 +13,7 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
   <ul className="movies">
     {
       movies.map(movie => (
-        <li key={movie.imdbId} className="card" data-cy="Movie">
+        <li className="card" data-cy="Movie" key={movie.imdbId}>
           <MovieCard {...movie} />
         </li>
       ))
