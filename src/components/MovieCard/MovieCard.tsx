@@ -5,7 +5,10 @@ import { Movie } from '../../types/Movie';
 
 export const MovieCard: React.FC<Movie> = (
   {
-    title, description, imgUrl, imdbUrl,
+    title,
+    description,
+    imgUrl,
+    imdbUrl,
   },
 ) => (
   <>
