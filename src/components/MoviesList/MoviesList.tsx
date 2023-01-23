@@ -7,7 +7,7 @@ type Props = {
   moviesFromServer: Movie[];
 };
 
-export const MoviesList: React.FC<Props> = ({ moviesFromServer = []}) => (
+export const MoviesList: React.FC<Props> = ({ moviesFromServer = [] }) => (
   <>
     <div className="movies">
       {moviesFromServer.map(movie => (
