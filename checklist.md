@@ -20,7 +20,7 @@ GOOD EXAMPLE:
 </div>
 ```
 
-ALSO GOOD EXAMPLE: 
+ALSO GOOD EXAMPLE:
 
 ```jsx
   <>
@@ -53,7 +53,6 @@ function ListItem(props) {
     <li key={props.key}>
       {props.value}
     </li>
-  );
 }
 
 function NumberList(props) {
@@ -65,6 +64,7 @@ function NumberList(props) {
       {listItems}
     </ul>
   );
+}
 ```
 
 GOOD EXAMPLE:
@@ -73,7 +73,6 @@ function ListItem(props) {
     <li>
       {props.value}
     </li>
-  );
 }
 
 function NumberList(props) {
@@ -85,5 +84,6 @@ function NumberList(props) {
       {listItems}
     </ul>
   );
+}
 ```
 4. [CODE KNOWLEDGE] - NEVER EVER EVER use array index as a `key` prop
