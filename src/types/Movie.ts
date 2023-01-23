@@ -4,7 +4,4 @@ export interface Movie {
   imgUrl: string;
   imdbUrl:string;
   imdbId:string;
-  // movieLink:string;
-  // movieLogo: string;
-  // movieLink:string;
 }
