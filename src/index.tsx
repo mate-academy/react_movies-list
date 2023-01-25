@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
 
-//comments added for refork
+// comments added for refork
 
 import { App } from './App';
 
