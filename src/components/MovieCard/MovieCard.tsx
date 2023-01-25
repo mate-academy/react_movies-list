@@ -8,17 +8,19 @@ type Props = {
   movie: Movie;
 };
 
-export const MovieCard: React.FC<Props> = ({ movie }) => {
-  const {
-    title,
-    description,
-    imgUrl,
-    imdbUrl,
-  } = movie;
-
+export const MovieCard: React.FC<Props> = (
+  {
+    movie: {
+      title,
+      description,
+      imgUrl,
+      imdbUrl,
+    },
+  },
+) => {
   return (
     <div className="card" data-cy="Movie">
-      <div className="card-image">
+      <div className="card__image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
@@ -36,7 +38,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
             </figure>
           </div>
 
-          <div className="media-content">
+          <div className="media__content">
             <p className="title is-8" data-cy="MovieTitle">
               {title}
             </p>
