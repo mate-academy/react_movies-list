@@ -10,14 +10,7 @@ type MoviesArr = {
 export const MoviesList: React.FC<MoviesArr> = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <MovieCard
-        title={movie.title}
-        description={movie.description}
-        imgUrl={movie.imgUrl}
-        imdbUrl={movie.imdbUrl}
-        imdbId={movie.imdbId}
-        key={movie.imdbId}
-      />
+      <MovieCard {...movie} key={movie.imdbId} />
     ))}
   </div>
 );
