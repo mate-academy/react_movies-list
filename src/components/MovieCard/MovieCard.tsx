@@ -1,6 +1,5 @@
 import React from 'react';
 import { Movie } from '../../types/Movie';
-// import PropTypes from 'prop-types';
 
 import './MovieCard.scss';
 
@@ -59,11 +58,3 @@ export const MovieCard: React.FC <Props> = ({ film }) => {
     </div>
   );
 };
-
-// MovieCard.defaultProps = {
-//   title: null,
-// };
-
-// MovieCard.propTypes = {
-//   title: PropeTypes.string,
-// };
