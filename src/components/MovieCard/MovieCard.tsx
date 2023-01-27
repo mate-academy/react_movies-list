@@ -20,7 +20,6 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
-            // eslint-disable-next-line max-len
             src={imgUrl}
             alt="Film logo"
           />
