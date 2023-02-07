@@ -66,5 +66,20 @@
       "_comment": "Add `cypressComponents: true` to enable component tests",
       "cypressComponents": true
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": [
+          "**/*.css",
+          "**/*.scss",
+          "**/*.html"
+        ],
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
   }
 }
