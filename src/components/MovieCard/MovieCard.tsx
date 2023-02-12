@@ -2,20 +2,24 @@ import React from 'react';
 
 import './MovieCard.scss';
 
-type Prop = {
+type Props = {
   title: string;
   imgUrl: string;
   imdbUrl: string;
-  description: string
+  description: string;
+  imdbId: string;
 };
 
-export const MovieCard: React.FC<Prop> = ({
+export const MovieCard: React.FC<Props> = ({
   title,
   imgUrl,
   imdbUrl,
   description,
+  imdbId,
+
 }) => (
-  <>
+
+  <div className="card" data-cy="Movie" key={imdbId}>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -55,5 +59,5 @@ export const MovieCard: React.FC<Prop> = ({
         </a>
       </div>
     </div>
-  </>
+  </div>
 );
