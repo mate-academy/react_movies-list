@@ -11,13 +11,7 @@ export const MoviesList: React.FC<MovieType> = ({ movies }) => (
   <>
     <div className="movies">
       {movies.map(movie => (
-        <div
-          className="card"
-          data-cy="Movie"
-          key={movie.imdbId}
-        >
-          <MovieCard {...movie} />
-        </div>
+        <MovieCard movie={movie} />
       ))}
     </div>
   </>
