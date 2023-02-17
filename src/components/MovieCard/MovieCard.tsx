@@ -50,6 +50,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           <a
             href={imdbUrl}
             data-cy="MovieLink"
+            target={"_blank"}
           >
             IMDB
           </a>
