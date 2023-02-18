@@ -3,6 +3,15 @@ import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
 
+const movie = {
+  title: 'Movie title',
+  description: 'Some description',
+  // eslint-disable-next-line max-len
+  imgUrl: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg',
+  imdbUrl: 'https://www.imdb.com/title/tt1375666',
+  imdbId: 'tt1375666',
+};
+
 export const MovieCard: React.FC<Movie> = ({
   title,
   description,
@@ -15,8 +24,7 @@ export const MovieCard: React.FC<Movie> = ({
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
-            // eslint-disable-next-line max-len
-            src={imgUrl && 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}
+            src={imgUrl || movie.imgUrl}
             alt="Film logo"
           />
         </figure>
@@ -32,18 +40,18 @@ export const MovieCard: React.FC<Movie> = ({
 
           <div className="media-content">
             <p className="title is-8" data-cy="MovieTitle">
-              {title && 'Movie title'}
+              {title || movie.title}
             </p>
           </div>
         </div>
 
         <div className="content">
           <p data-cy="MovieDescription">
-            {description && 'Some description'}
+            {description || movie.description}
           </p>
 
           <a
-            href={imdbUrl && 'https://www.imdb.com/title/tt1375666'}
+            href={imdbUrl || movie.imdbUrl}
             data-cy="MovieLink"
           >
             IMDB
