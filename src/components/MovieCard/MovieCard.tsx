@@ -43,7 +43,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => (
           href={movie.imdbUrl}
           data-cy="MovieLink"
         >
-          {movie.imdbId}
+          IMDB
         </a>
       </div>
     </div>
