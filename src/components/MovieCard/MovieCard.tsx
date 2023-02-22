@@ -8,12 +8,12 @@ type MovieType = {
 
 export const MovieCard: React.FC <MovieType> = ({ movie }) => {
   const {
-    title, description, imgUrl, imdbUrl,
+    title, description, imgUrl, imdbUrl, imdbId
   } = movie;
 
   return (
     <>
-      <li className="card" key={movie.imdbId}>
+      <li className="card" key={imdbId}>
         <div data-cy="Movie">
           <div className="card-image">
             <figure className="image is-4by3">
