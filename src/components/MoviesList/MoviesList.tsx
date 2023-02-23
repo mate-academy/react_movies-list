@@ -14,7 +14,7 @@ type Props = {
   movies: Movie[];
 };
 
-export const MovieList: React.FC<Props> = ({ movies = [] }) => (
+export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
   <div className="movies">
     {movies.map(movie => (
       <MovieCard {...movie} key={movie.imdbId} />
