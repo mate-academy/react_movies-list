@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
+// /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { mount } from '@cypress/react';
 import { MoviesList } from './MoviesList';
