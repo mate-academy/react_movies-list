@@ -23,8 +23,8 @@ export const MovieCard: React.FC<Props> = (
         <img
           data-cy="MovieImage"
           src={imgUrl
-            || `https://m.media-amazon.com/images/M/MV5BMjAxMzY3Nj`+
-            `cxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg`}
+            || 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3Nj'
+            + 'cxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}
           alt="Film logo"
         />
       </figure>
