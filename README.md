@@ -12,8 +12,18 @@ You are given movies loaded from the API and initial markup. Your task is to:
 1. The `MoviesList` should pass a `movie` to the `MovieCard`.
 1. Keep all `data-cy` attributes to pass the tests.
 
+Вам даються завантажені з API фільми та початкова розмітка. Ваше завдання:
+
+1. Створіть та експортуйте інтерфейс `Movie` всередині `./src/types/Movie.ts` (усі поля є обов'язковими для заповнення)
+1. Візуалізувати фільми із заданого масиву `moviesFromServer` (для простоти ви можете зробити це всередині `App` і розділити пізніше).
+1. Вийміть блок `.movies` із компоненту `MoviesList`.
+1. "Додаток" повинен був передати "moviesFromServer" в "MoviesList" як реквізит "movies".
+1. Вийміть блок `.card` із компонента `MovieCard`.
+1. "MoviesList" повинен передати "фільм" у "MovieCard".
+1. Збережіть усі атрибути `data-cy` для проходження тестів.
+
 ## Instructions
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_movies-list/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://yevhenii-stanchenko.github.io/react_movies-list/) and add it to the PR description.
