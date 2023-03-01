@@ -13,7 +13,7 @@ export const MovieCard: React.FC<Movie> = (movie) => {
 
   return (
     <div className="card" data-cy="Movie">
-      <div className="card-image">
+      <div className="card__image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
