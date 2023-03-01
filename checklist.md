@@ -20,7 +20,7 @@ GOOD EXAMPLE:
 </div>
 ```
 
-ALSO GOOD EXAMPLE: 
+ALSO GOOD EXAMPLE:
 
 ```jsx
   <>
@@ -73,7 +73,7 @@ function ListItem(props) {
     <li>
       {props.value}
     </li>
-  );
+  
 }
 
 function NumberList(props) {
