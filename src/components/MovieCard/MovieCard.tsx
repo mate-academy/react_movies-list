@@ -16,8 +16,12 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
     imdbId,
   } = movie;
 
+  const myStyle = {
+    height: '100%',
+  };
+
   return (
-    <div className="card" data-cy="Movie">
+    <div className="card" data-cy="Movie" style={myStyle}>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
