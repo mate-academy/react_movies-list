@@ -46,7 +46,12 @@ export const MovieCard: React.FC<MovieProps> = ({
           {`${description}`}
         </p>
 
-        <a href={imdbUrl} data-cy="MovieLink">
+        <a
+          href={imdbUrl}
+          data-cy="MovieLink"
+          target="_blank"
+          rel="noreferrer"
+        >
           IMDB
         </a>
       </div>
