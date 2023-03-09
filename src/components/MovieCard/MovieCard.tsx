@@ -7,6 +7,9 @@ type Props = {
   movie: Movie;
 };
 
+const urlImage = 'https://m.media-amazon.com/images/'
+  + 'M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg';
+
 export const MovieCard: React.FC<Props> = (
   {
     movie: {
@@ -22,8 +25,7 @@ export const MovieCard: React.FC<Props> = (
       <figure className="image is-4by3">
         <img
           data-cy="MovieImage"
-          src={imgUrl || 'https://m.media-amazon.com/images/'
-          + 'M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg'}
+          src={imgUrl || urlImage}
           alt="Film logo"
         />
       </figure>
