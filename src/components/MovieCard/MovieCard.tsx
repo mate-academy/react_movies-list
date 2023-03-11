@@ -8,7 +8,7 @@ interface Props {
   movie: Movie;
 }
 
-const MovieCard: React.FC<Props> = ({ movie }) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   return (
     <div className="card" data-cy="Movie">
       <div className="card-image">
@@ -43,5 +43,3 @@ const MovieCard: React.FC<Props> = ({ movie }) => {
     </div>
   );
 };
-
-export default MovieCard;
