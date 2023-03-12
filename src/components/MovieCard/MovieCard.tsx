@@ -9,7 +9,6 @@ interface MovieCardProps {
 
 export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const {
-    imdbId,
     imgUrl,
     title,
     description,
@@ -17,7 +16,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   } = movie;
 
   return (
-    <div key={imdbId} className="card" data-cy="Movie">
+    <div className="card" data-cy="Movie">
       <div className="card-image">
         <figure className="image is-4by3">
           <img
