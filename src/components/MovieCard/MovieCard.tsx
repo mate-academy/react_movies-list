@@ -31,7 +31,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src={imgUrl} alt="imdb" />
+              <img src="images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
