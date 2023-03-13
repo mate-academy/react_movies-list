@@ -2,14 +2,14 @@ import React from 'react';
 
 import './MovieCard.scss';
 
-type Props = {
+type PropsObj = {
   title: string;
   description: string;
   imgUrl: string;
   imdbUrl: string;
 };
 
-export const MovieCard: React.FC<Props> = ({
+export const MovieCard: React.FC<PropsObj> = ({
   title, description, imgUrl, imdbUrl,
 }) => (
   <>
