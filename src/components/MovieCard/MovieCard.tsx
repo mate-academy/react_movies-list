@@ -2,14 +2,14 @@ import React from 'react';
 
 import './MovieCard.scss';
 
-type PropsObj = {
+type Props = {
   title: string;
   description: string;
   imgUrl: string;
   imdbUrl: string;
 };
 
-export const MovieCard: React.FC<PropsObj> = ({
+export const MovieCard: React.FC<Props> = ({
   title, description, imgUrl, imdbUrl,
 }) => (
   <>
@@ -44,8 +44,10 @@ export const MovieCard: React.FC<PropsObj> = ({
         </p>
 
         <a
+          rel="noreferrer"
           href={imdbUrl}
           data-cy="MovieLink"
+          target="_blank"
         >
           IMDB
         </a>
