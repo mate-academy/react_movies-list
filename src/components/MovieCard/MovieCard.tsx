@@ -47,6 +47,8 @@ export const MovieCard: React.FC <MovieType> = ({ movie }) => {
             <a
               href={imdbUrl}
               data-cy="MovieLink"
+              target="_blank"
+              rel="noreferrer"
             >
               IMDB
             </a>
