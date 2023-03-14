@@ -10,9 +10,12 @@ type Props = {
 };
 
 export const MovieCard: React.FC<Props> = ({
-  title, description, imgUrl, imdbUrl,
+  title,
+  description,
+  imgUrl,
+  imdbUrl,
 }) => (
-  <>
+  <div className="card" data-cy="Movie">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -53,5 +56,5 @@ export const MovieCard: React.FC<Props> = ({
         </a>
       </div>
     </div>
-  </>
+  </div>
 );
