@@ -24,7 +24,7 @@ export const MovieCard: React.FC<Movie> = ({
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="../images/imdb-logo.jpeg" alt="IMDB" />
+              <img src="images/imdb-logo.jpeg" alt="IMDB" />
             </figure>
           </div>
           <div className="media-content">
