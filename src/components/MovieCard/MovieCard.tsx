@@ -1,5 +1,6 @@
 import React from 'react';
 import './MovieCard.scss';
+
 import { Movie } from '../../types/Movie';
 
 type Props = {
@@ -20,7 +21,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
-            src={`${imgUrl}`}
+            src={imgUrl}
             alt="Film logo"
           />
         </figure>
