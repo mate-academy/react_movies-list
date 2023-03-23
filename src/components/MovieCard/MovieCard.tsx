@@ -2,9 +2,9 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type Props = {
+interface Props {
   movie: Movie;
-};
+}
 
 export const MovieCard: React.FC<Props> = (props) => {
   const { movie } = props;
@@ -51,6 +51,8 @@ export const MovieCard: React.FC<Props> = (props) => {
           <a
             href={imdbUrl}
             data-cy="MovieLink"
+            target="_blank"
+            rel="noreferrer"
           >
             IMDB
           </a>
