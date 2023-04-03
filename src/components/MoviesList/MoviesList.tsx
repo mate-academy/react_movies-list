@@ -8,7 +8,7 @@ import { MovieCard } from '../MovieCard';
 export const MoviesList: React.FC<MovieList> = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <MovieCard movie={movie} />
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );
