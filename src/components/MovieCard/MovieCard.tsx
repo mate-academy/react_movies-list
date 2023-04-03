@@ -6,7 +6,7 @@ import './MovieCard.scss';
 export const MovieCard: React.FC<Movie> = ({
   title, description, imgUrl, imdbUrl,
 }) => (
-  <>
+  <li>
     <div className="card-image">
       <figure className="image is-4by3">
         <img
@@ -45,5 +45,5 @@ export const MovieCard: React.FC<Movie> = ({
         </a>
       </div>
     </div>
-  </>
+  </li>
 );
