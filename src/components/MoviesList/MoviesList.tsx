@@ -12,7 +12,7 @@ export const MoviesList: React.FC<{ moviesFromServer: Movie[] }> = ({
   return (
     <>
       {moviesFromServer.map((movie) => (
-        <MovieCard {...movie} />
+        <MovieCard movie={movie} />
       ))}
     </>
   );
