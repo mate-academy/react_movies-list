@@ -1,8 +1,17 @@
 import React from 'react';
-
 import './MovieCard.scss';
 
-export const MovieCard: React.FC = ({ movie }) => (
+interface MovieCardProps {
+  movie: {
+    title: string;
+    description: string;
+    imgUrl: string;
+    imdbUrl: string;
+    imdbId: string;
+  };
+}
+
+export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => (
   <div className="card" data-cy="Movie" key={movie.imdbId}>
     <div className="card-image">
 
