@@ -11,9 +11,7 @@ type Props = {
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <div className="movies">
     {movies.map(movie => (
-      <React.Fragment key={movie.imdbId}>
-        <MovieCard movie={movie} />
-      </React.Fragment>
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );
