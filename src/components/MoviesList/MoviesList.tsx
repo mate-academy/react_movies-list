@@ -1,15 +1,10 @@
 import React from 'react';
 import { MovieCard } from '../MovieCard';
 import './MoviesList.scss';
+import { Movie } from '../../types/Movie';
 
 interface MoviesListProps {
-  movies: {
-    title: string;
-    description: string;
-    imdbUrl: string;
-    imgUrl: string;
-    imdbId: string;
-  } [];
+  movies: Movie[];
 }
 
 export const MoviesList: React.FC <MoviesListProps> = ({ movies }) => (
