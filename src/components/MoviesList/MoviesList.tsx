@@ -1,7 +1,5 @@
-/* eslint-disable max-len */
 import React from 'react';
 import './MoviesList.scss';
-// import { type } from 'os';
 import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 
