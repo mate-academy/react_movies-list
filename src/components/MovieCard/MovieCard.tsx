@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
@@ -47,10 +46,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
             {description}
           </p>
 
-          <a
-            href={imdbUrl}
-            data-cy="MovieLink"
-          >
+          <a href={imdbUrl} data-cy="MovieLink">
             IMDB
           </a>
         </div>
