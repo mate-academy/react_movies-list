@@ -1,10 +1,12 @@
 import React from 'react';
-
 import './MovieCard.scss';
+import { Movie } from '../../types/Movie';
 
-import { MovieCard } from '../../types/MovieCard';
+type Props = {
+  movie: Movie
+};
 
-export const MovieCards: React.FC<MovieCard> = ({ movie }) => {
+export const MovieCards: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
@@ -44,10 +46,7 @@ export const MovieCards: React.FC<MovieCard> = ({ movie }) => {
             {description}
           </p>
 
-          <a
-            href={imdbUrl}
-            data-cy="MovieLink"
-          >
+          <a href={imdbUrl} data-cy="MovieLink">
             IMDB
           </a>
         </div>
