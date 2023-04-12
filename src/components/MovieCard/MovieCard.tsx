@@ -6,7 +6,7 @@ type Props = {
   movie: Movie
 };
 
-export const MovieCards: React.FC<Props> = ({ movie }) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
@@ -21,7 +21,7 @@ export const MovieCards: React.FC<Props> = ({ movie }) => {
           <img
             data-cy="MovieImage"
             src={imgUrl}
-            alt="Film logo"
+            alt={`Movie: ${title}`}
           />
         </figure>
       </div>
