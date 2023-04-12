@@ -21,7 +21,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           <img
             data-cy="MovieImage"
             src={imgUrl}
-            alt="Movie preview logo"
+            alt={`${title} preview logo`}
           />
         </figure>
       </div>
