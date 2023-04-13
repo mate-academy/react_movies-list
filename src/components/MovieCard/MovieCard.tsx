@@ -17,13 +17,13 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
   } = movie;
 
   return (
-    <>
+    <div className="card" data-cy="Movie" key={movie.imdbId}>
       <div className="card-image">
         <figure className="image is-4by3">
           <img
             data-cy="MovieImage"
             src={imgUrl}
-            alt="Film logo"
+            alt={`Film logo ${title}`}
           />
         </figure>
       </div>
@@ -32,18 +32,12 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img
-                src="images/imdb-logo.jpeg"
-                alt="imdb"
-              />
+              <img src="images/imdb-logo.jpeg" alt="imdb" />
             </figure>
           </div>
 
           <div className="media-content">
-            <p
-              className="title is-8"
-              data-cy="MovieTitle"
-            >
+            <p className="title is-8" data-cy="MovieTitle">
               {title}
             </p>
           </div>
@@ -54,14 +48,11 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
             {description}
           </p>
 
-          <a
-            href={imdbUrl}
-            data-cy="MovieLink"
-          >
+          <a href={imdbUrl} data-cy="MovieLink">
             IMDB
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
