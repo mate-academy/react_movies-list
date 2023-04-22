@@ -1,14 +1,17 @@
 /* eslint-disable max-len */
 import React from 'react';
-
 import './App.scss';
 import { MoviesList } from './components/MoviesList';
-import moviesFromServer from './api/movies.json';
+import MoviesFromServer from './api/movies.json';
 
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList movies={moviesFromServer} />
+      {MoviesFromServer.length && (
+        <MoviesList
+          movies={MoviesFromServer}
+        />
+      )}
     </div>
 
     <div className="sidebar" data-cy="Sidebar">
