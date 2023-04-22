@@ -17,19 +17,3 @@ iframe {
   padding: 20px;
   border-left: 1px solid lightgray;
 }
-
-.movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card-image img {
-  object-fit: contain;
-}
-
-.image {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 10%;
-}
