@@ -9,7 +9,7 @@ type Props = {
 
 export const MovieCard: React.FC<Props> = ({ movie }) => (
   <div className="card" data-cy="Movie">
-    <div className="crd-image">
+    <div className="card-image">
       <figure className="image is-4by3">
         <img
           data-cy="MovieImage"
