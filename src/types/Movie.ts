@@ -8,6 +8,10 @@ export interface MovieItem {
 
 export type MoviesArr = {
   movies:MovieItem[];
-}
+};
 
-export type PropMovie = Pick<MovieItem, 'title' | 'description' | 'imgUrl' | 'imdbUrl'>
+export type PropMovie = Pick<MovieItem,
+'title' |
+'description' |
+'imgUrl' |
+'imdbUrl'>;
