@@ -4,7 +4,7 @@ import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
 
 type Props = {
-  movies: MovieCard[];
+  movies: MovieCardItem[];
 };
 
 export const MoviesList: React.FC<Props> = ({ movies = [] }) => (
