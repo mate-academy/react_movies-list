@@ -3,9 +3,9 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type MovieCardsProps = {
+interface MovieCardsProps {
   movie: Movie
-};
+}
 
 export const MovieCard: React.FC<MovieCardsProps> = ({ movie }) => {
   const {
