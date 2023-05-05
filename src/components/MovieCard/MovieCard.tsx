@@ -20,7 +20,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         <img
           data-cy="MovieImage"
           src={imgUrl}
-          alt="Film logo"
+          alt="Movie logo"
         />
       </figure>
     </div>
