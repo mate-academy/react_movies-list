@@ -3,24 +3,24 @@
 import "./MovieCard.scss";
 import { Movie } from "../../types/Movie";
 
-type PropsType = {
+interface Props {
   movie: Movie;
-};
+}
 
-export const MovieCard: React.FC<PropsType> = (props: PropsType) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
     imgUrl,
     imdbUrl,
     imdbId,
-  } = props.movie;
+  } = movie;
 
   return (
     <div key={imdbId} className="card" data-cy="Movie">
       <div className="card-image">
         <figure className="image is-4by3">
-          <img data-cy="MovieImage" src={imgUrl} alt="Film logo" />
+          <img data-cy="MovieImage" src={imgUrl} alt="Movie logo" />
         </figure>
       </div>
 
