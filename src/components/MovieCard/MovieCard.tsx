@@ -3,9 +3,9 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type MovieProps = {
+interface MovieProps {
   movie: Movie,
-};
+}
 
 export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
   const {
@@ -31,7 +31,10 @@ export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="/images/imdb-logo.jpeg" alt="imdb" />
+              <img
+                src="/images/imdb-logo.jpeg"
+                alt="Movie logo"
+              />
             </figure>
           </div>
 
