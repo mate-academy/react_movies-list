@@ -3,12 +3,10 @@ import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
 interface Props {
-  movie: Movie
+  movie: Movie,
 }
 
-export const MovieCard: React.FC<Props> = (props) => {
-  const { movie } = props;
-
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   return (
     <div className="card" data-cy="Movie">
       <div className="card-image">
@@ -31,7 +29,7 @@ export const MovieCard: React.FC<Props> = (props) => {
 
           <div className="media-content">
             <p className="title is-8" data-cy="MovieTitle">
-              Inception
+              {movie.title}
             </p>
           </div>
         </div>
