@@ -1,13 +1,13 @@
 import React from 'react';
-import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
+import { Movie } from '../../types/Movie';
 
-type Props = {
-  movie: Movie;
-};
+interface MovieCardProps {
+  movie: Movie,
+}
 
-export const MovieCard: React.FC<Props> = ({ movie }) => {
+export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const {
     title,
     description,
@@ -31,7 +31,10 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src="images/imdb-logo.jpeg" alt="imdb" />
+              <img
+                src="/images/imdb-logo.jpeg"
+                alt="Movie logo"
+              />
             </figure>
           </div>
 
@@ -49,6 +52,8 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
 
           <a
             href={imdbUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             data-cy="MovieLink"
           >
             IMDB
