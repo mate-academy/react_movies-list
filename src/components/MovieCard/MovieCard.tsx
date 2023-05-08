@@ -13,10 +13,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
     imdbUrl,
     imgUrl,
     title,
+    imdbId,
   } = movie;
 
   return (
-    <div className="card" data-cy="Movie">
+    <div key={imdbId} className="card" data-cy="Movie">
       <div className="card-image">
         <figure className="image is-4by3">
           <img

@@ -8,17 +8,12 @@ interface MoviesListProps {
 }
 
 export const MoviesList: React.FC<MoviesListProps> = ({ movies }) => (
-  <div className="movies">
-    {movies.map(movie => (
-      <div
-        className="card"
-        data-cy="Movie"
-      >
-        <MovieCard
-          key={movie.imdbId}
-          movie={movie}
-        />
-      </div>
+  <>
+    {movies.map((movie: Movie) => (
+      <MovieCard
+        key={movie.imdbId}
+        movie={movie}
+      />
     ))}
-  </div>
+  </>
 );
