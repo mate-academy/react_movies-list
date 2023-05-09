@@ -3,7 +3,7 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type MovieFromList = {
+type MovieСardProps = {
   movie: Movie
 };
 
