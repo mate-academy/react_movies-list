@@ -7,7 +7,7 @@ type MoviesListProps = {
   movies: Movie[]
 };
 
-export const MoviesList: React.FC<ListOfMovies> = ({ movies }) => (
+export const MoviesList: React.FC<MoviesListProps> = ({ movies }) => (
   <>
     <div className="movies">
       {movies.map(movieFromList => (

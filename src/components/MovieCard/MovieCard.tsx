@@ -7,7 +7,7 @@ type MovieСardProps = {
   movie: Movie
 };
 
-export const MovieCard: React.FC<MovieFromList> = ({ movie }) => {
+export const MovieCard: React.FC<MovieСardProps> = ({ movie }) => {
   const {
     title,
     description,
