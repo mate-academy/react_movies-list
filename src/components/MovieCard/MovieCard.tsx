@@ -2,11 +2,11 @@ import React from 'react';
 import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
-type Props = {
+interface MovieProps {
   movie: Movie;
-};
+}
 
-export const MovieCard: React.FC<Props> = ({ movie }) => {
+export const MovieCard: React.FC<MovieProps> = ({ movie }) => {
   const {
     title,
     description,
@@ -21,7 +21,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           <img
             data-cy="MovieImage"
             src={imgUrl}
-            alt="Film logo"
+            alt="Movie logo"
           />
         </figure>
       </div>
