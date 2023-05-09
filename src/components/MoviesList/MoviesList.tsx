@@ -3,7 +3,7 @@ import './MoviesList.scss';
 import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 
-type ListOfMovies = {
+type MoviesListProps = {
   movies: Movie[]
 };
 
