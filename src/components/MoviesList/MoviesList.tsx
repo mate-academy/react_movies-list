@@ -4,7 +4,7 @@ import { MovieCard } from '../MovieCard/MovieCard';
 import { MovieType } from '../../types/Movie';
 
 type Props = {
-  movies:MovieType[]
+  movies: MovieType[],
 };
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
