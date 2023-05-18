@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
