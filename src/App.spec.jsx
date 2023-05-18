@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { mount } from '@cypress/react';
 import { App } from './App';
+import './App.scss';
 
 describe('App', () => {
   beforeEach(() => {
