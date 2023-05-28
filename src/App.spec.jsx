@@ -4,6 +4,7 @@ import { App } from './App';
 
 describe('App', () => {
   beforeEach(() => {
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<App />);
   });
 
