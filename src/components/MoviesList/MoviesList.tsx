@@ -4,14 +4,14 @@ import './MoviesList.scss';
 import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 
-type Props = {
+type MoviesArray = {
   movies: Movie[];
 };
 
-export const MoviesList: React.FC<Props> = ({ movies }) => (
+export const MoviesList: React.FC<MoviesArray> = ({ movies }) => (
   <>
     {movies.map((movieItem) => (
-      <MovieCard {...movieItem} key={movieItem.imdbId} />
+      <MovieCard movie={movieItem} key={movieItem.imdbId} />
     ))}
   </>
 );
