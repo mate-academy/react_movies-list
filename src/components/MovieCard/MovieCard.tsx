@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
+import './MovieCard.scss';
 
 type Props = {
   movie: Movie;
