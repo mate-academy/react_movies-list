@@ -9,9 +9,9 @@ type MoviesArray = {
 };
 
 export const MoviesList: React.FC<MoviesArray> = ({ movies }) => (
-  <>
+  <div className="movies">
     {movies.map((movieItem) => (
       <MovieCard movie={movieItem} key={movieItem.imdbId} />
     ))}
-  </>
+  </div>
 );
