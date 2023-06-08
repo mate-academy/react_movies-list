@@ -12,7 +12,11 @@ export const MoviesList: React.FC<Props> = ({ movies }) => (
   <>
     <div className="movies">
       {movies.map((movie) => (
-        <div className="card" data-cy="Movie" key={movie.imdbId}>
+        <div
+          className="card"
+          data-cy="Movie"
+          key={movie.imdbId}
+        >
           <MovieCard movie={movie} />
         </div>
       ))}
