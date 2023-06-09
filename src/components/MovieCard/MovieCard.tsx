@@ -7,10 +7,7 @@ type Props = {
   movie: Movie
 };
 
-export const MovieCard: React.FC<Props> = (
-  { movie },
-
-) => {
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
