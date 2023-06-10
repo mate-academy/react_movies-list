@@ -16,7 +16,6 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
   } = movie;
 
   return (
-    <>
       <div className="card" data-cy="Movie">
         <div className="card-image">
           <figure className="image is-4by3">
@@ -49,14 +48,13 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
             </p>
 
             <a
-              href="https://www.imdb.com/title/tt1375666"
+              href={imdbUrl}
               data-cy="MovieLink"
             >
-              {imdbUrl}
+              IMDB
             </a>
           </div>
         </div>
       </div>
-    </>
-  )
+  );
 };
