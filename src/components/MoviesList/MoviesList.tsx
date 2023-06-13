@@ -1,7 +1,7 @@
 import React from 'react';
+import { Movie } from '../../types/Movie';
 import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
-import { Movie } from '../../types/Movie';
 
 type Props = {
   movies: Movie[]
@@ -17,6 +17,5 @@ export const MoviesList: React.FC <Props> = ({ movies }) => (
 
       </div>
     ))}
-
   </div>
 );
