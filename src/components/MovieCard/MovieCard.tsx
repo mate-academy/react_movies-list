@@ -22,7 +22,7 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
           <img
             data-cy="MovieImage"
             src={imgUrl}
-            alt="Film logo"
+            alt={title}
           />
         </figure>
       </div>
@@ -49,6 +49,8 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
 
           <a
             href={imdbUrl}
+            rel="noreferrer"
+            target="_blank"
             data-cy="MovieLink"
           >
             IMDB
