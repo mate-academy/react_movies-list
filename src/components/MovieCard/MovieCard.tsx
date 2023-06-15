@@ -9,13 +9,13 @@ type Proms = {
 };
 
 export const MovieCard: React.FC<Proms> = ({ movie }) => (
-  <>
+  <li className="card" data-cy="Movie">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
           data-cy="MovieImage"
           src={movie.imgUrl}
-          alt="Film logo"
+          alt={movie.title}
         />
       </figure>
     </div>
@@ -41,6 +41,8 @@ export const MovieCard: React.FC<Proms> = ({ movie }) => (
         </p>
 
         <a
+          rel="noreferrer"
+          target="_blank"
           href={movie.imdbUrl}
           data-cy="MovieLink"
         >
@@ -48,5 +50,5 @@ export const MovieCard: React.FC<Proms> = ({ movie }) => (
         </a>
       </div>
     </div>
-  </>
+  </li>
 );
