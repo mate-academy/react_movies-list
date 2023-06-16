@@ -1,6 +1,4 @@
 import React from 'react';
-
-import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
@@ -9,7 +7,7 @@ type Props = {
 };
 
 export const MovieCard: React.FC <Props> = ({ movie }) => (
-  <div key={movie.imdbId} className="card" data-cy="Movie">
+  <div className="card" data-cy="Movie">
     <div className="card-image">
       <figure className="image is-4by3">
         <img
