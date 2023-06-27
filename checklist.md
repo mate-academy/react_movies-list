@@ -1,89 +1,37 @@
-1. [CODE KNOWLEDGE] - Don't use React fragment, if you already have a wrapper
+1. ADD a `key` to the root tag inside an iteration (the first tag after the `.map` call)
+2. DON't add keys to any other tags
+3. NEVER use array index as a `key` (it is the default behaviour)
 
 BAD EXAMPLE:
 ```jsx
-  <>
-    <div className="movies">
-      {cats.map(cat => (
-        <Cat key={cat.id} cat={cat} />
-      ))}
-    </div>
-  </>
-```
+const CatCard = ({ cat }) => (
+  <div key={cat.id}>
+    {cat.name}
+  </div>
+);
 
-GOOD EXAMPLE:
-```jsx
-<div className="movies">
-  {cats.map(cat => (
-    <Cat key={cat.id} cat={cat} />
-  ))}
-</div>
-```
-
-ALSO GOOD EXAMPLE: 
-
-```jsx
-  <>
+const CatList = ({ cats }) => (
+  <div class="CatList">
     {cats.map(cat => (
-      <Cat key={cat.id} cat={cat} />
+      <CatCard cat={cat}> />
     ))}
-  </>
-```
-2. [CODE KNOWLEDGE] - When you rendering a list, don't forget to add `key` prop
-
-BAD EXAMPLE:
-```jsx
-<div>
-  {cats.map(cat => <Cat cat={cat} />)}
-</div>
+  </div>
+);
 ```
 
 GOOD EXAMPLE:
 ```jsx
-<div>
-  {cats.map(cat => <Cat key={cat.id} cat={cat} />)}
-</div>
+const CatCard = ({ cat }) => (
+  <div>
+    {cat.name}
+  </div>
+);
+
+const CatList = ({ cats }) => (
+  <div class="CatList">
+    {cats.map(cat => (
+      <CatCard cat={cat}> key={cat.id} />
+    ))}
+  </div>
+);
 ```
-
-3. [CODE KNOWLEDGE] -  There is no need to specify the key in the child component.
-
-BAD EXAMPLE:
-```jsx
-function ListItem(props) {
-    <li key={props.key}>
-      {props.value}
-    </li>
-  );
-}
-
-function NumberList(props) {
-  const listItems = numbers.map((number) =>
-    <ListItem value={number} />
-  );
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
-```
-
-GOOD EXAMPLE:
-```jsx
-function ListItem(props) {
-    <li>
-      {props.value}
-    </li>
-  );
-}
-
-function NumberList(props) {
-  const listItems = numbers.map((number) =>
-    <ListItem value={number} key={number.toString()}/>
-  );
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
-```
-4. [CODE KNOWLEDGE] - NEVER EVER EVER use array index as a `key` prop
