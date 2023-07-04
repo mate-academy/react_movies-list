@@ -2,13 +2,17 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-export const MovieCard: React.FC<Movie> = (props) => {
+type Props = {
+  movie: Movie
+};
+
+export const MovieCard: React.FC<Props> = ({ movie }) => {
   const {
     title,
     description,
     imgUrl,
     imdbUrl,
-  } = props;
+  } = movie;
 
   return (
     <div className="card" data-cy="Movie">
