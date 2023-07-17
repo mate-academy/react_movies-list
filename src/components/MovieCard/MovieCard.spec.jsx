@@ -19,7 +19,7 @@ describe('MovieCard component', () => {
   });
 
   it('should render a movie title', () => {
-    cy.getByDataCy('MovieTitle', { timeout: 10000 }).should('have.text', 'Movie title');
+    cy.getByDataCy('MovieTitle').should('have.text', 'Movie title');
   });
 
   it('should render a movie description', () => {
