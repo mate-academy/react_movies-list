@@ -3,6 +3,10 @@ import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
 
+type Props = {
+  movie: Movie;
+};
+
 export const MovieCard: React.FC<Props> = ({ movie }) => (
   <div className="card" data-cy="Movie" key={movie.imdbId}>
     <div className="card-image">
@@ -45,7 +49,3 @@ export const MovieCard: React.FC<Props> = ({ movie }) => (
     </div>
   </div>
 );
-
-type Props = {
-  movie: Movie;
-};
