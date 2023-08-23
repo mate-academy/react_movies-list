@@ -21,3 +21,4 @@ export const MoviesList: React.FC = ({ movies }) => (
     </div>
   </>
 );
+
