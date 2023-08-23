@@ -6,7 +6,7 @@ describe('App', () => {
   beforeEach(() => {
     mount(<App />);
   });
-
+  
   it('should render all the movies', () => {
     cy.getByDataCy('Movie').should('have.length', 5);
   });
