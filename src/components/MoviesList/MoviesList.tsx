@@ -9,14 +9,11 @@ type PP = {
 
 export const MoviesList: React.FC<PP> = ({ moviesArr }) => (
   <div className="movies">
-    <ul>
-      {moviesArr.map(movie => (
-        <li key={movie.imgUrl}>
-          <MovieCard
-            movie={movie}
-          />
-        </li>
-      ))}
-    </ul>
+    {moviesArr.map(movie => (
+      <MovieCard
+        key={movie.imdbId}
+        movie={movie}
+      />
+    ))}
   </div>
 );
