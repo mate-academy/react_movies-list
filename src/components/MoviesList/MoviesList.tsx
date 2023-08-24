@@ -11,11 +11,9 @@ export const MoviesList: React.FC<Props> = ({ movies }: Props) => {
   return (
     <>
       <div className="movies">
-        {movies.map((movie: Movie) => {
-          return (
-            <MovieCard movie={{ ...movie }} key={movie.imdbId} />
-          );
-        })}
+        {movies.map((movie: Movie) => (
+          <MovieCard movie={{ ...movie }} key={movie.imdbId} />
+        ))}
       </div>
     </>
   );
