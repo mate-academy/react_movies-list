@@ -1,11 +1,11 @@
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
-type MovieCardProps = {
+type Movie = {
   card: Movie;
 };
 
-export const MovieCard: React.FC<MovieCardProps> = (
+export const MovieCard: React.FC<Movie> = (
   { card }: MovieCardProps,
 ) => {
   return (
