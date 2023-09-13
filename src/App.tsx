@@ -9,6 +9,8 @@ export const App: React.FC = () => (
     <div className="page-content">
       <MoviesList movies={moviesFromServer} />
     </div>
-    <div className="sidebar" data-cy="Sidebar" />
+    <div className="sidebar" data-cy="Sidebar">
+      Sidebar will be here
+    </div>
   </div>
 );
