@@ -1,5 +1,7 @@
 export interface Movie {
-  title: string;
-
-  // add all the other field
+  title: string,
+  description: string,
+  imgUrl: string,
+  imdbUrl: string,
+  imdbId: string;
 }
