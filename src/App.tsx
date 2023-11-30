@@ -2,7 +2,8 @@
 import React from 'react';
 
 import './App.scss';
-// import moviesFromServer from './api/movies.json';
+import { MoviesList } from './components/MoviesList/MoviesList';
+import moviesFromServer from './api/movies.json';
 
 export const App: React.FC = () => (
   <div className="page">
@@ -95,7 +96,7 @@ export const App: React.FC = () => (
         </div>
       </div>
     </div>
-
+    <MoviesList movies={moviesFromServer} />
     <div className="sidebar" data-cy="Sidebar">
       Sidebar will be here
     </div>
