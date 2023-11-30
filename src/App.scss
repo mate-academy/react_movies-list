@@ -1,3 +1,6 @@
+@import "./components/MovieCard/MovieCard.scss";
+@import "./components/MoviesList/MoviesList.scss";
+
 iframe {
   display: none;
 }
@@ -16,14 +19,4 @@ iframe {
 .sidebar {
   padding: 20px;
   border-left: 1px solid lightgray;
-}
-
-.movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card-image img {
-  object-fit: contain;
 }
