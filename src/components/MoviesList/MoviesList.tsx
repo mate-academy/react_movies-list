@@ -5,13 +5,13 @@ import { Movie } from '../../types/Movie';
 import { MovieCard } from '../MovieCard';
 
 interface MovieProp {
-  movieArray: Movie[]
+  movies: Movie[]
 }
 
-export const MoviesList: React.FC<MovieProp> = ({ movieArray }) => (
+export const MoviesList: React.FC<MovieProp> = ({ movies }) => (
   <div className="movies">
-    {movieArray?.map((movie: Movie) => (
-      <MovieCard movie={movie} />
+    {movies.map((movie: Movie) => (
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );

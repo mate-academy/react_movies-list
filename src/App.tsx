@@ -8,7 +8,7 @@ import { MoviesList } from './components/MoviesList/MoviesList';
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
-      <MoviesList movieArray={moviesFromServer} />
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar" data-cy="Sidebar">
