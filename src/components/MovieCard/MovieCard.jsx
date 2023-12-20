@@ -2,7 +2,7 @@ import React from 'react';
 
 import './MovieCard.scss';
 
-export const MovieCard: React.FC = ({ movie }) => (
+export const MovieCard = ({ movie }) => (
   <>
     <div className="card" data-cy="Movie">
       <div className="card-image">
