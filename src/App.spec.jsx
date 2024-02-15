@@ -12,7 +12,6 @@ describe('App', () => {
   });
 
   it('should render a sidebar', () => {
-    cy.getByDataCy('Sidebar')
-      .should('have.text', 'Sidebar will be here');
+    cy.getByDataCy('Sidebar').should('have.text', 'Sidebar will be here');
   });
 });
