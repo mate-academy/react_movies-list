@@ -2,11 +2,15 @@
 import React from 'react';
 
 import './App.scss';
-// import moviesFromServer from './api/movies.json';
+
+import moviesFromServer from './api/movies.json';
+import { MoviesList } from './components/MoviesList';
 
 export const App: React.FC = () => (
   <div className="page">
     <div className="page-content">
+
+
       <div className="movies">
         <div className="card" data-cy="Movie">
           <div className="card-image">
@@ -84,16 +88,8 @@ export const App: React.FC = () => (
                 an idea into the mind of a C.E.O.
               </p>
 
-              <a
-                href="https://www.imdb.com/title/tt0314331"
-                data-cy="MovieLink"
-              >
-                IMDB
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <MoviesList movies={moviesFromServer} />
     </div>
 
     <div className="sidebar" data-cy="Sidebar">
