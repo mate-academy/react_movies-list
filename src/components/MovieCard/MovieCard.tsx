@@ -3,6 +3,7 @@ import React from 'react';
 import './MovieCard.scss';
 import { Movie } from '../../types/Movie';
 
+
 type MovieCardProps = {
   movie: Movie
 };
@@ -46,3 +47,6 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => (
     </div>
   </>
 );
+
+export const MovieCard: React.FC = () => <>Put the card here</>;
+
