@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 
 import React from 'react';
-import { mount } from '@cypress/react';
+import { mount } from '@cypress/react18';
 import { MovieCard } from './MovieCard';
 
 describe('MovieCard component', () => {
