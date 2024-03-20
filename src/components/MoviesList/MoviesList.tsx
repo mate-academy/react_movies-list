@@ -1,16 +1,17 @@
+/* eslint-disable max-len */
 import React from 'react';
 import './MoviesList.scss';
-import { MovieCard } from '../MovieCard';
 import { Movie } from '../../types/Movie';
+import { MovieCard } from '../MovieCard';
 
-interface Props {
+type Props = {
   movies: Movie[];
-}
+};
 
 export const MoviesList: React.FC<Props> = ({ movies }) => (
   <div className="movies">
-    {movies.map((movie) => (
-      <MovieCard key={movie.imdbId} movie={movie} />
+    {movies.map(movie => (
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );
