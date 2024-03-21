@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/types/Movie.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1710945801085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1710945807204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export interface Movie {\n   title: string;\n-  \n+  year: number;\n+  director: string;\n   // add all the other field\n }\n"
+                },
+                {
+                    "date": 1710946998493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n export interface Movie {\n   title: string;\n-  year: number;\n-  director: string;\n+  description: string;\n+  imgUrl: string;\n+  imdbUrl: string;\n+  imdbId: string;\n   // add all the other field\n }\n"
+                },
+                {
+                    "date": 1710947627678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n   imgUrl: string;\n   imdbUrl: string;\n   imdbId: string;\n   // add all the other field\n-}\n+}[]\n"
+                },
+                {
+                    "date": 1710947726811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,6 @@\n   imdbUrl: string;\n   imdbId: string;\n   // add all the other field\n }[]\n+\n+\n"
+                },
+                {
+                    "date": 1710947735942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n   imdbId: string;\n   // add all the other field\n }[]\n \n-interface\n+interface MoviesListProps {\n+  \n+}\n"
+                },
+                {
+                    "date": 1710947741632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   // add all the other field\n }[]\n \n interface MoviesListProps {\n-  movies: Movie[[]]\n+  movies: Movie[]\n }\n"
+                }
+            ],
+            "date": 1710945801085,
+            "name": "Commit-0",
+            "content": "export interface Movie {\n  title: string;\n  \n  // add all the other field\n}\n"
+        }
+    ]
+}

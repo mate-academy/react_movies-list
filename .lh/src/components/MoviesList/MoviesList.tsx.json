@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/components/MoviesList/MoviesList.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1710946393314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1710946401279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n import React from 'react';\n import './MoviesList.scss';\n \n-export const MoviesList: React.FC = () => {<>Put the list here</>;\n+export const MoviesList: React.FC = () => {\n+  <>Put the list here</>\n+}\n"
+                },
+                {
+                    "date": 1710946407665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React from 'react';\n import './MoviesList.scss';\n \n export const MoviesList: React.FC = () => {\n-  <>Put the list here</>\n+  return (\n+    <>Put the list here</>\n+\n }\n"
+                },
+                {
+                    "date": 1710946412996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,8 @@\n import './MoviesList.scss';\n \n export const MoviesList: React.FC = () => {\n   return (\n-    <>Put the list here</>\n-\n+    <>\n+    </>\n+  )\n }\n"
+                },
+                {
+                    "date": 1710946418990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,51 @@\n \n export const MoviesList: React.FC = () => {\n   return (\n     <>\n+      <div className=\"movies\">\n+        <div className=\"card\" data-cy=\"Movie\">\n+          <div className=\"card-image\">\n+            <figure className=\"image is-4by3\">\n+              <img\n+                data-cy=\"MovieImage\"\n+                src=\"https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_.jpg\"\n+                alt=\"Film logo\"\n+              />\n+            </figure>\n+          </div>\n+\n+          <div className=\"card-content\">\n+            <div className=\"media\">\n+              <div className=\"media-left\">\n+                <figure className=\"image is-48x48\">\n+                  <img src=\"images/imdb-logo.jpeg\" alt=\"imdb\" />\n+                </figure>\n+              </div>\n+\n+              <div className=\"media-content\">\n+                <p className=\"title is-8\" data-cy=\"MovieTitle\">\n+                  Love Actually\n+                </p>\n+              </div>\n+            </div>\n+\n+            <div className=\"content\">\n+              <p data-cy=\"MovieDescription\">\n+                A thief who steals corporate secrets through the use of\n+                dream-sharing technology is given the inverse task of planting\n+                an idea into the mind of a C.E.O.\n+              </p>\n+\n+              <a\n+                href=\"https://www.imdb.com/title/tt0314331\"\n+                data-cy=\"MovieLink\"\n+              >\n+                IMDB\n+              </a>\n+            </div>\n+          </div>\n+        </div>\n+      </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710946526222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,50 +4,9 @@\n export const MoviesList: React.FC = () => {\n   return (\n     <>\n       <div className=\"movies\">\n-        <div className=\"card\" data-cy=\"Movie\">\n-          <div className=\"card-image\">\n-            <figure className=\"image is-4by3\">\n-              <img\n-                data-cy=\"MovieImage\"\n-                src=\"https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_.jpg\"\n-                alt=\"Film logo\"\n-              />\n-            </figure>\n-          </div>\n \n-          <div className=\"card-content\">\n-            <div className=\"media\">\n-              <div className=\"media-left\">\n-                <figure className=\"image is-48x48\">\n-                  <img src=\"images/imdb-logo.jpeg\" alt=\"imdb\" />\n-                </figure>\n-              </div>\n-\n-              <div className=\"media-content\">\n-                <p className=\"title is-8\" data-cy=\"MovieTitle\">\n-                  Love Actually\n-                </p>\n-              </div>\n-            </div>\n-\n-            <div className=\"content\">\n-              <p data-cy=\"MovieDescription\">\n-                A thief who steals corporate secrets through the use of\n-                dream-sharing technology is given the inverse task of planting\n-                an idea into the mind of a C.E.O.\n-              </p>\n-\n-              <a\n-                href=\"https://www.imdb.com/title/tt0314331\"\n-                data-cy=\"MovieLink\"\n-              >\n-                IMDB\n-              </a>\n-            </div>\n-          </div>\n-        </div>\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710946536176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import React from 'react';\n import './MoviesList.scss';\n+import {}\n \n export const MoviesList: React.FC = () => {\n   return (\n     <>\n       <div className=\"movies\">\n-\n+        <Movie />\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710946542994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\n import './MoviesList.scss';\n-import {}\n+import { Movie } from './'\n \n export const MoviesList: React.FC = () => {\n   return (\n     <>\n"
+                },
+                {
+                    "date": 1710946548236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\n import './MoviesList.scss';\n-import { Movie } from './'\n+import { Movie } from '../MovieCard'\n \n export const MoviesList: React.FC = () => {\n   return (\n     <>\n"
+                },
+                {
+                    "date": 1710946553364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const MoviesList: React.FC = () => {\n   return (\n     <>\n       <div className=\"movies\">\n-        <Movie />\n+        <MovieCard />\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947142653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import React from 'react';\n+import './MoviesList.scss';\n+import { MovieCard } from '../MovieCard';\n+\n+export const MoviesList: React.FC = (movies) => {\n+  return (\n+    <>\n+      <div className=\"movies\">\n+        <MovieCard />\n+      </div>\n+    </>\n+  )\n+}\n"
+                },
+                {
+                    "date": 1710947155114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,13 @@\n import React from 'react';\n import './MoviesList.scss';\n import { MovieCard } from '../MovieCard';\n \n-export const MoviesList: React.FC = (movies) => {\n+export const MoviesList: React.FC = (props.movies) => {\n   return (\n     <>\n       <div className=\"movies\">\n         <MovieCard />\n       </div>\n     </>\n   )\n }\n-import React from 'react';\n-import './MoviesList.scss';\n-import { Movie } from '../MovieCard'\n-\n-export const MoviesList: React.FC = () => {\n-  return (\n-    <>\n-      <div className=\"movies\">\n-        <MovieCard />\n-      </div>\n-    </>\n-  )\n-}\n"
+                },
+                {
+                    "date": 1710947162961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n import './MoviesList.scss';\n import { MovieCard } from '../MovieCard';\n \n-export const MoviesList: React.FC = (props.movies) => {\n+export const MoviesList: React.FC = (props) => {\n   return (\n     <>\n       <div className=\"movies\">\n         <MovieCard />\n"
+                },
+                {
+                    "date": 1710947169210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n import './MoviesList.scss';\n import { MovieCard } from '../MovieCard';\n \n-export const MoviesList: React.FC = (props) => {\n+export const MoviesList: React.FC = ({ ovies}) => {\n   return (\n     <>\n       <div className=\"movies\">\n         <MovieCard />\n"
+                },
+                {
+                    "date": 1710947201730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import React from 'react';\n import './MoviesList.scss';\n import { MovieCard } from '../MovieCard';\n \n-export const MoviesList: React.FC = ({ ovies}) => {\n+export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <>\n       <div className=\"movies\">\n-        <MovieCard />\n+        <MovieCard />.map\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947213339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <>\n       <div className=\"movies\">\n-        <MovieCard />.map\n+        <MovieCard />.map(\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947223782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <>\n       <div className=\"movies\">\n-        <MovieCard />.map(\n+        movies.map()\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947229569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <>\n       <div className=\"movies\">\n-        movies.map()\n+        {movies.map()}\n       </div>\n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947242307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from 'react';\n+import './MoviesList.scss';\n+import { MovieCard } from '../MovieCard';\n+\n+export const MoviesList: React.FC = ({ movies }) => {\n+  return (\n+    <>\n+      <div className=\"movies\">\n+        {movies.map()}\n+      </div>\n+  )\n+}\n"
+                },
+                {
+                    "date": 1710947252557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,23 +3,9 @@\n import { MovieCard } from '../MovieCard';\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n-    <>\n-      <div className=\"movies\">\n-        {movies.map()}\n-      </div>\n+    <div className=\"movies\">\n+      {movies.map((item))}\n+    </div>\n   )\n }\n-import React from 'react';\n-import './MoviesList.scss';\n-import { MovieCard } from '../MovieCard';\n-\n-export const MoviesList: React.FC = ({ movies }) => {\n-  return (\n-    <>\n-      <div className=\"movies\">\n-        {movies.map()}\n-      </div>\n-    </>\n-  )\n-}\n"
+                },
+                {
+                    "date": 1710947257831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item))}\n+      {movies.map((item) => <)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947263697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item) => <)}\n+      {movies.map((item) => <MovieCard />)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947268995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item) => <MovieCard />)}\n+      {movies.map((item) => <MovieCard movie/>)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947274228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item) => <MovieCard movie/>)}\n+      {movies.map((item) => <MovieCard movie={movies} />)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947281240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item) => <MovieCard movie={movies} />)}\n+      {movies.map((item) => <MovieCard movie={item} />)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947287201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item) => <MovieCard movie={item} />)}\n+      {movies.map((item: ) => <MovieCard movie={item} />)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947315845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item: ) => <MovieCard movie={item} />)}\n+      {movies.map((item: ) => <MovieCard key={movie={item} />)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947326020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item: ) => <MovieCard key={ } movie={item} />)}\n+      {movies.map((item: ) => <MovieCard key={\"imdbId\" } movie={item} />)}\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1710947666643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export const MoviesList: React.FC = ({ movies }) => {\n   return (\n     <div className=\"movies\">\n-      {movies.map((item: string) => <MovieCard key={item.imdbId:} movie={item} />)}\n+      {movies.map((item: string) => <MovieCard key={item.imdbId} movie={item} />)}\n     </div>\n   )\n }\n"
+                }
+            ],
+            "date": 1710946393314,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport './MoviesList.scss';\n\nexport const MoviesList: React.FC = () => {<>Put the list here</>;\n"
+        }
+    ]
+}
