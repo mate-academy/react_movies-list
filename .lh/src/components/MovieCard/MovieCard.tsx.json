@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/MovieCard/MovieCard.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1711039713678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1711039713678,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { Movie } from '../../types/Movie';\nimport './MovieCard.scss';\n\ninterface Props {\n  movie: Movie;\n}\n\nexport const MovieCard: React.FC<Props> = ({ movie }) => (\n  <div className=\"card\" data-cy=\"Movie\">\n    <div className=\"card-image\">\n      <figure className=\"image is-4by3\">\n        <img data-cy=\"MovieImage\" src={movie.imgUrl} alt=\"Film logo\" />\n      </figure>\n    </div>\n    <div className=\"card-content\">\n      <div className=\"media\">\n        <div className=\"media-left\">\n          <figure className=\"image is-48x48\">\n            <img src=\"images/imdb-logo.jpeg\" alt=\"imdb\" />\n          </figure>\n        </div>\n        <div className=\"media-content\">\n          <p className=\"title is-8\" data-cy=\"MovieTitle\">\n            {movie.title}\n          </p>\n        </div>\n      </div>\n      <div className=\"content\" data-cy=\"MovieDescription\">\n        {movie.description}{' '}\n        <a href={movie.imdbUrl} data-cy=\"MovieLink\">\n          IMDB\n        </a>\n      </div>\n    </div>\n  </div>\n);\n"
+        }
+    ]
+}
