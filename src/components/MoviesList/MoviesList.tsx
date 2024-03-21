@@ -3,11 +3,11 @@ import './MoviesList.scss';
 import { MovieCard } from '../MovieCard';
 import { Movie } from '../../types/Movie';
 
-type MoviesListProps = {
+type MoviesListProp = {
   movies: Movie[];
 };
 
-export const MoviesList: React.FC<MoviesListProps> = ({ movies }) => (
+export const MoviesList: React.FC<MoviesListProp> = ({ movies }) => (
   <>
     {' '}
     <div className="movies">
