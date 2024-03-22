@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/MoviesList/MoviesList.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1711091570954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711091583527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './MoviesList.scss';\n import { Movie } from '../../types/Movie';\n import { MovieCard } from '../MovieCard';\n \n-typ Props {\n+type Props =; {\n   movies: Movie[];\n }\n \n export const MoviesList: React.FC<Props> = ({ movies }) => (\n"
+                }
+            ],
+            "date": 1711091570953,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport './MoviesList.scss';\nimport { Movie } from '../../types/Movie';\nimport { MovieCard } from '../MovieCard';\n\ntyp Props {\n  movies: Movie[];\n}\n\nexport const MoviesList: React.FC<Props> = ({ movies }) => (\n  <div className=\"movies\">\n    {movies.map(movie => (\n      <MovieCard key={movie.imdbId} movie={movie} />\n    ))}\n  </div>\n);\n"
+        }
+    ]
+}

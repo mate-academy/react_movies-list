@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1711039713678,
@@ -24,6 +24,14 @@
                 {
                     "date": 1711089397276,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,39 @@\n+import React from 'react';\n+import { Movie } from '../../types/Movie';\n+import './MovieCard.scss';\n+\n+interface Props {\n+  movie: Movie;\n+}\n+\n+export const MovieCard: React.FC<Props> = ({ movie }) => {\n+  return (\n+    <div className=\"card\" data-cy=\"Movie\">\n+      <div className=\"card-image\">\n+        <figure className=\"image is-4by3\">\n+          <img data-cy=\"MovieImage\" src={movie.imgUrl} alt=\"Film logo\" />\n+        </figure>\n+      </div>\n+      <div className=\"card-content\">\n+        <div className=\"media\">\n+          <div className=\"media-left\">\n+            <figure className=\"image is-48x48\">\n+              <img src=\"images/imdb-logo.jpeg\" alt=\"imdb\" />\n+            </figure>\n+          </div>\n+          <div className=\"media-content\">\n+            <p className=\"title is-8\" data-cy=\"MovieTitle\">\n+              {movie.title}\n+            </p>\n+          </div>\n+        </div>\n+        <div className=\"content\" data-cy=\"MovieDescription\">\n+          {movie.description}{' '}\n+          <a href={movie.imdbUrl} data-cy=\"MovieLink\">\n+            IMDB\n+          </a>\n+        </div>\n+      </div>\n+    </div>\n+  );\n+};\n"
+                },
+                {
+                    "date": 1711091597964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n import { Movie } from '../../types/Movie';\n import './MovieCard.scss';\n \n-ty Props {\n+type Props {\n   movie: Movie;\n }\n \n export const MovieCard: React.FC<Props> = ({ movie }) => {\n"
+                },
+                {
+                    "date": 1711094266107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n               {movie.title}\n             </p>\n           </div>\n         </div>\n-        <div className=\"content\" data-cy=\"MovieDescription\">\n+        <div className=\"content\"></div> data-cy=\"MovieDescription\">\n           {movie.description}{' '}\n           <a href={movie.imdbUrl} data-cy=\"MovieLink\">\n             IMDB\n           </a>\n"
                 }
             ],
             "date": 1711039713678,

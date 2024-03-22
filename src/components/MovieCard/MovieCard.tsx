@@ -2,9 +2,9 @@ import React from 'react';
 import { Movie } from '../../types/Movie';
 import './MovieCard.scss';
 
-interface Props {
+type Props = {
   movie: Movie;
-}
+};
 
 export const MovieCard: React.FC<Props> = ({ movie }) => {
   return (
@@ -27,8 +27,8 @@ export const MovieCard: React.FC<Props> = ({ movie }) => {
             </p>
           </div>
         </div>
-        <div className="content" data-cy="MovieDescription">
-          {movie.description}{' '}
+        <div className="content">
+          <p data-cy="MovieDescription">{movie.description}</p>
           <a href={movie.imdbUrl} data-cy="MovieLink">
             IMDB
           </a>
