@@ -1,17 +1,19 @@
 import React from 'react';
 import './MoviesList.scss';
 import { Movie } from '../../types/Movie';
-import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieCard } from '../MovieCard';
 
-interface MovieProps {
-  moviesFromServer: Movie[];
+interface MovieListProps {
+  movies: Movie[];
 }
 
-export const MoviesList: React.FC<MovieProps> = ({ moviesFromServer }) => (
-  moviesFromServer ? (
-    <>
-      {moviesFromServer.sort((a, b) => a.title.localeCompare(b.title))
-        .map((movie) => <MovieCard movieFromServer={movie} />)}
-    </>
-  ) : null
-);
+export const MoviesList: React.FC<MovieListProps> = ({ movies }) => {
+  return (
+    <div className='movies'>
+      {movies.map((movie) => (
+        <MovieCard movie={movie} />
+      ))}
+
+    </div>
+  )
+};
