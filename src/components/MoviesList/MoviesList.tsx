@@ -1,9 +1,14 @@
 import React from 'react';
 import './MoviesList.scss';
-import moviesFromServer from '../../api/movies.json';
+// import moviesFromServer from '../../api/movies.json';
 import { MovieCard } from '../MovieCard';
+import { Movie } from '../../types/Movie';
 
-export const MoviesList: React.FC = () => {
+type MoviesListProps = {
+  moviesFromServer: Movie[];
+};
+
+export const MoviesList: React.FC<MoviesListProps> = ({ moviesFromServer }) => {
   return (
     <div className="movies">
       {moviesFromServer.map(movie => {
