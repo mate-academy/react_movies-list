@@ -9,7 +9,7 @@ describe('MovieCard component', () => {
   beforeEach(() => {
     const movie = {
       title: 'Movie title',
-      description: 'Some description',
+      description: 'Some description'.trim(),
       imgUrl:
         'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg',
       imdbUrl: 'https://www.imdb.com/title/tt1375666',
@@ -24,7 +24,11 @@ describe('MovieCard component', () => {
   });
 
   it('should render a movie description', () => {
-    cy.getByDataCy('MovieDescription').should('have.text', 'Some description');
+    cy.getByDataCy('MovieDescription')
+      .invoke('text')
+      .then(text => {
+        expect(text.trim()).to.equal('Some description');
+      });
   });
 
   it('should have a link to IMDb page', () => {
