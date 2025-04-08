@@ -4,6 +4,8 @@
     "src"
   ],
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "jsx": "react",
     "sourceMap": false,
     "types": ["node", "cypress"]
   }
