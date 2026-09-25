@@ -1,1 +1,49 @@
-// add styles here
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-image {
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .media {
+    min-height: 64px;
+    align-items: center;
+
+    [data-cy='MovieTitle'] {
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin: 0;
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    [data-cy='MovieDescription'] {
+      font-size: 1rem;
+      color: #4a4a4a;
+      margin-bottom: 12px;
+    }
+
+    [data-cy='MovieLink'] {
+      margin-top: auto;
+    }
+  }
+}
